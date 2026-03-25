@@ -199,7 +199,8 @@ ORL-CHAT/
 │   ├── FAQ.md  
 │   ├── Quickstart.md  
 │   ├── Test-Guide.md  
-│   └── Proof-Sketch.md  
+│   ├── Proof-Sketch.md  
+│   └── ORL-Chat-Structural-Meaning-Overview.png  
 │  
 ├── inputs  
 │   └── chat_fragments.json  
@@ -209,7 +210,7 @@ ORL-CHAT/
 │  
 ├── VERIFY  
 │   ├── FREEZE_DEMO_SHA256.txt  
-│   └── VERIFY.txt
+│   └── VERIFY.txt  
 ```
 
 ---

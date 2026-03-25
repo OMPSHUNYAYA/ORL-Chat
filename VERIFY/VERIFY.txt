@@ -1,0 +1,72 @@
+ORL-Chat Verification
+
+1. Run interactive demo:
+   Open:
+   demo\orl_chat_interactive_demo.html
+
+2. Observe in interactive demo:
+   - same fragments can appear in different arrival orders
+   - traditional chat shows messages but does not resolve final meaning
+   - ORL-Chat resolves meaning structurally
+   - no dependence on time, order, or synchronization
+   - Replay Proof ends in the same final meaning
+   - Reset controls restore the expected local states
+
+3. Expected interactive result:
+   - Final meaning = Meeting at 5 PM
+   - State = RESOLVED
+   - Node-A incomplete before merge = TRUE
+   - Node-B incomplete before merge = TRUE
+   - Converged after merge = TRUE
+   - Same structure -> same result = TRUE
+   - Order independence = TRUE
+   - Time independence = TRUE
+   - Sync independence = TRUE
+   - Permutation tested = 120
+   - Proof verified = TRUE
+
+4. Run Python reference demo:
+   python demo\orl_chat_demo.py --write-output
+
+5. Observe in Python reference demo:
+   - identical final meaning across runs
+   - deterministic structural convergence
+   - no dependence on time, order, or synchronization
+   - Node-A begins INCOMPLETE
+   - Node-B begins INCOMPLETE
+   - final merged state becomes RESOLVED
+   - permutation independence remains TRUE
+   - output JSON is regenerated in outputs\
+
+6. Expected final result:
+   - Final Meaning = 5 PM
+   - Final Text = Final: 5 PM
+   - Final State = RESOLVED
+
+7. Expected proof checks:
+   - Node-A incomplete first = True
+   - Node-B incomplete first = True
+   - Both incomplete first = True
+   - Resolved after merge = True
+   - Final value present = True
+   - Permutation independence = True
+   - Permutations checked = 120
+
+8. Expected structural invariants:
+   - Same structure -> same result = True
+   - Without time = True
+   - Without order = True
+   - Without sync = True
+   - Structural invariant passed = True
+
+9. Verify hashes:
+   certutil -hashfile demo\orl_chat_demo.py SHA256
+   certutil -hashfile demo\orl_chat_interactive_demo.html SHA256
+   certutil -hashfile inputs\chat_fragments.json SHA256
+   certutil -hashfile outputs\orl_chat_result_general_chat_correction.json SHA256
+
+10. Confirm:
+   - hashes match VERIFY\FREEZE_DEMO_SHA256.txt
+
+Result:
+Deterministic structural meaning resolution confirmed for the ORL-Chat demo layer, including interactive proof, reference replay, permutation invariance, and reproducible convergence without time, order, or synchronization.

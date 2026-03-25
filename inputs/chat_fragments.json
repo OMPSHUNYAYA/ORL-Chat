@@ -1,0 +1,48 @@
+{
+  "initial_nodes": {
+    "Node-A": ["M1", "M2"],
+    "Node-B": ["M3", "M4", "M5"]
+  },
+  "messages": [
+    {
+      "id": "M1",
+      "topic": "meeting_time",
+      "kind": "OPEN",
+      "text": "Meeting at 3 PM",
+      "value": "3 PM",
+      "targets": []
+    },
+    {
+      "id": "M2",
+      "topic": "meeting_time",
+      "kind": "REPLACE",
+      "text": "Correction: 4 PM",
+      "value": "4 PM",
+      "targets": ["M1"]
+    },
+    {
+      "id": "M3",
+      "topic": "meeting_time",
+      "kind": "RETRACT",
+      "text": "Ignore previous time",
+      "value": null,
+      "targets": ["M2"]
+    },
+    {
+      "id": "M4",
+      "topic": "meeting_time",
+      "kind": "REPLACE",
+      "text": "Final: 5 PM",
+      "value": "5 PM",
+      "targets": ["M2"]
+    },
+    {
+      "id": "M5",
+      "topic": "meeting_time",
+      "kind": "CONFIRM",
+      "text": "Confirmed",
+      "value": null,
+      "targets": ["M4"]
+    }
+  ]
+}

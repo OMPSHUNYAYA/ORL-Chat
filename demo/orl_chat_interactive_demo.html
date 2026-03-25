@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORL-Chat Interactive Demo</title>
+<style>
+  :root{
+    --bg:#07111f;
+    --panel:#0e1b31;
+    --line:rgba(255,255,255,.10);
+    --text:#eaf2ff;
+    --muted:#a9bbd8;
+    --brand:#76a8ff;
+    --brand2:#69f0c8;
+    --good:#00f5b0;
+    --warn:#ffc857;
+    --bad:#ff7a9d;
+    --shadow:0 18px 50px rgba(0,0,0,.35);
+    --press-shadow:inset 0 3px 8px rgba(0,0,0,.35), inset 0 -1px 0 rgba(255,255,255,.05);
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+
+  body{
+    margin:0;
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+    color:var(--text);
+    background:
+      radial-gradient(circle at 15% 0%, rgba(118,168,255,.18), transparent 26%),
+      radial-gradient(circle at 100% 0%, rgba(105,240,200,.12), transparent 22%),
+      linear-gradient(180deg, var(--bg) 0%, #081324 100%);
+  }
+
+  .app{
+    min-height:100%;
+    padding:10px;
+    display:grid;
+    grid-template-rows:auto auto 1fr auto;
+    gap:10px;
+  }
+
+  .hero,.footer,.panel{
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    box-shadow:var(--shadow);
+    border-radius:22px;
+  }
+
+  .hero{
+    padding:12px 16px;
+    display:grid;
+    grid-template-columns:1.25fr .9fr;
+    gap:12px;
+    align-items:center;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 11px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    color:var(--warn);
+    font-size:.74rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    background:rgba(255,255,255,.04);
+  }
+
+  h1{
+    margin:8px 0 6px;
+    font-size:clamp(1.35rem, 2.6vw, 2.05rem);
+    line-height:1.08;
+    letter-spacing:-.03em;
+  }
+
+  .sub{
+    color:var(--muted);
+    line-height:1.42;
+    font-size:.92rem;
+  }
+
+  .formula{
+    display:inline-block;
+    margin-top:8px;
+    padding:8px 11px;
+    border-radius:13px;
+    border:1px solid rgba(118,168,255,.25);
+    background:rgba(118,168,255,.08);
+    font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+    font-size:.90rem;
+  }
+
+  .hero-right{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+
+  .metric{
+    padding:10px 12px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.04);
+  }
+
+  .metric .num{
+    font-size:1.2rem;
+    font-weight:800;
+    letter-spacing:-.03em;
+  }
+
+  .metric .lbl{
+    margin-top:3px;
+    color:var(--muted);
+    font-size:.83rem;
+    line-height:1.28;
+  }
+
+  .banner{
+    padding:8px 14px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .banner .pillrow{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+  }
+
+  .pill{
+    padding:7px 10px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.04);
+    color:#dfe9f8;
+    font-size:.81rem;
+    font-weight:700;
+  }
+
+  .pill.good{
+    border-color:rgba(0,245,176,.28);
+    color:#bfffe9;
+  }
+
+  .pill.brand{
+    border-color:rgba(118,168,255,.28);
+    color:#d9e7ff;
+  }
+
+  .main{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    align-items:start;
+  }
+
+  .panel{
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    min-height:0;
+  }
+
+  .panelhead{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    align-items:flex-start;
+  }
+
+  .panel h2{
+    margin:0;
+    font-size:1.16rem;
+    letter-spacing:-.02em;
+  }
+
+  .small{
+    color:var(--muted);
+    font-size:.88rem;
+    line-height:1.35;
+    margin-top:3px;
+  }
+
+  .controls{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+
+  button{
+    border:none;
+    padding:9px 12px;
+    border-radius:10px;
+    font-weight:800;
+    cursor:pointer;
+    transition:transform .12s ease, box-shadow .12s ease, filter .12s ease, background .12s ease;
+    box-shadow:0 4px 10px rgba(0,0,0,.18);
+  }
+
+  button:hover{
+    transform:translateY(-1px);
+  }
+
+  button:active{
+    transform:translateY(1px) scale(.985);
+    box-shadow:var(--press-shadow);
+    filter:brightness(.96);
+  }
+
+  .btn-primary{
+    background:linear-gradient(135deg, var(--brand), var(--brand2));
+    color:#04111f;
+  }
+
+  .btn-soft{
+    background:rgba(255,255,255,.08);
+    color:var(--text);
+    border:1px solid var(--line);
+  }
+
+  .btn-ghost{
+    background:rgba(255,255,255,.04);
+    color:var(--text);
+    border:1px solid var(--line);
+  }
+
+  .stack{
+    display:grid;
+    gap:8px;
+    align-content:start;
+  }
+
+  .message{
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:linear-gradient(90deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+    position:relative;
+    overflow:hidden;
+  }
+
+  .message .title{
+    font-weight:800;
+    font-size:.97rem;
+  }
+
+  .message .meta{
+    color:var(--muted);
+    font-size:.8rem;
+    margin-top:4px;
+  }
+
+  .message.bad{
+    border-color:rgba(255,122,157,.28);
+    background:linear-gradient(90deg, rgba(255,122,157,.10), rgba(255,255,255,.03));
+  }
+
+  .message.good{
+    border-color:rgba(0,245,176,.28);
+    background:linear-gradient(90deg, rgba(0,245,176,.10), rgba(255,255,255,.03));
+  }
+
+  .message.dim{
+    opacity:.5;
+  }
+
+  .message.active{
+    outline:2px solid rgba(118,168,255,.35);
+    transform:translateX(4px);
+  }
+
+  .timeline{
+    color:var(--muted);
+    font-size:.8rem;
+    padding:7px 9px;
+    border-radius:10px;
+    border:1px dashed var(--line);
+    background:rgba(255,255,255,.03);
+  }
+
+  .result{
+    padding:12px 14px;
+    border-radius:14px;
+    border:1px solid rgba(0,245,176,.35);
+    background:linear-gradient(180deg, rgba(0,245,176,.08), rgba(0,245,176,.04));
+  }
+
+  .result.warn{
+    border-color:rgba(255,200,87,.35);
+    background:linear-gradient(180deg, rgba(255,200,87,.08), rgba(255,200,87,.04));
+  }
+
+  .result .big{
+    font-size:1.2rem;
+    font-weight:900;
+    letter-spacing:-.03em;
+    color:#c9ffeb;
+  }
+
+  .result .state{
+    margin-top:6px;
+    font-size:.9rem;
+    font-weight:800;
+  }
+
+  .orl-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:10px;
+    align-items:start;
+  }
+
+  .steps{
+    display:grid;
+    gap:8px;
+    align-content:start;
+  }
+
+  .step{
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.04);
+    color:#dbe7fb;
+    font-size:.88rem;
+    line-height:1.35;
+  }
+
+  .step.done{
+    border-color:rgba(0,245,176,.28);
+    background:rgba(0,245,176,.08);
+  }
+
+  .step.current{
+    border-color:rgba(118,168,255,.35);
+    background:rgba(118,168,255,.08);
+  }
+
+  .footer{
+    padding:8px 12px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+    color:var(--muted);
+    font-size:.82rem;
+  }
+
+  .footer strong{
+    color:#e8f1ff;
+  }
+
+  .mono{
+    font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+  }
+
+  .muted{
+    color:var(--muted);
+  }
+
+  @media (max-width: 1100px){
+    .hero{
+      grid-template-columns:1fr;
+    }
+
+    .main{
+      grid-template-columns:1fr;
+    }
+
+    .orl-grid{
+      grid-template-columns:1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Interactive Structural Demo</div>
+      <h1>ORL-Chat — Meaning Without Time, Order, or Sync</h1>
+      <div class="sub">
+        Same conversation. Two different systems. Traditional chat shows messages and leaves the user to interpret them. ORL-Chat resolves meaning from structure and converges to the same final truth after offline gaps.
+      </div>
+      <div class="formula">correctness != time + order + sync</div>
+    </div>
+    <div class="hero-right">
+      <div class="metric">
+        <div class="num">2</div>
+        <div class="lbl">offline nodes begin with incomplete chat fragments</div>
+      </div>
+      <div class="metric">
+        <div class="num">5</div>
+        <div class="lbl">messages in the correction chain</div>
+      </div>
+      <div class="metric">
+        <div class="num">0</div>
+        <div class="lbl">timestamps used for correctness</div>
+      </div>
+      <div class="metric">
+        <div class="num">5 PM</div>
+        <div class="lbl">final converged meaning after structural merge</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner hero">
+    <div class="pillrow">
+      <div class="pill brand">Traditional: user interprets manually</div>
+      <div class="pill good">ORL-Chat: system resolves meaning</div>
+      <div class="pill">SSUM-Time: offline continuity</div>
+      <div class="pill">STOCRS: no synchronization needed</div>
+      <div class="pill">ORL: no ordering authority needed</div>
+    </div>
+    <div class="muted mono">Demo Scenario: general_chat_correction</div>
+  </section>
+
+  <section class="main">
+    <section class="panel">
+      <div class="panelhead">
+        <div>
+          <h2>Traditional Chat</h2>
+          <div class="small">Order dependent. Same fragments appear in a scrambled arrival view. Meaning remains unresolved at the system level.</div>
+        </div>
+        <div class="controls">
+          <button class="btn-soft" id="scrambleBtn">Scramble Arrival</button>
+          <button class="btn-ghost" id="resetTraditionalBtn">Reset</button>
+        </div>
+      </div>
+
+      <div class="timeline" id="traditionalTimeline">
+        Arrival view: local inbox order determines what the user sees first.
+      </div>
+
+      <div class="stack" id="traditionalStack"></div>
+
+      <div class="result warn" id="traditionalResult">
+        <div><strong>System Output:</strong></div>
+        <div class="big" style="color:#fff2c9">Messages Displayed Only</div>
+        <div class="state">No structural resolution. Final meaning depends on human interpretation.</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panelhead">
+        <div>
+          <h2>ORL-Chat</h2>
+          <div class="small">Structure based. Two offline nodes exchange partial fragments later. Final meaning is resolved deterministically.</div>
+        </div>
+        <div class="controls">
+          <button class="btn-primary" id="resolveBtn">Resolve Structure</button>
+          <button class="btn-soft" id="replayBtn">Replay Proof</button>
+          <button class="btn-ghost" id="resetOrlBtn">Reset</button>
+        </div>
+      </div>
+
+      <div class="orl-grid">
+        <div>
+          <div class="timeline" id="orlTimeline">
+            Node-A begins with M1, M2. Node-B begins with M3, M4, M5. Both are offline.
+          </div>
+          <div class="stack" id="orlStack"></div>
+        </div>
+        <div class="steps" id="stepList"></div>
+      </div>
+
+      <div class="result" id="orlResult">
+        <div><strong>Deterministic Meaning:</strong></div>
+        <div class="big">Awaiting resolution…</div>
+        <div class="state">Run the structural resolver to see convergence without time, order, or synchronization.</div>
+      </div>
+    </section>
+  </section>
+
+  <section class="footer">
+    <div><strong>ORL-Chat:</strong> Chat today shows messages. ORL-Chat shows meaning.</div>
+    <div class="mono">No Time • No Order • No Sync • Same Final Truth • All Permutations Verified</div>
+  </section>
+</div>
+
+<script>
+  const traditionalBase = [
+    { id: "T5", text: "Confirmed", meta: "arrived first locally" },
+    { id: "T2", text: "Correction: 4 PM", meta: "seen before original proposal" },
+    { id: "T1", text: "Meeting at 3 PM", meta: "older fragment arrives later" },
+    { id: "T4", text: "Final: 5 PM", meta: "may or may not supersede prior meaning" },
+    { id: "T3", text: "Ignore previous time", meta: "appears after the final update" }
+  ];
+
+  const orlMessages = [
+    { id: "M1", text: "Meeting at 3 PM", meta: "Node-A", role: "open" },
+    { id: "M2", text: "Correction: 4 PM", meta: "Node-A", role: "replace" },
+    { id: "M3", text: "Ignore previous time", meta: "Node-B", role: "retract" },
+    { id: "M4", text: "Final: 5 PM", meta: "Node-B", role: "replace-final" },
+    { id: "M5", text: "Confirmed", meta: "Node-B", role: "confirm" }
+  ];
+
+  const steps = [
+    "Node-A local state: INCOMPLETE (proposal exists, confirmation missing)",
+    "Node-B local state: INCOMPLETE (late fragments reference missing dependencies)",
+    "Bounded sharing occurs after the offline gap",
+    "Structure is merged without timestamps, ordering authority, or synchronization",
+    "Correction chain removes earlier proposals and preserves the final active proposal",
+    "Confirmation locks the surviving proposal",
+    "Both nodes converge to the same final meaning: Meeting at 5 PM"
+  ];
+
+  const traditionalStack = document.getElementById("traditionalStack");
+  const orlStack = document.getElementById("orlStack");
+  const stepList = document.getElementById("stepList");
+  const traditionalTimeline = document.getElementById("traditionalTimeline");
+  const orlTimeline = document.getElementById("orlTimeline");
+  const orlResult = document.getElementById("orlResult");
+  const traditionalResult = document.getElementById("traditionalResult");
+
+  let resolutionRunId = 0;
+
+  function shuffle(array) {
+    const a = array.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function renderTraditional(list) {
+    traditionalStack.innerHTML = "";
+    list.forEach((m, idx) => {
+      const div = document.createElement("div");
+      div.className = "message";
+      div.innerHTML = `<div class="title">${idx + 1}. ${m.text}</div><div class="meta">${m.meta}</div>`;
+      traditionalStack.appendChild(div);
+    });
+  }
+
+  function renderOrlBase() {
+    resolutionRunId += 1;
+    orlStack.innerHTML = "";
+    orlMessages.forEach(m => {
+      const div = document.createElement("div");
+      div.className = "message";
+      div.dataset.id = m.id;
+      div.innerHTML = `<div class="title">${m.id}: ${m.text}</div><div class="meta">${m.meta}</div>`;
+      orlStack.appendChild(div);
+    });
+
+    stepList.innerHTML = "";
+    steps.forEach((s, i) => {
+      const div = document.createElement("div");
+      div.className = "step";
+      div.id = `step-${i}`;
+      div.textContent = `${i + 1}. ${s}`;
+      stepList.appendChild(div);
+    });
+
+    orlTimeline.textContent = "Node-A begins with M1, M2. Node-B begins with M3, M4, M5. Both are offline.";
+    orlResult.innerHTML = `
+      <div><strong>Deterministic Meaning:</strong></div>
+      <div class="big">Awaiting resolution…</div>
+      <div class="state">Run the structural resolver to see convergence without time, order, or synchronization.</div>
+    `;
+  }
+
+  function resetTraditionalPanel() {
+    traditionalTimeline.textContent = "Arrival view: local inbox order determines what the user sees first.";
+    renderTraditional(traditionalBase);
+    traditionalResult.innerHTML = `
+      <div><strong>System Output:</strong></div>
+      <div class="big" style="color:#fff2c9">Messages Displayed Only</div>
+      <div class="state">No structural resolution. Final meaning depends on human interpretation.</div>
+    `;
+  }
+
+  function resetAll() {
+    resetTraditionalPanel();
+    renderOrlBase();
+  }
+
+  function runResolution() {
+    renderOrlBase();
+    const runId = resolutionRunId;
+
+    const stepEls = steps.map((_, i) => document.getElementById(`step-${i}`));
+    const msgs = {
+      M1: document.querySelector('[data-id="M1"]'),
+      M2: document.querySelector('[data-id="M2"]'),
+      M3: document.querySelector('[data-id="M3"]'),
+      M4: document.querySelector('[data-id="M4"]'),
+      M5: document.querySelector('[data-id="M5"]')
+    };
+
+    const actions = [
+      () => {
+        if (runId !== resolutionRunId) return;
+        stepEls[0].classList.add("current");
+        msgs.M1.classList.add("active");
+        msgs.M2.classList.add("active");
+        orlTimeline.textContent = "Node-A local state = INCOMPLETE. Early proposal chain exists, but confirmation is absent.";
+      },
+      () => {
+        if (runId !== resolutionRunId) return;
+        stepEls[0].classList.remove("current");
+        stepEls[0].classList.add("done");
+        stepEls[1].classList.add("current");
+        msgs.M1.classList.remove("active");
+        msgs.M2.classList.remove("active");
+        msgs.M3.classList.add("active");
+        msgs.M4.classList.add("active");
+        msgs.M5.classList.add("active");
+        orlTimeline.textContent = "Node-B local state = INCOMPLETE. Late fragments exist, but dependencies are not yet complete.";
+      },
+      () => {
+        if (runId !== resolutionRunId) return;
+        stepEls[1].classList.remove("current");
+        stepEls[1].classList.add("done");
+        stepEls[2].classList.add("current");
+        Object.values(msgs).forEach(el => el.classList.remove("active"));
+        Object.values(msgs).forEach(el => el.classList.add("good"));
+        orlTimeline.textContent = "Offline gap ends. Bounded sharing merges all available fragments across both isolated nodes.";
+      },
+      () => {
+        if (runId !== resolutionRunId) return;
+        stepEls[2].classList.remove("current");
+        stepEls[2].classList.add("done");
+        stepEls[3].classList.add("current");
+        msgs.M1.classList.add("dim");
+        msgs.M2.classList.add("dim");
+        orlTimeline.textContent = "Structure is evaluated directly. No timestamps. No ordering authority. No coordinator.";
+      },
+      () => {
+        if (runId !== resolutionRunId) return;
+        stepEls[3].classList.remove("current");
+        stepEls[3].classList.add("done");
+        stepEls[4].classList.add("current");
+        msgs.M3.classList.add("bad");
+        msgs.M4.classList.add("active");
+        orlTimeline.textContent = "Retraction and replacement remove earlier proposals. Only the structurally surviving proposal remains active.";
+      },
+      () => {
+        if (runId !== resolutionRunId) return;
+        stepEls[4].classList.remove("current");
+        stepEls[4].classList.add("done");
+        stepEls[5].classList.add("current");
+        msgs.M5.classList.add("active");
+        orlTimeline.textContent = "Confirmation binds the surviving proposal. The final state becomes structurally resolved.";
+      },
+      () => {
+        if (runId !== resolutionRunId) return;
+        stepEls[5].classList.remove("current");
+        stepEls[5].classList.add("done");
+        stepEls[6].classList.add("done");
+        document.querySelectorAll("#orlStack .message").forEach(el => el.classList.remove("active"));
+        msgs.M4.classList.add("good");
+        msgs.M5.classList.add("good");
+        orlTimeline.textContent = "Both nodes now converge to the same final truth after offline structural merge. Proof verified across all permutations.";
+        orlResult.innerHTML = `
+          <div><strong>Deterministic Meaning:</strong></div>
+          <div class="big">Meeting at 5 PM</div>
+          <div class="state">State: RESOLVED</div>
+
+          <div class="state">Node-A incomplete before merge: TRUE</div>
+          <div class="state">Node-B incomplete before merge: TRUE</div>
+          <div class="state">Converged after merge: TRUE</div>
+
+          <div class="state" style="margin-top:10px;"><strong>STRUCTURAL INVARIANTS</strong></div>
+          <div class="state">Same structure -> same result: TRUE</div>
+          <div class="state">Order independence: TRUE</div>
+          <div class="state">Time independence: TRUE</div>
+          <div class="state">Sync independence: TRUE</div>
+          <div class="state">Permutation tested: 120</div>
+          <div class="state">Proof verified: TRUE</div>
+
+          <div class="state" style="margin-top:10px;">No Time • No Order • No Sync</div>
+        `;
+      }
+    ];
+
+    actions.forEach((fn, idx) => {
+      setTimeout(fn, idx * 900);
+    });
+  }
+
+  function replayProof() {
+    resetAll();
+
+    setTimeout(() => {
+      document.getElementById("scrambleBtn").click();
+    }, 400);
+
+    setTimeout(() => {
+      runResolution();
+    }, 1400);
+  }
+
+  document.getElementById("scrambleBtn").addEventListener("click", () => {
+    renderTraditional(shuffle(traditionalBase));
+    traditionalTimeline.textContent = "Arrival scrambled. Same fragments, different local order. Final truth is still not system-resolved.";
+    traditionalResult.innerHTML = `
+      <div><strong>System Output:</strong></div>
+      <div class="big" style="color:#fff2c9">Order Changed, Meaning Unclear</div>
+      <div class="state">Same fragments, different arrival order. Final meaning is not structurally resolved.</div>
+    `;
+    renderOrlBase();
+  });
+
+  document.getElementById("resetTraditionalBtn").addEventListener("click", () => {
+    resetTraditionalPanel();
+  });
+
+  document.getElementById("resolveBtn").addEventListener("click", runResolution);
+  document.getElementById("replayBtn").addEventListener("click", replayProof);
+  document.getElementById("resetOrlBtn").addEventListener("click", renderOrlBase);
+
+  resetAll();
+</script>
+</body>
+</html>

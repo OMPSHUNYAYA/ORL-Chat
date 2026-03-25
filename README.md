@@ -13,6 +13,8 @@
 ![Replay-Verifiable](https://img.shields.io/badge/Replay-Verifiable-orange)
 ![Open-Standard](https://img.shields.io/badge/Reference%20Implementation-Open%20Standard-blue)
 
+![ORL-Chat Verify](https://github.com/OMPSHUNYAYA/ORL-Chat/actions/workflows/orl-chat-verify.yml/badge.svg)
+
 **Structure-Based Meaning Resolution • Open Reference Implementation**
 
 ---

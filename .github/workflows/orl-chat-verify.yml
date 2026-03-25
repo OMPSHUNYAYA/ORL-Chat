@@ -1,0 +1,54 @@
+name: ORL-Chat Verify
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run ORL-Chat demo
+        run: python demo/orl_chat_demo.py --write-output
+
+      - name: Verify output hash
+        run: |
+          expected=$(grep 'orl_chat_result_general_chat_correction.json' VERIFY/FREEZE_DEMO_SHA256.txt | awk '{print $NF}' | tr -d '\r')
+          actual=$(sha256sum outputs/orl_chat_result_general_chat_correction.json | awk '{print $1}')
+          if [ "$actual" != "$expected" ]; then
+            echo "Hash mismatch!"
+            echo "Expected: $expected"
+            echo "Actual:   $actual"
+            exit 1
+          fi
+
+      - name: Verify output content
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("outputs/orl_chat_result_general_chat_correction.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
+
+          assert data["name"] == "ORL-Chat"
+          assert data["input_file"] == "inputs/chat_fragments.json"
+          assert data["primary_topic"] == "meeting_time"
+          assert data["merged_state"]["meeting_time"]["final_value"] == "5 PM"
+          assert data["merged_state"]["meeting_time"]["state"] == "RESOLVED"
+          assert data["permutation_check"]["checked_permutations"] == 120
+          assert data["permutation_check"]["permutation_independence"] is True
+          assert data["proof_summary"]["structural_invariant_passed"] is True
+          PY

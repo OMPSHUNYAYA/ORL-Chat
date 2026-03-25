@@ -1,0 +1,112 @@
+{
+  "certificate": "dbfcd4cf65aa47e344908561b9ec10da37edd6283b43fa4cdb1b9af16b56a03b",
+  "certificate_checks": {
+    "both_incomplete_before": true,
+    "converged_after_merge": true,
+    "converged_before_merge": false,
+    "final_value_present": true,
+    "node_a_incomplete_before": true,
+    "node_b_incomplete_before": true,
+    "permutation_independence": true,
+    "resolved_after_merge": true
+  },
+  "input_file": "inputs/chat_fragments.json",
+  "merged_state": {
+    "meeting_time": {
+      "active_ids": [
+        "M4"
+      ],
+      "confirmed_ids": [
+        "M4"
+      ],
+      "final_message_id": "M4",
+      "final_text": "Final: 5 PM",
+      "final_value": "5 PM",
+      "invalid_ids": [],
+      "state": "RESOLVED"
+    }
+  },
+  "message_count": 5,
+  "name": "ORL-Chat",
+  "no_order_required": true,
+  "no_sync_required": true,
+  "no_time_required": true,
+  "node_count": 2,
+  "permutation_check": {
+    "baseline_signature_hash": "4795496490c8654db752ffd4333b7f3eac5c25cc8300f93eadf8456d13fd5372",
+    "checked_permutations": 120,
+    "permutation_independence": true
+  },
+  "primary_topic": "meeting_time",
+  "proof_summary": {
+    "meaning_reconstructed_without_order": true,
+    "meaning_reconstructed_without_sync": true,
+    "meaning_reconstructed_without_time": true,
+    "same_structure_same_result": true,
+    "structural_invariant_passed": true
+  },
+  "scenario": "general_chat_correction",
+  "state_a_after": {
+    "meeting_time": {
+      "active_ids": [
+        "M4"
+      ],
+      "confirmed_ids": [
+        "M4"
+      ],
+      "final_message_id": "M4",
+      "final_text": "Final: 5 PM",
+      "final_value": "5 PM",
+      "invalid_ids": [],
+      "state": "RESOLVED"
+    }
+  },
+  "state_a_before": {
+    "meeting_time": {
+      "active_ids": [
+        "M2"
+      ],
+      "confirmed_ids": [],
+      "invalid_ids": [],
+      "reason": "missing_confirmation",
+      "state": "INCOMPLETE"
+    }
+  },
+  "state_b_after": {
+    "meeting_time": {
+      "active_ids": [
+        "M4"
+      ],
+      "confirmed_ids": [
+        "M4"
+      ],
+      "final_message_id": "M4",
+      "final_text": "Final: 5 PM",
+      "final_value": "5 PM",
+      "invalid_ids": [],
+      "state": "RESOLVED"
+    }
+  },
+  "state_b_before": {
+    "meeting_time": {
+      "active_ids": [],
+      "confirmed_ids": [],
+      "invalid_ids": [
+        "M3",
+        "M4",
+        "M5"
+      ],
+      "reason": "missing_dependencies",
+      "state": "INCOMPLETE"
+    }
+  },
+  "topic_summaries": {
+    "meeting_time": {
+      "final_message_id": "M4",
+      "final_text": "Final: 5 PM",
+      "final_value": "5 PM",
+      "state": "RESOLVED",
+      "topic": "meeting_time"
+    }
+  }
+}

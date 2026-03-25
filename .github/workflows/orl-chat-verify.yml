@@ -20,25 +20,30 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Verify frozen source hashes
+        run: |
+          expected_demo=$(grep 'demo\\orl_chat_demo.py' VERIFY/FREEZE_DEMO_SHA256.txt | awk '{print $NF}' | tr -d '\r')
+          expected_html=$(grep 'demo\\orl_chat_interactive_demo.html' VERIFY/FREEZE_DEMO_SHA256.txt | awk '{print $NF}' | tr -d '\r')
+          expected_input=$(grep 'inputs\\chat_fragments.json' VERIFY/FREEZE_DEMO_SHA256.txt | awk '{print $NF}' | tr -d '\r')
+
+          actual_demo=$(sha256sum demo/orl_chat_demo.py | awk '{print $1}')
+          actual_html=$(sha256sum demo/orl_chat_interactive_demo.html | awk '{print $1}')
+          actual_input=$(sha256sum inputs/chat_fragments.json | awk '{print $1}')
+
+          [ "$actual_demo" = "$expected_demo" ] || (echo "demo hash mismatch" && exit 1)
+          [ "$actual_html" = "$expected_html" ] || (echo "html hash mismatch" && exit 1)
+          [ "$actual_input" = "$expected_input" ] || (echo "input hash mismatch" && exit 1)
+
       - name: Run ORL-Chat demo
         run: python demo/orl_chat_demo.py --write-output
 
-      - name: Verify output hash
-        run: |
-          expected=$(grep 'orl_chat_result_general_chat_correction.json' VERIFY/FREEZE_DEMO_SHA256.txt | awk '{print $NF}' | tr -d '\r')
-          actual=$(sha256sum outputs/orl_chat_result_general_chat_correction.json | awk '{print $1}')
-          if [ "$actual" != "$expected" ]; then
-            echo "Hash mismatch!"
-            echo "Expected: $expected"
-            echo "Actual:   $actual"
-            exit 1
-          fi
-
-      - name: Verify output content
+      - name: Verify output content and certificate
         run: |
           python - <<'PY'
           import json
+          import hashlib
           from pathlib import Path
+          from copy import deepcopy
 
           p = Path("outputs/orl_chat_result_general_chat_correction.json")
           data = json.loads(p.read_text(encoding="utf-8"))
@@ -51,4 +56,17 @@ jobs:
           assert data["permutation_check"]["checked_permutations"] == 120
           assert data["permutation_check"]["permutation_independence"] is True
           assert data["proof_summary"]["structural_invariant_passed"] is True
+          assert data["certificate_checks"]["node_a_incomplete_before"] is True
+          assert data["certificate_checks"]["node_b_incomplete_before"] is True
+          assert data["certificate_checks"]["resolved_after_merge"] is True
+
+          certificate = data["certificate"]
+          payload = deepcopy(data)
+          del payload["certificate"]
+
+          canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+          recomputed = hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+          assert recomputed == certificate, f"certificate mismatch: {recomputed} != {certificate}"
+          print("Output content and certificate verified.")
           PY

@@ -1,378 +1,759 @@
 # ⭐ ORL-Chat — Test Guide
 
-**Orderless Chat — Structural Meaning System**
+**Deterministic Bounded Conversation-State Resolution**
 
-**Deterministic • Order-Free • Time-Independent Meaning Resolution**
+This guide explains how to run and evaluate the current ORL-Chat demonstrations.
 
-Powered by Shunyaya Framework (STOCRS + SSUM-Time + ORL)
+The governing relation is:
+
+`same deduplicated supported message fragments + same resolver rules -> same bounded conversation-state result`
+
+ORL-Chat is developed within the Shunyaya Framework.
 
 ---
 
-# ⚡ Start Here — Run the Demo (Recommended)
+# 1. Test Scope
+
+The current repository contains two different demonstration types:
+
+- a Python reference implementation
+- a scripted browser presentation
+
+The Python implementation performs the actual bounded resolver calculation and checks all `5! = 120` permutations of the committed five-message scenario.
+
+The browser demonstration visually presents the same scenario but does not independently execute the full Python resolver or enumerate the `120` permutations.
+
+Therefore:
+
+- use the browser for visual understanding
+- use the Python implementation for behavioral checking
+- use the frozen SHA-256 file for artifact-identity checking
+
+These are separate verification activities.
+
+---
+
+# 2. Repository Files Used
+
+## Python reference implementation
+
+`demo/orl_chat_demo.py`
+
+## Browser demonstration
+
+`demo/orl_chat_interactive_demo.html`
+
+## Committed scenario input
+
+`inputs/chat_fragments.json`
+
+## Optional generated output
+
+`outputs/orl_chat_result_general_chat_correction.json`
+
+## Verification instructions
+
+`VERIFY/VERIFY.txt`
+
+## Frozen demo hashes
+
+`VERIFY/FREEZE_DEMO_SHA256.txt`
+
+---
+
+# 3. Quick Visual Demonstration
 
 Open:
 
 `demo/orl_chat_interactive_demo.html`
 
-Then:
+No web server is required for the current browser presentation.
 
-Click → **Replay Proof**
+Use the controls:
 
-That’s it.
+- **Scramble Arrival**
+- **Resolve Structure**
+- **Replay Proof**
+- **Reset**
 
----
+The **Replay Proof** button should be interpreted as a scripted visual replay of the Python reference result.
 
-# 🧪 Advanced Scenario (Optional)
-
-Run the Python reference implementation:
-
-`python demo/orl_chat_demo.py --write-output`
-
-This provides:
-
-- deterministic structural resolution  
-- JSON output for verification  
-- reproducible meaning resolution  
-
-The core principle remains identical:
-
-**meaning emerges purely from structure**
+It is not an independently reconstructed browser proof.
 
 ---
 
-# 👀 What You Will See
+# 4. What the Browser Demonstration Shows
 
-- Two independent chat systems (Node A, Node B)  
-- Each node starts with different message fragments  
-- No timestamps anywhere  
-- No message ordering enforced  
-- No coordination between systems  
+The browser presents:
 
-Then:
+- one traditional arrival-order view
+- two initial partial node views
+- a scripted fragment-sharing step
+- explicit correction and confirmation relationships
+- the expected final bounded result
 
-- Structure is shared  
-- Corrections override earlier meanings  
-- Retractions remove invalid states  
-- Final meaning is selected  
-- Confirmation locks the final state  
-- Both nodes converge to the same meaning  
+The displayed final result is:
 
----
+```text
+State       = RESOLVED
+Final Value = Meeting at 5 PM
+```
 
-# 🧭 What This Demo Is Showing
+The browser also displays labels such as:
 
-ORL-Chat is not a traditional chat system.
+```text
+Permutation tested: 120
+Proof verified: TRUE
+```
 
-Instead of:
+These labels visually reproduce the expected Python result.
 
-- displaying messages in order  
-- relying on timestamps  
-- depending on synchronization  
+The browser itself does not currently:
 
-It:
-
-- evaluates conversational structure  
-- resolves only valid semantic states  
-- eliminates ambiguity deterministically  
-- converges to a single meaning  
+- execute the full Python resolver
+- enumerate all `120` permutations
+- reconstruct the Python result hash
+- establish Python-browser conformance
 
 ---
 
-# 🎮 Main Controls
+# 5. Browser Control Guide
 
-## Scramble Arrival
+## 5.1 Scramble Arrival
 
-Randomizes message order.
+This control randomizes the displayed order in the traditional-chat panel.
 
-Demonstrates:
+It demonstrates that the visible presentation order can change.
 
-- order dependence in traditional chat  
-- ambiguity without structure  
+It does not alter the committed Python input file or run the structural resolver.
 
----
+Expected observation:
 
-## Resolve Structure
+```text
+Order Changed, Meaning Unclear
+```
 
-Applies structural resolution logic.
-
-Result:
-
-- deterministic meaning  
-- convergence without time, order, or sync  
+The randomization affects only the visual traditional-chat list.
 
 ---
 
-## Replay Proof
+## 5.2 Resolve Structure
 
-Runs full sequence automatically:
+This control plays the scripted ORL-Chat resolution sequence.
 
-- scramble  
-- ambiguity  
-- structural resolution  
-- convergence  
+Expected visual stages include:
 
-Best for:
+- Node-A begins incomplete
+- Node-B begins incomplete
+- fragments are shared
+- explicit relationships are evaluated
+- earlier proposals are removed
+- the surviving proposal is confirmed
+- the displayed state becomes `RESOLVED`
 
-- first-time users  
-- presentations  
-- validation  
+Expected final displayed value:
 
----
-
-## Reset (Left / Right)
-
-**Left Reset**
-
-- resets traditional chat view  
-- shows message-based ambiguity  
-
-**Right Reset**
-
-- resets ORL system  
-- returns to unresolved structural state  
+```text
+Meeting at 5 PM
+```
 
 ---
 
-# 🔬 Demo Stages
+## 5.3 Replay Proof
 
-## Fragmented State
+This control:
 
-Each node sees partial messages.
+- resets the visual presentation
+- scrambles the traditional arrival view
+- runs the scripted resolution sequence
 
-Example:
+It is useful for:
 
-**Node A**
+- first-time viewing
+- presentations
+- visual walkthroughs
 
-- M1: Meeting at 3 PM  
-- M2: Correction: 4 PM  
-
-**Node B**
-
-- M3: Ignore previous time  
-- M4: Final: 5 PM  
-- M5: Confirmed  
-
-Result:
-
-- meaning is **INCOMPLETE**  
-- no final resolution possible  
+It does not independently verify the Python implementation.
 
 ---
 
-## Structural Interpretation
+## 5.4 Reset Controls
 
-System evaluates relationships:
+The left reset restores the traditional-chat panel.
 
-- corrections override earlier values  
-- retractions invalidate prior meaning  
-- final statements take precedence  
-- confirmations lock meaning  
+The right reset restores the ORL-Chat panel to its initial visual state.
 
-Result:
-
-- candidate meanings filtered  
-- ambiguity reduced  
+Neither reset changes repository files.
 
 ---
 
-## Final Resolution
+# 6. Run the Python Reference Implementation
 
-All structure becomes available.
+From the repository root, run:
 
-Result:
+```text
+python demo/orl_chat_demo.py
+```
 
-- final meaning → **RESOLVED**  
-- both nodes converge  
-- deterministic output achieved  
+On Windows, this may also be:
 
-Final:
+```text
+py demo/orl_chat_demo.py
+```
 
-**Meeting at 5 PM**
+The script should load:
+
+`inputs/chat_fragments.json`
+
+and print the bounded scenario result.
 
 ---
 
-# ⚖️ Meaning States
+# 7. Write the JSON Result
+
+Run:
+
+```text
+python demo/orl_chat_demo.py --write-output
+```
+
+Expected output file:
+
+`outputs/orl_chat_result_general_chat_correction.json`
+
+The written file is sorted and formatted for human readability.
+
+Compact canonical JSON serialization is used internally for signatures and SHA-256 hashing.
+
+---
+
+# 8. Expected Scenario Identity
+
+Expected scenario name:
+
+```text
+general_chat_correction
+```
+
+Expected message count:
+
+```text
+5
+```
+
+Expected node count:
+
+```text
+2
+```
+
+Expected primary topic:
+
+```text
+meeting_time
+```
+
+The exact primary topic should match the committed input file.
+
+---
+
+# 9. Expected Pre-Merge Results
+
+The committed initial views are:
+
+```text
+Node-A = M1, M2
+Node-B = M3, M4, M5
+```
+
+Expected local states before sharing:
+
+```text
+Node-A = INCOMPLETE
+Node-B = INCOMPLETE
+```
+
+Expected certificate checks:
+
+```text
+node_a_incomplete_before = True
+node_b_incomplete_before = True
+both_incomplete_before   = True
+```
+
+Expected equality before sharing:
+
+```text
+converged_before_merge = False
+```
+
+The two nodes begin with materially different fragment collections.
+
+---
+
+# 10. Expected Post-Merge Results
+
+After the scripted bounded sharing operation, both nodes receive the same deduplicated supported fragments.
+
+Expected final state:
+
+```text
+RESOLVED
+```
+
+Expected final message identifier:
+
+```text
+M4
+```
+
+Expected final declared value:
+
+```text
+Meeting at 5 PM
+```
+
+Expected final text should correspond to the committed `M4` fragment.
+
+Expected equality result:
+
+```text
+converged_after_merge = True
+```
+
+This means both nodes produce the same bounded resolver state after equal evidence is installed.
+
+It does not establish an autonomous networking or consensus protocol.
+
+---
+
+# 11. Expected Permutation Check
+
+The Python implementation deduplicates the committed fragments and evaluates every permutation.
+
+For five unique fragments:
+
+`5! = 120`
+
+Expected result:
+
+```text
+checked_permutations     = 120
+permutation_independence = True
+```
+
+The baseline state-signature hash should be present.
+
+This is an exhaustive result for the committed five-message scenario under the current Python implementation.
+
+It is not a universal order-independence proof for arbitrary conversations or implementations.
+
+---
+
+# 12. Expected Structural Check Summary
+
+The current console output should report values equivalent to:
+
+```text
+Node-A incomplete first  : True
+Node-B incomplete first  : True
+Both incomplete first    : True
+Resolved after merge     : True
+Final value present      : True
+Permutation independence : True
+Permutations checked     : 120
+```
+
+Expected overall bounded invariant result:
+
+```text
+structural_invariant_passed = True
+```
+
+Some no-time, no-order, and no-sync fields in the current result object are declared as `True` rather than independently reconstructed.
+
+They should therefore be interpreted only within the documented current-model boundary.
+
+---
+
+# 13. Message Relationship Check
+
+The committed scenario should contain a relationship chain equivalent to:
+
+```text
+M1 = OPEN
+M2 = REPLACE
+M3 = RETRACT
+M4 = REPLACE
+M5 = CONFIRM
+```
+
+Expected structural effect:
+
+```text
+M1 and M2 do not remain the final active proposal
+M3 participates in the declared correction chain
+M4 remains the final active proposal
+M5 confirms M4
+```
+
+Expected bounded result:
+
+```text
+one confirmed active proposal -> RESOLVED
+```
+
+The test does not establish unrestricted natural-language understanding.
+
+---
+
+# 14. Resolution-State Behavior
+
+The implementation contains classification paths for:
+
+- `RESOLVED`
+- `INCOMPLETE`
+- `ABSTAIN`
 
 ## RESOLVED
 
-Final meaning exists and is structurally consistent  
+The current resolver returns `RESOLVED` when exactly one confirmed proposal remains active.
 
----
+`count(confirmed_active_proposals) = 1 -> RESOLVED`
 
-## INCOMPLETE
-
-Missing required semantic elements  
-
-Result:
-
-- no assumption  
-- no premature resolution  
-
----
+Under the current branch order, this takes precedence even if additional unconfirmed active proposals remain.
 
 ## ABSTAIN
 
-Conflicting or unsafe meaning  
+The current resolver returns `ABSTAIN` when:
 
-Result:
+`count(confirmed_active_proposals) > 1`
 
-- no incorrect interpretation  
-- ambiguity is contained  
+or when:
 
----
+`count(confirmed_active_proposals) = 0 AND count(active_proposals) > 1`
 
-# 🔍 Key Messages in ORL-Chat Demo
+## INCOMPLETE
 
-- **M1 — Initial Proposal** → Meeting at 3 PM  
-- **M2 — Correction** → Updates time to 4 PM  
-- **M3 — Retraction** → Invalidates earlier time  
-- **M4 — Final Statement** → Meeting at 5 PM  
-- **M5 — Confirmation** → Locks final meaning  
+The current resolver returns `INCOMPLETE` when, for example:
 
----
+- one active proposal lacks confirmation
+- dependencies are missing
+- no proposal can be resolved
 
-# 📊 What to Observe Carefully
+The committed five-message scenario directly exercises `INCOMPLETE` and `RESOLVED`.
 
-## No Time Anywhere
-
-There are:
-
-- no timestamps  
-- no clocks  
-- no ordering  
+It does not directly exercise every `ABSTAIN`, cycle, malformed-input, or duplicate-insertion path.
 
 ---
 
-## Different Start States
+# 15. Exact-Duplicate Behavior
 
-Node A ≠ Node B initially  
+The current duplicate key includes:
 
----
+```text
+id
+topic
+kind
+text
+value
+targets
+```
 
-## Same Final Meaning
+The intended current-model relation is:
 
-After resolution:
+`D(D(M)) = D(M)`
 
-Node A == Node B  
+The committed implementation contains exact-duplicate absorption.
 
----
+However, the main five-message scenario should not be treated as a complete duplicate-safety test unless duplicate vectors are separately included and asserted.
 
-## Structural Safety
+Exact-duplicate absorption does not prove:
 
-Observe:
-
-- no ambiguity after resolution  
-- no conflicting interpretation  
-- no dependence on order  
-
----
-
-## Structural Invariants
-
-- Same structure → same result  
-- Order independence → TRUE  
-- Time independence → TRUE  
-- Sync independence → TRUE  
-- Permutations tested → 120  
-- Proof verified → TRUE  
+- general replay prevention
+- sender authentication
+- safe identifier reuse
+- transport idempotency
+- message authenticity
 
 ---
 
-# 🔁 Deterministic Behavior
+# 16. Dependency and Cycle Behavior
 
-Run the demo multiple times.
+The implementation contains paths for reasons including:
 
-You will observe:
+```text
+cyclic_dependency
+invalid_open
+missing_targets
+missing_dependency
+dependency_not_satisfied
+missing_value
+unknown_kind
+```
 
-- identical final meaning  
-- identical resolution steps  
-- identical invariants  
+The main committed scenario does not exercise every path.
 
----
+A later conformance suite should include dedicated vectors for:
 
-# 🔁 Replay Guarantee
-
-Given the same structure:
-
-`resolve(structure) -> identical meaning`
-
-This ensures:
-
-- reproducibility  
-- auditability  
-- verification without ambiguity  
-
-No probabilistic behavior exists.
-
-Independent systems produce identical meaning.
+- missing target
+- cyclic dependency
+- unknown kind
+- missing value
+- conflicting identifier reuse
+- malformed required fields
 
 ---
 
-# 📌 Key Insight
+# 17. Deterministic Repeatability Check
 
-ORL-Chat does not require:
+Run the unchanged Python command multiple times:
 
-- time  
-- order  
-- synchronization  
+```text
+python demo/orl_chat_demo.py
+```
 
-It requires only:
+Expected stable fields include:
 
-- **structure**
+- scenario name
+- message count
+- node count
+- primary topic
+- pre-merge states
+- post-merge state
+- final declared value
+- permutation count
+- permutation result
+- baseline state-signature hash
+- replay certificate
 
----
+For unchanged files, inputs, Python behavior, and resolver rules, these values should remain the same.
 
-# 📐 Core Resolution Identity
+This is implementation repeatability.
 
-`meaning = resolve(structure)`
-
----
-
-# 🔁 Structural Convergence Invariant
-
-`arrival_structure_A != arrival_structure_B  
--> resolve(S_A) == resolve(S_B)`
-
-Provided:
-
-S_A and S_B converge to the same structural set  
-
----
-
-# ⚡ Suggested 1-Minute Demo Flow
-
-Click **Replay Proof**
-
-Observe:
-
-- scrambled messages  
-- ambiguous state  
-- structural resolution  
-- deterministic meaning  
-
-Then:
-
-Click **Reset**
-
-Repeat with manual controls  
+It is not a universal cross-platform or cross-language conformance guarantee.
 
 ---
 
-# 🧠 What This Proves
+# 18. Result Hash Check
 
-A communication system can:
+The implementation computes hashes from compact canonical JSON using:
 
-- start with incomplete messages  
-- receive unordered inputs  
-- operate without clocks  
-- avoid synchronization  
+```text
+sort_keys = True
+separators = (",", ":")
+UTF-8 encoding
+SHA-256
+```
 
-And still:
+Expected relation:
 
-arrive at the same final meaning  
+`same canonical result bytes -> same SHA-256 hash`
+
+The console should display:
+
+- a state-signature hash
+- a replay certificate hash
+
+A stable hash shows deterministic identity for the current serialized result object.
+
+It does not prove:
+
+- semantic truth
+- behavioral correctness
+- message authenticity
+- independent reconstruction
+- security
+- production safety
 
 ---
 
-# ⭐ One-Line Summary
+# 19. Frozen Artifact Hash Check
 
-ORL-Chat demonstrates that conversations starting with fragmented and unordered messages can converge deterministically to the same final meaning — without relying on time, order, synchronization, or coordination — by resolving only structurally valid meaning while safely handling incomplete and conflicting states.
+Follow:
+
+`VERIFY/VERIFY.txt`
+
+and compare the committed demo files against:
+
+`VERIFY/FREEZE_DEMO_SHA256.txt`
+
+Expected relation:
+
+`same file bytes -> same SHA-256 hash`
+
+A successful comparison establishes artifact identity only.
+
+It does not establish that the program behaves correctly.
+
+Regenerate frozen hashes only after intentional file changes and after completing the relevant behavioral checks.
+
+---
+
+# 20. Pass Criteria
+
+The current committed reference scenario passes when all of the following are observed:
+
+- the Python script executes without an unexpected exception
+- the committed input file is loaded
+- Node-A is `INCOMPLETE` before sharing
+- Node-B is `INCOMPLETE` before sharing
+- the nodes are unequal before sharing
+- both nodes receive the same deduplicated supported evidence after sharing
+- both nodes produce equal post-sharing resolver states
+- the final state is `RESOLVED`
+- the final message identifier is `M4`
+- the final declared value is `Meeting at 5 PM`
+- all `120` supplied-scenario permutations match the baseline resolver state
+- the result hashes are produced
+- repeated unchanged runs reproduce the same bounded results
+
+---
+
+# 21. Fail Criteria
+
+The current scenario fails review if any of the following occurs:
+
+- the script cannot load the committed input
+- an unexpected exception occurs on the committed input
+- either node is not `INCOMPLETE` before sharing
+- the nodes incorrectly match before sharing
+- the post-sharing node states differ
+- the final state is not `RESOLVED`
+- the final message identifier is not `M4`
+- the final declared value is not `Meeting at 5 PM`
+- fewer or more than `120` unique-fragment permutations are checked
+- any tested permutation produces a different bounded state signature
+- repeated unchanged runs produce materially different bounded results
+- a frozen artifact hash fails without an intentional file change
+
+---
+
+# 22. What a Passing Result Establishes
+
+A passing committed scenario establishes that the current Python implementation:
+
+- loaded the committed supported fragments
+- produced the documented pre-merge and post-merge states
+- produced same-evidence node equality after scripted sharing
+- selected the declared value `Meeting at 5 PM`
+- reproduced the same bounded state across all `120` committed-fragment permutations
+- generated deterministic hashes for the current serialized result
+
+These are bounded implementation and scenario results.
+
+---
+
+# 23. What a Passing Result Does Not Establish
+
+A passing result does not prove:
+
+- unrestricted natural-language understanding
+- universal meaning resolution
+- factual truth
+- speaker identity
+- message authenticity
+- authorization
+- encryption
+- access control
+- delivery guarantees
+- network convergence
+- consensus
+- Byzantine fault tolerance
+- immutable finality
+- conflict repair
+- complete replay prevention
+- complete malformed-input safety
+- universal order independence
+- universal time independence
+- Python-browser conformance
+- production readiness
+- safe operation on arbitrary or hostile input
+
+---
+
+# 24. Browser and Python Comparison
+
+The browser and Python demonstrations currently have different roles.
+
+## Python
+
+The Python implementation:
+
+- loads the committed JSON input
+- executes the resolver
+- compares node states
+- evaluates all `120` permutations
+- computes deterministic hashes
+- optionally writes a result file
+
+## Browser
+
+The browser demonstration:
+
+- visually scrambles a traditional arrival list
+- visually presents partial node views
+- plays a scripted structural-resolution sequence
+- displays the expected Python result
+
+The browser does not independently establish equality with the Python implementation.
+
+A future revision should add a shared conformance corpus and execute the same resolver rules in both environments.
+
+---
+
+# 25. Suggested One-Minute Review Flow
+
+1. Open `demo/orl_chat_interactive_demo.html`.
+2. Click **Scramble Arrival**.
+3. Click **Resolve Structure**.
+4. Confirm that the displayed final value is `Meeting at 5 PM`.
+5. Run `python demo/orl_chat_demo.py`.
+6. Confirm both pre-merge states are `INCOMPLETE`.
+7. Confirm the post-merge state is `RESOLVED`.
+8. Confirm `converged_after_merge = True`.
+9. Confirm `checked_permutations = 120`.
+10. Confirm `permutation_independence = True`.
+11. Run again and compare the stable result fields.
+12. Check frozen file hashes separately.
+
+---
+
+# 26. Future Test Expansion
+
+A stronger test suite should add:
+
+- formal schema-validity vectors
+- explicit invalid-input refusal vectors
+- duplicate-insertion vectors
+- conflicting identifier-reuse vectors
+- missing-target vectors
+- dependency-cycle vectors
+- multiple-confirmed-proposal vectors
+- multiple-unconfirmed-active-proposal vectors
+- one-confirmed-plus-one-unconfirmed-active vectors
+- multi-topic vectors
+- large-graph vectors
+- selected permutation corpora
+- metamorphic property tests
+- canonical byte-serialization vectors
+- Python-browser conformance vectors
+- independent receipt reconstruction
+- ruleset-version binding
+- structural-closure tests
+
+Future target relation:
+
+`same validated canonical message fragments + same ruleset version -> same independently verified bounded conversation-state result`
+
+This stronger target is not part of the current demonstration.
+
+---
+
+# ⭐ Final Test Statement
+
+The current ORL-Chat Python reference implementation passes its committed scenario when two initially incomplete nodes receive the same deduplicated supported five-message fragment set, produce the same `RESOLVED` bounded conversation state, select the declared value `Meeting at 5 PM`, and reproduce that state across all `120` permutations of the committed fragments.
+
+The browser provides a visual replay of that result.
+
+Neither demonstration establishes unrestricted language understanding, truth, delivery, consensus, security, finality, or production correctness.

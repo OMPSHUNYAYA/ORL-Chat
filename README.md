@@ -1,12 +1,26 @@
-# ORL-Chat v2.0.0
+# ⭐ ORL-Chat v2.0.0
 
-## Deterministic Bounded Conversation-Evidence Reconciliation
+## **Deterministic Bounded Conversation-Evidence Reconciliation**
+
+![ORL-Chat](https://img.shields.io/badge/ORL--Chat-Bounded%20Conversation%20Evidence-black)
+![Version](https://img.shields.io/badge/Version-2.0.0-blue)
+![Python Reference](https://img.shields.io/badge/Python%20Reference-2955%2F2955%20PASS-green)
+![Independent Verifier](https://img.shields.io/badge/Independent%20Verifier-173%2F173%20PASS-green)
+![Cross-Language Parity](https://img.shields.io/badge/Cross--Language%20Parity-442%2F442%20PASS-green)
+![Bundle Parity](https://img.shields.io/badge/Bundle%20Parity-17%2F17%20PARITY-green)
+![Parser Parity](https://img.shields.io/badge/Parser%20Parity-8%2F8%20PARITY-green)
+![Property Assertions](https://img.shields.io/badge/Property%20Assertions-256%2F256%20PASS-green)
+![Capsule Parity](https://img.shields.io/badge/Capsule%20Parity-310%2F310%20PASS-green)
+![Graph Depth](https://img.shields.io/badge/Graph%20Depth-256-purple)
+![Orderless Resolution](https://img.shields.io/badge/Arrival%20Order-Not%20Resolution%20Authority-lightgrey)
+
+[![ORL-Chat Deterministic Verification](https://github.com/OMPSHUNYAYA/ORL-Chat/actions/workflows/orl-chat-verify.yml/badge.svg?branch=main)](https://github.com/OMPSHUNYAYA/ORL-Chat/actions/workflows/orl-chat-verify.yml)
 
 ORL-Chat resolves the current declared state of supported proposals, amendments, withdrawals, endorsements, and objections from validated canonical conversation evidence.
 
 Its governing contract is:
 
-`same admitted canonical conversation evidence + same bound conversation context + same ruleset + same text profile + same participation profile + same boundary declaration -> same bounded conversation-state bundle or deterministic refusal`
+`same admitted canonical conversation evidence + same bound conversation context + same ruleset + same participation profile + same boundary declaration + same resource limits + same text profile -> same bounded conversation-state bundle or deterministic refusal`
 
 Message arrival position and wall-clock timestamps are not used as resolution authority within the declared model.
 
@@ -17,6 +31,45 @@ ORL-Chat operates on declared typed structure. It does not infer unrestricted la
 ## 🧭 Visual Overview
 
 ![ORL-Chat Structural Overview](docs/ORL-Chat-Structural-Overview.png)
+
+---
+
+## 🔗 Quick Links
+
+### 📘 Documentation
+
+- [Quickstart](docs/Quickstart.md)
+- [Architecture](docs/Architecture.md)
+- [Conversation-State Capsule](docs/Conversation_State_Capsule.md)
+- [Text Profile](docs/Text_Profile.md)
+- [Claim and Threat Boundary](docs/Claim_and_Threat_Boundary.md)
+- [Integration Guide](docs/Integration_Guide.md)
+- [Verification Guide](docs/Verification_Guide.md)
+- [FAQ](docs/FAQ.md)
+- [Structural Overview](docs/ORL-Chat-Structural-Overview.png)
+
+### ⚙️ Reference Implementations and Browser Laboratories
+
+- [Python Reference Kernel](demo/ORL_Chat_Reference_Kernel_v2_0_0.py)
+- [JavaScript Browser Resolver](demo/ORL_Chat_Browser_Resolver_v2_0_0.js)
+- [Structural Laboratory](demo/ORL_Chat_Structural_Lab_v2_0_0.html)
+- [Conversation-State Capsule Laboratory](demo/ORL_Chat_Capsule_Lab_v2_0_0.html)
+- [Python Conversation-State Capsule Implementation](demo/ORL_Chat_Conversation_State_Capsule_v2_0_0.py)
+- [JavaScript Conversation-State Capsule Implementation](demo/ORL_Chat_Conversation_State_Capsule_v2_0_0.js)
+
+### 🔍 Verification and Evidence
+
+- [Complete Cross-Platform Verification Runner](VERIFY_ALL.py)
+- [GitHub Actions Verification Workflow](.github/workflows/orl-chat-verify.yml)
+- [Independent Python Verifier](verifier/ORL_Chat_Independent_Verifier_v2_0_0.py)
+- [Python-JavaScript Cross-Check](verifier/ORL_Chat_Cross_Language_Cross_Check_v2_0_0.py)
+- [Seeded Property Verifier](verifier/ORL_Chat_Seeded_Property_Verifier_v2_0_0.py)
+- [Frozen Corpus Manifest](corpus/ORL_Chat_Frozen_Corpus_Manifest_v2_0_0.json)
+- [Cross-Language Parity Vectors](parity/ORL_Chat_Cross_Language_Parity_Vectors_v2_0_0.json)
+- [Conversation-State Capsule Vectors](capsules/ORL_Chat_Conversation_State_Capsule_Vectors_v2_0_0.json)
+- [Selected-File SHA-256 Checksums](hashes/SHA256SUMS.txt)
+- [Complete Verification Summary](VERIFY/ORL_Chat_Complete_Verification_Summary_v2_0_0.txt)
+- [Verification Entry Point](VERIFY/VERIFY.txt)
 
 ---
 
@@ -38,6 +91,7 @@ ORL-Chat operates on declared typed structure. It does not infer unrestricted la
 - A live Python-JavaScript cross-implementation checker.
 - A reproducible seeded property verifier for generated bounded graphs.
 - Hostile-input, falsification, mutation, graph-depth, cycle, privacy, order, partition, duplicate, relay, and tamper assurance.
+- Automated GitHub Actions verification on pushes and pull requests to `main`.
 
 ---
 
@@ -51,7 +105,7 @@ ORL-Chat operates on declared typed structure. It does not infer unrestricted la
 
 ### Complete verification
 
-From the `Public_Release` directory, use any one of these commands:
+From the repository root, use any one of these commands:
 
 ```text
 python -B VERIFY_ALL.py
@@ -69,7 +123,7 @@ when every included verification stage succeeds.
 
 ### Open the browser laboratories
 
-For the most consistent browser behavior, start a local HTTP server from the `Public_Release` directory:
+For the most consistent browser behavior, start a local HTTP server from the repository root:
 
 ```text
 python -m http.server 8000
@@ -90,7 +144,7 @@ The HTML files may also be opened directly, but some browsers display `file:` or
 
 ## Current Verification Evidence
 
-The included verification reports record the following passing results:
+The included verification reports and the automated GitHub Actions workflow record the following passing results:
 
 ```text
 Python reference kernel:                         2955/2955 PASS
@@ -107,6 +161,8 @@ Adversarial assurance:                                154/154 PASS
 Capsule cross-language parity:                        310/310 PASS
 Selected-file SHA-256 verification:                        PASS
 ```
+
+The [ORL-Chat Deterministic Verification workflow](.github/workflows/orl-chat-verify.yml) checks the frozen 14-file SHA-256 checkpoint, runs the complete cross-platform verifier on Ubuntu, validates the expected totals and profile identities, and confirms that verification does not alter tracked files or create untracked artifacts.
 
 The live Python-JavaScript and seeded-property verifiers decode Node subprocess output explicitly as strict UTF-8, so their behavior does not depend on the Windows active code page.
 
@@ -337,12 +393,13 @@ The verifier uses `ORL-CHAT-SPLITMIX64-2-D01`, so the same seed defines the same
 ## Package Structure
 
 ```text
-Public_Release/
+ORL-Chat/
   README.md
   LICENSE
   VERIFY_ALL.py     shared cross-platform verification runner
   VERIFY_ALL.bat    Windows wrapper
   verify_all.sh     Linux and macOS wrapper
+  .github/         automated deterministic verification workflow
   demo/            reference and browser implementations
   verifier/        independent verification, live cross-check, property, and parity tooling
   corpus/          frozen bounded conversation scenarios
@@ -360,14 +417,14 @@ Public_Release/
 
 ## Documentation
 
-- `docs/Quickstart.md`
-- `docs/Architecture.md`
-- `docs/Conversation_State_Capsule.md`
-- `docs/Integration_Guide.md`
-- `docs/Verification_Guide.md`
-- `docs/Claim_and_Threat_Boundary.md`
-- `docs/FAQ.md`
-- `docs/Text_Profile.md`
+- [Quickstart](docs/Quickstart.md)
+- [Architecture](docs/Architecture.md)
+- [Conversation-State Capsule](docs/Conversation_State_Capsule.md)
+- [Integration Guide](docs/Integration_Guide.md)
+- [Verification Guide](docs/Verification_Guide.md)
+- [Claim and Threat Boundary](docs/Claim_and_Threat_Boundary.md)
+- [FAQ](docs/FAQ.md)
+- [Text Profile](docs/Text_Profile.md)
 
 ---
 
@@ -403,7 +460,7 @@ Strings are preserved as exact Unicode scalar sequences. The implementation does
 
 `"café" != "cafe\u0301"`
 
-This exact-sequence rule closes runtime Unicode-version drift within the declared text profile. See `docs/Text_Profile.md`.
+This exact-sequence rule closes runtime Unicode-version drift within the declared text profile. See [Text Profile](docs/Text_Profile.md).
 
 ---
 
@@ -411,9 +468,9 @@ This exact-sequence rule closes runtime Unicode-version drift within the declare
 
 The package includes one minimal manifest:
 
-`hashes/SHA256SUMS.txt`
+[Selected-File SHA-256 Checksums](hashes/SHA256SUMS.txt)
 
-It covers 14 verification-critical files: four core implementation files, six principal verifier files, the shared verification runner, and three corpus or vector-root files. Root files, documentation, browser HTML files, verification reports, examples, hostile fixtures, falsification fixtures, generators, and generated capsule sub-artifacts are intentionally outside this minimal scope.
+It covers 14 verification-critical files: four core implementation files, six principal verifier files, the shared verification runner, and three corpus or vector-root files. Other root files, documentation, browser HTML files, verification reports, examples, hostile fixtures, falsification fixtures, generators, and generated capsule sub-artifacts are intentionally outside this minimal scope.
 
 The manifest supports byte-integrity checking for the selected surface. It does not replace semantic verification, source authentication, or independent review.
 
@@ -451,3 +508,11 @@ The ORL-Chat reference implementation and associated verification artifacts are 
 Documentation, architecture materials, specifications, diagrams, and explanatory content are subject to the separate terms stated in the LICENSE.
 
 This repository does not claim recognition as a formal technical standard, security certification, production qualification, or third-party verification.
+
+---
+
+## 🧭 Final Statement
+
+**ORL-Chat transforms bounded canonical conversation evidence into deterministic, inspectable conversation-state bundles without treating message arrival order as resolution authority.**
+
+

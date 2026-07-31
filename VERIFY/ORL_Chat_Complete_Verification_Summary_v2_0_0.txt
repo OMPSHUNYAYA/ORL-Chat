@@ -1,0 +1,46 @@
+ORL-Chat v2.0.0 Complete Verification Summary
+
+Reference kernel producer audit: 2955/2955 PASS
+Separate Python verifier audit: 173/173 PASS
+Frozen Python corpus: 13/13 PASS
+Cross-language vector reproducibility: PASS
+JavaScript resolver and cross-language parity: 442/442 PASS
+Live Python-JavaScript bundle cross-check: 17/17 PARITY
+Strict-parser Python-JavaScript cross-check: 8/8 PARSER PARITY
+Seeded generated-property cases: 32/32 PASS
+Seeded generated-property assertions: 256/256 PASS
+Conversation-State Capsule unit audit: 14/14 PASS
+Adversarial assurance: 154/154 PASS
+Capsule cross-language parity: 310/310 PASS
+Selected-file SHA-256 verification: PASS
+
+Verified bounded areas
+
+- Strict JSON intake with exact-integer range enforcement.
+- Parser-refusal and structured-REFUSED channel separation.
+- Exact Unicode scalar-sequence text profile with a frozen code-point table.
+- Typed conversation-action grammar.
+- Iterative relationship-graph traversal and active-frontier resolution.
+- Declared MAX_GRAPH_DEPTH = 256, counted as dependency edges.
+- Participation and evidence-boundary evaluation.
+- Order, partition, exact-duplicate, and relay behavior.
+- Public receipt and private bundle reconstruction.
+- Separate Python verification.
+- Separate JavaScript reconstruction.
+- Byte-identical parity-vector regeneration across 17 vectors.
+- Live canonical-bundle comparison on all 17 shipped inputs.
+- Live parser-outcome comparison on all 8 raw parser cases.
+- Reproducible generated graph properties under seed 20260731 and ORL-CHAT-SPLITMIX64-2-D01.
+- Conversation-State Capsule construction, verification, privacy separation, and comparison.
+- Hostile-input, falsification, mutation, graph-depth, cycle, resource, witness, and tamper assurance.
+- One-command verification through the shared Python runner and platform wrappers.
+
+Claim boundary
+
+The results apply only to the declared ORL-Chat v2.0.0 schemas, profiles, text profile, limits, corpora, vectors, implementations, and artifacts. They do not establish unrestricted natural-language understanding, factual truth, source authenticity, authenticated consent, legal agreement, authorization, execution authority, independent third-party certification, or production suitability.
+
+Complete commands
+
+python -B VERIFY_ALL.py
+VERIFY_ALL.bat
+./verify_all.sh

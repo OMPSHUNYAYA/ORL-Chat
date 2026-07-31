@@ -1,0 +1,272 @@
+{
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary": {
+    "boundary_receipt_id": "boundary_receipt_937944abcafca604019fa2c264fe235adf4aba4ce0d2a863250676dfd28fbb28",
+    "declared_state": "SEALED",
+    "expected_observation_refs": [
+      "obs-proposal"
+    ],
+    "missing_observation_refs": [],
+    "observed_observation_refs": [
+      "obs-proposal"
+    ],
+    "observed_observation_set_id": "observation_set_550152f778473457fb2011f73f0d91c3c224322998894520e71e39b1eddc90a0",
+    "profile": "ORL-CHAT-BOUNDARY-RECEIPT-2-D01",
+    "state": "SEALED",
+    "unexpected_observation_refs": []
+  },
+  "context": {
+    "context": {
+      "conversation_id": "conversation-capsule-lineage",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "ALL_DECLARED_PARTICIPANTS",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 2
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "context_id": "context_f24550d128d07476283b3bcb0de9cf679bd1ab9f9acc220dee5a3ec8e053e21f",
+    "validation_state": "ACCEPTED"
+  },
+  "conversation_resolution_id": "conversation_resolution_dbaee101fc246e56bed858b79cdcf60a9f1d67da453aa084e0ea669b8ff859a9",
+  "evidence": {
+    "action_ref_to_id": {
+      "proposal-3pm": "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc"
+    },
+    "action_set_id": "action_set_eeb0c7a20b13bafcc0d02ce79c35eac33cec0d2444f2a978d0bdacb34db5c008",
+    "actions": [
+      {
+        "action": {
+          "action_ref": "proposal-3pm",
+          "actor": "alice",
+          "conversation_id": "conversation-capsule-lineage",
+          "declared_value": "3 PM",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "meeting-time"
+        },
+        "action_id": "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_cefeb15dc2da80baf6794ef0a3dab6707b44f3ac01c4726147804a6adb067517"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_cefeb15dc2da80baf6794ef0a3dab6707b44f3ac01c4726147804a6adb067517",
+            "presentation": "Meet at 3 PM"
+          }
+        ],
+        "sources": [
+          "node-a"
+        ]
+      }
+    ],
+    "exact_observation_duplicate_count": 0,
+    "observation_multiplicity_count": 0,
+    "observation_set_id": "observation_set_550152f778473457fb2011f73f0d91c3c224322998894520e71e39b1eddc90a0",
+    "observations": [
+      {
+        "action_id": "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc",
+        "observation_id": "observation_cefeb15dc2da80baf6794ef0a3dab6707b44f3ac01c4726147804a6adb067517",
+        "observation_ref": "obs-proposal",
+        "presentation": "Meet at 3 PM",
+        "source": "node-a"
+      }
+    ],
+    "raw_observation_count": 1,
+    "unique_action_count": 1,
+    "unique_observation_count": 1,
+    "validation_state": "ACCEPTED"
+  },
+  "execution_authority": "NONE",
+  "graph": {
+    "cycle_action_refs": [],
+    "edges": [],
+    "graph_root": "graph_7b33144177d64701a8ffe379d43a04dfceebdfbe09e3aac435c42fb197fc1b47",
+    "missing_dependencies": [],
+    "nodes": [
+      {
+        "action_id": "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc",
+        "action_ref": "proposal-3pm",
+        "actor": "alice",
+        "kind": "PROPOSE",
+        "topic_id": "meeting-time"
+      }
+    ],
+    "profile": "ORL-CHAT-GRAPH-2-D01"
+  },
+  "inputs": {
+    "boundary": {
+      "expected_observation_refs": [
+        "obs-proposal"
+      ],
+      "schema": "ORL-CHAT-BOUNDARY-2-D01",
+      "state": "SEALED"
+    },
+    "context": {
+      "conversation_id": "conversation-capsule-lineage",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "ALL_DECLARED_PARTICIPANTS",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 2
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "observations": [
+      {
+        "action": {
+          "action_ref": "proposal-3pm",
+          "actor": "alice",
+          "conversation_id": "conversation-capsule-lineage",
+          "declared_value": "3 PM",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "meeting-time"
+        },
+        "observation_ref": "obs-proposal",
+        "presentation": "Meet at 3 PM",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-a"
+      }
+    ]
+  },
+  "private_bundle_id": "private_bundle_c3737c7c175d021045bd734b2e0d14cf2dee23661fb2ad26bb5c1e3bc6d0de20",
+  "profile": "ORL-CHAT-PRIVATE-BUNDLE-2-D01",
+  "public_receipt": {
+    "action_set_id": "action_set_eeb0c7a20b13bafcc0d02ce79c35eac33cec0d2444f2a978d0bdacb34db5c008",
+    "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+    "boundary_receipt_id": "boundary_receipt_937944abcafca604019fa2c264fe235adf4aba4ce0d2a863250676dfd28fbb28",
+    "boundary_state": "SEALED",
+    "context_id": "context_f24550d128d07476283b3bcb0de9cf679bd1ab9f9acc220dee5a3ec8e053e21f",
+    "conversation_id": "conversation-capsule-lineage",
+    "conversation_resolution_id": "conversation_resolution_dbaee101fc246e56bed858b79cdcf60a9f1d67da453aa084e0ea669b8ff859a9",
+    "execution_authority": "NONE",
+    "graph_root": "graph_7b33144177d64701a8ffe379d43a04dfceebdfbe09e3aac435c42fb197fc1b47",
+    "profile": "ORL-CHAT-PUBLIC-RECEIPT-2-D01",
+    "public_receipt_id": "public_receipt_919c65f9d152a798e9bd60abea3df4ffeafbe66c38de37ad36ba48a17d2c0890",
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "state_counts": {
+      "ABSTAIN": 0,
+      "INCOMPLETE": 1,
+      "RESOLVED": 0
+    },
+    "topic_receipt_root": "topic_receipt_root_2f5e741e03e7b2ed6e101901bbc40f63a26710143d846ac7d66609352f6eb121",
+    "topic_summaries": [
+      {
+        "active_action_ids": [
+          "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc"
+        ],
+        "active_endorser_count": 0,
+        "active_objector_count": 0,
+        "execution_authority": "NONE",
+        "participation_satisfied": false,
+        "reason_code": "PARTICIPATION_INCOMPLETE",
+        "resolved_action_id": null,
+        "state": "INCOMPLETE",
+        "topic_id": "meeting-time",
+        "topic_receipt_id": "topic_receipt_92e86d2766e1243478e2b24480a93770a455b092992152132902437dd7988efe"
+      }
+    ],
+    "version": "2.0.0"
+  },
+  "result": "ACCEPTED",
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "self_verification": {
+    "errors": [],
+    "expected_conversation_resolution_id": "conversation_resolution_dbaee101fc246e56bed858b79cdcf60a9f1d67da453aa084e0ea669b8ff859a9",
+    "expected_private_bundle_id": "private_bundle_c3737c7c175d021045bd734b2e0d14cf2dee23661fb2ad26bb5c1e3bc6d0de20",
+    "expected_public_receipt_id": "public_receipt_919c65f9d152a798e9bd60abea3df4ffeafbe66c38de37ad36ba48a17d2c0890",
+    "profile": "ORL-CHAT-PRODUCER-VERIFICATION-2-D01",
+    "valid": true
+  },
+  "topics": {
+    "receipts": [
+      {
+        "action_ids": [
+          "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc"
+        ],
+        "actions": [
+          {
+            "action_id": "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc",
+            "action_ref": "proposal-3pm",
+            "active_proposal": true,
+            "actor": "alice",
+            "declared_value": "3 PM",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          }
+        ],
+        "active_action_ids": [
+          "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc"
+        ],
+        "active_action_refs": [
+          "proposal-3pm"
+        ],
+        "active_endorsers": [],
+        "active_objectors": [],
+        "active_signal_conflicts": [],
+        "cycle_action_refs": [],
+        "execution_authority": "NONE",
+        "missing_dependencies": [],
+        "participation": {
+          "endorsement_count": 0,
+          "endorsers": [],
+          "missing": [
+            "alice",
+            "bob"
+          ],
+          "participants": [
+            "alice",
+            "bob"
+          ],
+          "profile": "ALL_DECLARED_PARTICIPANTS",
+          "required_endorsers": [],
+          "satisfied": false,
+          "surplus": [],
+          "threshold": 2
+        },
+        "profile": "ORL-CHAT-TOPIC-RECEIPT-2-D01",
+        "reason_code": "PARTICIPATION_INCOMPLETE",
+        "resolved_action_id": null,
+        "resolved_action_ref": null,
+        "resolved_declared_value": null,
+        "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+        "signal_conflicts": [],
+        "state": "INCOMPLETE",
+        "superseded_action_refs": [],
+        "topic_id": "meeting-time",
+        "topic_receipt_id": "topic_receipt_92e86d2766e1243478e2b24480a93770a455b092992152132902437dd7988efe",
+        "withdrawn_action_refs": []
+      }
+    ],
+    "state_counts": {
+      "ABSTAIN": 0,
+      "INCOMPLETE": 1,
+      "RESOLVED": 0
+    },
+    "topic_receipt_root": "topic_receipt_root_2f5e741e03e7b2ed6e101901bbc40f63a26710143d846ac7d66609352f6eb121"
+  },
+  "version": "2.0.0"
+}

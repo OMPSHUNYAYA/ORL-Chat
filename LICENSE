@@ -1,79 +1,132 @@
-ORL-Chat Open Use License v1.0
+ORL-CHAT LICENSE v1.0
 
-1. Reference Implementation
+1. Scope
 
-Permission is granted, free of charge, on a worldwide, perpetual, non-exclusive, royalty-free, and irrevocable basis, provided that these terms are followed, to any person or organization obtaining a copy of the ORL-Chat reference implementation.
+This license applies to the ORL-Chat materials distributed with this repository
+unless a specific file or directory states otherwise.
 
-This permission includes the right to use, execute, study, copy, reproduce, publish, distribute, modify, implement, extend, and deploy the reference implementation, in whole or in part, for commercial or non-commercial purposes.
+The covered materials are divided into:
 
-This permission applies to original, modified, and extended versions, subject to the conditions in Section 2.
+- reference implementation and verification artifacts; and
+- documentation and architecture materials.
 
-No registration, fee, or prior approval is required.
+2. Reference Implementation and Verification Artifacts
 
+The reference implementation and verification artifacts include, where present,
+the Python reference kernel, browser structural laboratory, independent
+verification tooling, frozen verification corpus, corpus manifest, checksum
+manifests, machine-readable bundles, and other implementation or verification
+files.
 
-2. Conditions
+Permission is granted, without a license fee, to use, copy, modify, test, study,
+and redistribute these materials for lawful purposes, including commercial and
+non-commercial use, subject to the terms of this license.
 
-Redistributions of the reference implementation, or substantial portions of it, must include a copy of this license.
+A substantial redistribution of these materials must retain this license and any
+applicable copyright or attribution notices included with the original materials.
 
-Applicable third-party license notices and attributions must be retained.
-
-Modified or extended versions must be clearly identified as modified and must not be represented as the official or canonical ORL-Chat reference implementation unless explicitly authorized by the authors or maintainers.
-
-The name "ORL-Chat" or "Orderless Chat" may be used for accurate descriptive reference, but must not imply official authorship, endorsement, certification, approval, conformance, or production readiness.
-
-No right to use any trademark, service mark, logo, or other branding is granted except for accurate descriptive reference.
-
-Attribution to ORL-Chat is not required, but is encouraged.
-
-Suggested attribution:
-
-Based on the ORL-Chat reference implementation developed within the Shunyaya Framework.
-
-Attribution must not imply endorsement.
+Modified implementation or verification files must be clearly identified as
+modified and must not imply that the modifications were verified, certified,
+endorsed, or authored by the original project maintainers.
 
 Third-party components remain subject to their own licenses and notices.
 
+3. Documentation and Architecture Materials
 
-3. Architecture and Documentation
+Unless a file or section states otherwise, ORL-Chat documentation, architectural
+descriptions, specifications, diagrams, and explanatory materials are licensed
+under the Creative Commons Attribution-NonCommercial 4.0 International License
+(CC BY-NC 4.0).
 
-Unless a file or section states otherwise, the ORL-Chat architecture descriptions, diagrams, and documentation are licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
-
-Under that license, these materials may be shared and adapted for non-commercial purposes with appropriate credit, a link to the license, and an indication of whether changes were made.
-
-Attribution must not imply endorsement.
+Under that license, these materials may be shared and adapted for non-commercial
+purposes with appropriate attribution, a link to the license, and an indication
+of whether changes were made.
 
 The full license terms govern these materials:
 
 https://creativecommons.org/licenses/by-nc/4.0/legalcode
 
-Commercial use of the architecture descriptions, diagrams, and documentation requires separate written permission from the relevant rights holder.
+Commercial use of substantial portions of the documentation or architecture
+materials requires separate permission from the relevant rights holder unless the
+use is limited to factual reference, interoperability, review, or implementation
+of independently written software without substantial copying of the protected
+materials.
 
+Nothing in this license is intended to restrict rights that may otherwise be
+available under applicable law.
 
-4. Responsibility
+4. Attribution
 
-Use of ORL-Chat is entirely at the user's own risk.
+Attribution is not required for use, modification, or redistribution of the
+reference implementation or verification artifacts, but it is appreciated.
 
-The reference implementation does not guarantee unrestricted natural-language understanding, universal meaning resolution, factual truth, speaker identity, message authenticity, authorization, encryption, access control, delivery, network convergence, consensus, Byzantine fault tolerance, reliable broadcast, immutable finality, conflict repair, complete replay prevention, complete malformed-input validation, universal order independence, universal time independence, cross-language conformance, regulatory compliance, production readiness, or fitness for communication, AI, safety-critical, or other high-risk use.
+Where attribution is required for documentation or architecture materials, or
+where voluntary attribution is provided for the reference implementation, a
+reasonable attribution is:
 
-The current browser demonstration is a scripted visual presentation and does not independently execute the full Python resolver, enumerate the committed permutation set, reconstruct result hashes, or establish browser-Python conformance.
+ORL-Chat
+Developed within the Shunyaya Framework
 
-The current Python implementation and committed scenarios provide bounded reference results only. They must not be treated as guarantees of human intent, agreement, truth, safety, delivery, or real-world correctness.
+Attribution may be provided in documentation, notices, credits, or another
+reasonable location appropriate to the form of redistribution or adaptation.
 
+Attribution must not imply endorsement.
 
-5. No Warranty
+5. Names and Marks
 
-THE ORL-CHAT REFERENCE IMPLEMENTATION, ARCHITECTURE, DIAGRAMS, AND DOCUMENTATION ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+This license does not grant trademark rights or permission to imply endorsement.
 
-THIS INCLUDES, BUT IS NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, RELIABILITY, SECURITY, OR FITNESS FOR COMMUNICATION, AI, SAFETY-CRITICAL, OR OTHER HIGH-RISK USE.
+The names ORL-Chat, Orderless Ledger - Chat, Shunyaya Framework, Shunyaya, and
+related project names may be used for accurate factual reference and attribution.
 
+6. Verification and Assurance Claims
 
-6. Limitation of Liability
+A passing producer audit, browser audit, parity result, tamper result, independent
+verifier self-test, independent reconstruction result, frozen corpus verification
+result, checksum result, or other verification result applies only to the declared
+files, profiles, inputs, corpora, rules, manifests, evidence, and verification
+boundary associated with that result.
 
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHORS AND CONTRIBUTORS SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGE, LOSS, OR OTHER LIABILITY ARISING FROM THE USE, MODIFICATION, DISTRIBUTION, IMPLEMENTATION, EXTENSION, OR DEPLOYMENT OF ORL-CHAT.
+Modified files, changed rules, changed profiles, changed corpora, changed
+manifests, changed evidence, changed inputs, or changed verification artifacts
+require their own verification.
 
+Redistribution, modification, or use of the covered materials must not imply
+third-party verification, certification, production qualification, legal
+approval, consent verification, security approval, safety approval, or
+endorsement by the original project maintainers unless such a claim has been
+separately and expressly authorized.
 
-7. Severability
+Producer-side audits, cross-implementation parity checks, and separate
+implementation reconstruction do not, by themselves, constitute independent
+third-party verification or certification.
 
-If any provision of this license is held unenforceable, the remaining provisions remain in effect.
+7. No Security, Legal, Communication, or Safety Warranty
 
-Exercise of the permissions granted under this license is subject to these terms.
+THE ORL-CHAT REFERENCE IMPLEMENTATION, VERIFICATION ARTIFACTS, ARCHITECTURE,
+DIAGRAMS, SPECIFICATIONS, AND DOCUMENTATION ARE PROVIDED "AS IS", WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY,
+RELIABILITY, SECURITY, SAFETY, AVAILABILITY, OR CORRECTNESS.
+
+ORL-Chat is not a replacement for authentication, identity verification,
+message-source verification, transport security, delivery proof, access control,
+consent verification, legal review, organizational authorization, application
+security, safety controls, or domain-specific controls.
+
+A structurally reconstructed, resolved, or sealed result does not by itself
+establish factual truth, source authenticity, authenticated consent, legal
+agreement, delivery, consensus, authorization, safety, policy approval,
+execution authority, or real-world occurrence.
+
+8. Limitation of Liability
+
+To the maximum extent permitted by applicable law, the authors and contributors
+shall not be liable for any claim, damages, loss, or other liability arising from
+use, modification, distribution, implementation, extension, deployment,
+publication, verification, or reliance on ORL-Chat or the covered materials.
+
+9. Acceptance
+
+Using, modifying, or redistributing the covered materials indicates acceptance of
+these terms.

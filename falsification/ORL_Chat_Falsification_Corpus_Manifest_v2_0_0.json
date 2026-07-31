@@ -1,0 +1,80 @@
+{
+  "entries": [
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/bundle-conversation-id.json",
+      "kind": "bundle",
+      "name": "bundle-conversation-id"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/bundle-graph-root.json",
+      "kind": "bundle",
+      "name": "bundle-graph-root"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/bundle-topic-value.json",
+      "kind": "bundle",
+      "name": "bundle-topic-value"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/bundle-boundary-state.json",
+      "kind": "bundle",
+      "name": "bundle-boundary-state"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/bundle-public-receipt-id.json",
+      "kind": "bundle",
+      "name": "bundle-public-receipt-id"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/bundle-private-bundle-id.json",
+      "kind": "bundle",
+      "name": "bundle-private-bundle-id"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/bundle-action-content.json",
+      "kind": "bundle",
+      "name": "bundle-action-content"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/bundle-observation-source.json",
+      "kind": "bundle",
+      "name": "bundle-observation-source"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/capsule-boundary-state.json",
+      "kind": "capsule",
+      "name": "capsule-boundary-state"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/capsule-topic-state.json",
+      "kind": "capsule",
+      "name": "capsule-topic-state"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/capsule-action-id.json",
+      "kind": "capsule",
+      "name": "capsule-action-id"
+    },
+    {
+      "expected_result": "FAIL",
+      "file": "falsification/capsule-witness.json",
+      "kind": "capsule",
+      "name": "capsule-witness"
+    }
+  ],
+  "execution_authority": "NONE",
+  "manifest_id": "falsification_manifest_2051da9ed671cf3517f4b6ac2feaf2c2793d7d01a3cb9d75c8c7f3f73a81ae79",
+  "profile": "ORL-CHAT-FALSIFICATION-CORPUS-2-C01",
+  "version": "2.0.0"
+}

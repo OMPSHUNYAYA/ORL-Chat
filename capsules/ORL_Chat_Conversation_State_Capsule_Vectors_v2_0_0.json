@@ -1,0 +1,146 @@
+{
+  "capsules": [
+    {
+      "bundle_file": "capsules/source_bundles/base-incomplete_Bundle_v2_0_0.json",
+      "capsule_file": "capsules/artifacts/base-incomplete_Capsule_v2_0_0.json",
+      "capsule_id": "conversation_state_capsule_58def6515e0e3b3af6f6791571fff6b4299c41729b4e0146037c0a12fc98f86d",
+      "input_file": "capsules/source_inputs/base-incomplete_Input_v2_0_0.json",
+      "name": "base-incomplete",
+      "topic_states": {
+        "meeting-time": "INCOMPLETE"
+      }
+    },
+    {
+      "bundle_file": "capsules/source_bundles/corrected-resolved_Bundle_v2_0_0.json",
+      "capsule_file": "capsules/artifacts/corrected-resolved_Capsule_v2_0_0.json",
+      "capsule_id": "conversation_state_capsule_6580ac397c69bcc7a2cebb6e25e2359a3f649f2db9627b104cda9b5d391b1984",
+      "input_file": "capsules/source_inputs/corrected-resolved_Input_v2_0_0.json",
+      "name": "corrected-resolved",
+      "topic_states": {
+        "meeting-time": "RESOLVED"
+      }
+    },
+    {
+      "bundle_file": "capsules/source_bundles/corrected-exact-duplicate_Bundle_v2_0_0.json",
+      "capsule_file": "capsules/artifacts/corrected-exact-duplicate_Capsule_v2_0_0.json",
+      "capsule_id": "conversation_state_capsule_6580ac397c69bcc7a2cebb6e25e2359a3f649f2db9627b104cda9b5d391b1984",
+      "input_file": "capsules/source_inputs/corrected-exact-duplicate_Input_v2_0_0.json",
+      "name": "corrected-exact-duplicate",
+      "topic_states": {
+        "meeting-time": "RESOLVED"
+      }
+    },
+    {
+      "bundle_file": "capsules/source_bundles/corrected-relay_Bundle_v2_0_0.json",
+      "capsule_file": "capsules/artifacts/corrected-relay_Capsule_v2_0_0.json",
+      "capsule_id": "conversation_state_capsule_33c4677ddf4cdffef5b4e6bf2d0d3826340cf1f44ed71902b0e6ef5fb9362063",
+      "input_file": "capsules/source_inputs/corrected-relay_Input_v2_0_0.json",
+      "name": "corrected-relay",
+      "topic_states": {
+        "meeting-time": "RESOLVED"
+      }
+    },
+    {
+      "bundle_file": "capsules/source_bundles/alternative-resolved_Bundle_v2_0_0.json",
+      "capsule_file": "capsules/artifacts/alternative-resolved_Capsule_v2_0_0.json",
+      "capsule_id": "conversation_state_capsule_09079547d0b238051658fa9524dc33d4a7948977678710173b4f19d44ab24b72",
+      "input_file": "capsules/source_inputs/alternative-resolved_Input_v2_0_0.json",
+      "name": "alternative-resolved",
+      "topic_states": {
+        "meeting-time": "RESOLVED"
+      }
+    },
+    {
+      "bundle_file": "capsules/source_bundles/competing-amendments_Bundle_v2_0_0.json",
+      "capsule_file": "capsules/artifacts/competing-amendments_Capsule_v2_0_0.json",
+      "capsule_id": "conversation_state_capsule_254856932938a4f19fc92b8b344a75dfa9b606cdccf7ff02ddd38878ab0b4844",
+      "input_file": "capsules/source_inputs/competing-amendments_Input_v2_0_0.json",
+      "name": "competing-amendments",
+      "topic_states": {
+        "meeting-time": "ABSTAIN"
+      }
+    },
+    {
+      "bundle_file": "capsules/source_bundles/withdrawal-repair_Bundle_v2_0_0.json",
+      "capsule_file": "capsules/artifacts/withdrawal-repair_Capsule_v2_0_0.json",
+      "capsule_id": "conversation_state_capsule_c3f7e494770e54f5896e27feabe27b6f423f05e3a9c014b4035ecd12c584179c",
+      "input_file": "capsules/source_inputs/withdrawal-repair_Input_v2_0_0.json",
+      "name": "withdrawal-repair",
+      "topic_states": {
+        "meeting-time": "RESOLVED"
+      }
+    },
+    {
+      "bundle_file": "capsules/source_bundles/unrelated-context_Bundle_v2_0_0.json",
+      "capsule_file": "capsules/artifacts/unrelated-context_Capsule_v2_0_0.json",
+      "capsule_id": "conversation_state_capsule_deef0457ff9882fce17b4fa736bf7347c36403b987bac0799c5c3d1c94bdbe36",
+      "input_file": "capsules/source_inputs/unrelated-context_Input_v2_0_0.json",
+      "name": "unrelated-context",
+      "topic_states": {
+        "meeting-time": "INCOMPLETE"
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_file": "capsules/comparisons/identical-exact-duplicate_Comparison_v2_0_0.json",
+      "comparison_id": "capsule_comparison_043b9a11e75b4237bb09ec469320d0bdff0afc6c828906e6970f82d9a4cf1fc0",
+      "expected_relation": "IDENTICAL",
+      "left": "corrected-resolved",
+      "name": "identical-exact-duplicate",
+      "right": "corrected-exact-duplicate"
+    },
+    {
+      "comparison_file": "capsules/comparisons/compatible-relay_Comparison_v2_0_0.json",
+      "comparison_id": "capsule_comparison_3632c17dc1f77f955b766f97bff837de92085132bb20158f7dea84ea13ec003c",
+      "expected_relation": "COMPATIBLE",
+      "left": "corrected-resolved",
+      "name": "compatible-relay",
+      "right": "corrected-relay"
+    },
+    {
+      "comparison_file": "capsules/comparisons/supersedes-incomplete_Comparison_v2_0_0.json",
+      "comparison_id": "capsule_comparison_684c74b987168ad1af52173200d85967cdeb84df4a9ccc107a1d12d0836b0986",
+      "expected_relation": "SUPERSEDES",
+      "left": "base-incomplete",
+      "name": "supersedes-incomplete",
+      "right": "corrected-resolved"
+    },
+    {
+      "comparison_file": "capsules/comparisons/supersedes-disagreement_Comparison_v2_0_0.json",
+      "comparison_id": "capsule_comparison_b1c422d42e2aa10479823992302e6fef0ad2a8c07ff9d5e1dae73826d8f3713d",
+      "expected_relation": "SUPERSEDES",
+      "left": "competing-amendments",
+      "name": "supersedes-disagreement",
+      "right": "withdrawal-repair"
+    },
+    {
+      "comparison_file": "capsules/comparisons/diverges-value_Comparison_v2_0_0.json",
+      "comparison_id": "capsule_comparison_799e5c51f6b4544860f48d2758799ce718d5fee95b11015680afe1463fbb7cf8",
+      "expected_relation": "DIVERGES",
+      "left": "corrected-resolved",
+      "name": "diverges-value",
+      "right": "alternative-resolved"
+    },
+    {
+      "comparison_file": "capsules/comparisons/incomparable-context_Comparison_v2_0_0.json",
+      "comparison_id": "capsule_comparison_5941e27d3f4e21d9145b163cbc7145c2291dc01faa7cd03283518e2cbda22705",
+      "expected_relation": "INCOMPARABLE",
+      "left": "corrected-resolved",
+      "name": "incomparable-context",
+      "right": "unrelated-context"
+    },
+    {
+      "comparison_file": "capsules/comparisons/unsupported-tamper_Comparison_v2_0_0.json",
+      "comparison_id": "capsule_comparison_6e65ac52de00694f0d7e35fe3c9763db87e5c6a37914661ff180cd6f7094dc18",
+      "expected_relation": "UNSUPPORTED",
+      "left": "corrected-resolved",
+      "name": "unsupported-tamper",
+      "right": "tampered-capsule"
+    }
+  ],
+  "execution_authority": "NONE",
+  "profile": "ORL-CHAT-CAPSULE-VECTOR-SET-2-C01",
+  "vector_set_id": "capsule_vector_set_a8621728d37589b0bafdc208f1cb15ed6218d304870d40cb2ef4d2d74388a917",
+  "version": "2.0.0"
+}

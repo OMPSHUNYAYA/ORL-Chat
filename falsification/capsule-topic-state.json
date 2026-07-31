@@ -1,0 +1,76 @@
+{
+  "action_ids": [
+    "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc",
+    "action_6738f4357543b2a56f9508ee6367d854c5a881839b9c97ed2588151a504e6cef",
+    "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21",
+    "action_90764101ef982add777ca265112051ffeaf1bf22cb79173d252f93f0c718a124"
+  ],
+  "action_set_id": "action_set_61ee1ea174fac86c4f9831a4904cc2f76a6d271b755a56d2be41b7a94ff1763e",
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary_receipt_id": "boundary_receipt_9cf4647b6dba434107a27150ad4dde52749730c068ad4991f13ea9f08abffe08",
+  "boundary_state": "SEALED",
+  "capsule_id": "conversation_state_capsule_6580ac397c69bcc7a2cebb6e25e2359a3f649f2db9627b104cda9b5d391b1984",
+  "context_id": "context_f24550d128d07476283b3bcb0de9cf679bd1ab9f9acc220dee5a3ec8e053e21f",
+  "conversation_id": "conversation-capsule-lineage",
+  "conversation_resolution_id": "conversation_resolution_2e46f3443c4bfad6488ccea576da330b14d3be7cb5ca41658eae00988179602e",
+  "execution_authority": "NONE",
+  "graph_root": "graph_a9dd76673e5d3b7a6ac670355a6545f87e4f39e6be90171b8132b956be3ec199",
+  "observation_ids": [
+    "observation_08c13cf6ccb0077501005360c03ab82d2c8cf3d79ff9fcddc5e06c8d0295373f",
+    "observation_1a8573d9003f645343235adb31c2f693f0688ac4a16945d363ea1843a6054c3c",
+    "observation_cefeb15dc2da80baf6794ef0a3dab6707b44f3ac01c4726147804a6adb067517",
+    "observation_e12d4ef8083c8f20afa21ec41efd3ca05b4e9aacff2523af21e71319d1c1062c"
+  ],
+  "observation_set_id": "observation_set_6321593f621995083c7b9e00b021f87f0a73cc6fa96c0975d7f24773e5105fdd",
+  "profile": "ORL-CHAT-CONVERSATION-STATE-CAPSULE-2-C01",
+  "purpose_id": "active-instruction",
+  "relationship_edges": [
+    {
+      "relation": "ENDORSE",
+      "source_action_id": "action_6738f4357543b2a56f9508ee6367d854c5a881839b9c97ed2588151a504e6cef",
+      "target_action_id": "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21"
+    },
+    {
+      "relation": "AMEND",
+      "source_action_id": "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21",
+      "target_action_id": "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc"
+    },
+    {
+      "relation": "ENDORSE",
+      "source_action_id": "action_90764101ef982add777ca265112051ffeaf1bf22cb79173d252f93f0c718a124",
+      "target_action_id": "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21"
+    }
+  ],
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "source_private_bundle_id": "private_bundle_9c749c08d0340e55b4ae8eb34b2bd3d62e3b4e66256d99e921f95f38a0b00942",
+  "source_public_receipt_id": "public_receipt_02cd1ca5f80ac9e9baaa26f030c100c9abcff35bf8c882288f9fcca841b8244a",
+  "state_counts": {
+    "ABSTAIN": 0,
+    "INCOMPLETE": 0,
+    "RESOLVED": 1
+  },
+  "topics": [
+    {
+      "active_action_ids": [
+        "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21"
+      ],
+      "active_endorser_count": 2,
+      "active_objector_count": 0,
+      "participation_satisfied": true,
+      "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "resolved_action_id": "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21",
+      "resolved_value_commitment": "declared_value_435de76f488ad8379b5667ed03e8165def23685a7a0e0fd8c33283701865a14f",
+      "state": "ABSTAIN",
+      "topic_id": "meeting-time",
+      "topic_receipt_id": "topic_receipt_6d7913edff389e8e0707c1ba2556c3f530f83a2d0626aafa186e2db21900d76d",
+      "witness_codes": [
+        "ACTIVE_FRONTIER_PRESENT",
+        "BOUNDARY_SEALED",
+        "PARTICIPATION_SATISFIED",
+        "REASON_ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "STATE_RESOLVED"
+      ]
+    }
+  ],
+  "version": "2.0.0"
+}

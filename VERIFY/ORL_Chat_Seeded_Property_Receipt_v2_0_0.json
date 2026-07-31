@@ -1,0 +1,336 @@
+{
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "assertions": 256,
+  "generated_cases": 32,
+  "passed_assertions": 256,
+  "passed_cases": 32,
+  "prng_profile": "ORL-CHAT-SPLITMIX64-2-D01",
+  "profile": "ORL-CHAT-SEEDED-PROPERTY-VERIFICATION-2-D01",
+  "property_verification_id": "property_verification_6cf10d08520b914b8eabdb9f466fb0c1be584e82dccd17cbd6361fb7dd46bb4f",
+  "records": [
+    {
+      "case": 0,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 1,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MULTIPLE_ACTIVE_PROPOSALS",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 2,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 3,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MISSING_DEPENDENCY",
+      "expected_state": "INCOMPLETE",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 4,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "DEPENDENCY_CYCLE",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 5,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "PARTICIPANT_SIGNAL_CONFLICT",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 6,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ACTIVE_PROPOSAL_OBJECTED",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 7,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 8,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MULTIPLE_ACTIVE_PROPOSALS",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 9,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 10,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MISSING_DEPENDENCY",
+      "expected_state": "INCOMPLETE",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 11,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "DEPENDENCY_CYCLE",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 12,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "PARTICIPANT_SIGNAL_CONFLICT",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 13,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ACTIVE_PROPOSAL_OBJECTED",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 14,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 15,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MULTIPLE_ACTIVE_PROPOSALS",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 16,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 17,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MISSING_DEPENDENCY",
+      "expected_state": "INCOMPLETE",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 18,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "DEPENDENCY_CYCLE",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 19,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "PARTICIPANT_SIGNAL_CONFLICT",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 20,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ACTIVE_PROPOSAL_OBJECTED",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 21,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 22,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MULTIPLE_ACTIVE_PROPOSALS",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 23,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 24,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MISSING_DEPENDENCY",
+      "expected_state": "INCOMPLETE",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 25,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "DEPENDENCY_CYCLE",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 26,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "PARTICIPANT_SIGNAL_CONFLICT",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 27,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ACTIVE_PROPOSAL_OBJECTED",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 28,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 29,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MULTIPLE_ACTIVE_PROPOSALS",
+      "expected_state": "ABSTAIN",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 30,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "expected_state": "RESOLVED",
+      "order": true,
+      "partition": true,
+      "state": true
+    },
+    {
+      "case": 31,
+      "cross_language": true,
+      "duplicate": true,
+      "expected_reason": "MISSING_DEPENDENCY",
+      "expected_state": "INCOMPLETE",
+      "order": true,
+      "partition": true,
+      "state": true
+    }
+  ],
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "seed": 20260731,
+  "text_profile": "ORL-CHAT-UNICODE-SCALAR-EXACT-2-D01",
+  "version": "2.0.0"
+}

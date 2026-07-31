@@ -1,0 +1,411 @@
+{
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary": {
+    "boundary_receipt_id": "boundary_receipt_ed05b610bb2b5971887ec8a7bd3f759337ad9266d1bf3663750b96e439ea766a",
+    "declared_state": "OPEN",
+    "expected_observation_refs": [],
+    "missing_observation_refs": [],
+    "observed_observation_refs": [
+      "obs-endorse-a",
+      "obs-proposal-a",
+      "obs-proposal-b"
+    ],
+    "observed_observation_set_id": "observation_set_aa38947c86650cba32b6b3e23e3d4d26c1a07d352bbdbe8518cbdea138f6a38f",
+    "profile": "ORL-CHAT-BOUNDARY-RECEIPT-2-D01",
+    "state": "OPEN",
+    "unexpected_observation_refs": []
+  },
+  "context": {
+    "context": {
+      "conversation_id": "conversation-competing-proposals",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "SINGLE_DECLARED_ENDORSER",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 1
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "context_id": "context_d1adc8ceca8e1358c584eaf245735b3f24cfb2a7578f928b4e86e970c7b795d3",
+    "validation_state": "ACCEPTED"
+  },
+  "conversation_resolution_id": "conversation_resolution_3ff0b25e74a0b0c842543d91241f1bf4b0fb96bfa585d225498b17df8e65d775",
+  "evidence": {
+    "action_ref_to_id": {
+      "endorse-a": "action_3c9d44b68579a177b7bc87c4b69487c7666daf19d292922a4d89dfb81f3ece93",
+      "proposal-a": "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb",
+      "proposal-b": "action_0c6ab650ec55d16a92821c57103dcd503d9fc1ee60d9f267e2c4764f1659ca5c"
+    },
+    "action_set_id": "action_set_253525ace1fe033684c0ce599c2cf9feea25ed79bda7d4f32af0a31e78634557",
+    "actions": [
+      {
+        "action": {
+          "action_ref": "proposal-b",
+          "actor": "bob",
+          "conversation_id": "conversation-competing-proposals",
+          "declared_value": "Room B",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "location"
+        },
+        "action_id": "action_0c6ab650ec55d16a92821c57103dcd503d9fc1ee60d9f267e2c4764f1659ca5c",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_833d6afab40bc12be7b38e9082ebf14aa320831cf1444910679e12f615769152"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_833d6afab40bc12be7b38e9082ebf14aa320831cf1444910679e12f615769152",
+            "presentation": "Use Room B."
+          }
+        ],
+        "sources": [
+          "node-b"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "proposal-a",
+          "actor": "alice",
+          "conversation_id": "conversation-competing-proposals",
+          "declared_value": "Room A",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "location"
+        },
+        "action_id": "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_5a7ce6576d88fb8b348e4df7e2cacfe6de1ec69c9c95c26597dbae517d36cf53"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_5a7ce6576d88fb8b348e4df7e2cacfe6de1ec69c9c95c26597dbae517d36cf53",
+            "presentation": "Use Room A."
+          }
+        ],
+        "sources": [
+          "node-a"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "endorse-a",
+          "actor": "alice",
+          "conversation_id": "conversation-competing-proposals",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal-a"
+          ],
+          "topic_id": "location"
+        },
+        "action_id": "action_3c9d44b68579a177b7bc87c4b69487c7666daf19d292922a4d89dfb81f3ece93",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_43fc404761c401dd0ff2003504ef9adf02736d5bc94e67d4d8d495065b0e1c29"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_43fc404761c401dd0ff2003504ef9adf02736d5bc94e67d4d8d495065b0e1c29",
+            "presentation": "Alice endorses Room A."
+          }
+        ],
+        "sources": [
+          "node-a"
+        ]
+      }
+    ],
+    "exact_observation_duplicate_count": 0,
+    "observation_multiplicity_count": 0,
+    "observation_set_id": "observation_set_aa38947c86650cba32b6b3e23e3d4d26c1a07d352bbdbe8518cbdea138f6a38f",
+    "observations": [
+      {
+        "action_id": "action_3c9d44b68579a177b7bc87c4b69487c7666daf19d292922a4d89dfb81f3ece93",
+        "observation_id": "observation_43fc404761c401dd0ff2003504ef9adf02736d5bc94e67d4d8d495065b0e1c29",
+        "observation_ref": "obs-endorse-a",
+        "presentation": "Alice endorses Room A.",
+        "source": "node-a"
+      },
+      {
+        "action_id": "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb",
+        "observation_id": "observation_5a7ce6576d88fb8b348e4df7e2cacfe6de1ec69c9c95c26597dbae517d36cf53",
+        "observation_ref": "obs-proposal-a",
+        "presentation": "Use Room A.",
+        "source": "node-a"
+      },
+      {
+        "action_id": "action_0c6ab650ec55d16a92821c57103dcd503d9fc1ee60d9f267e2c4764f1659ca5c",
+        "observation_id": "observation_833d6afab40bc12be7b38e9082ebf14aa320831cf1444910679e12f615769152",
+        "observation_ref": "obs-proposal-b",
+        "presentation": "Use Room B.",
+        "source": "node-b"
+      }
+    ],
+    "raw_observation_count": 3,
+    "unique_action_count": 3,
+    "unique_observation_count": 3,
+    "validation_state": "ACCEPTED"
+  },
+  "execution_authority": "NONE",
+  "graph": {
+    "cycle_action_refs": [],
+    "edges": [
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_3c9d44b68579a177b7bc87c4b69487c7666daf19d292922a4d89dfb81f3ece93",
+        "source_action_ref": "endorse-a",
+        "target_action_id": "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb",
+        "target_action_ref": "proposal-a"
+      }
+    ],
+    "graph_root": "graph_9f7f6a02ac6297483a6b61f7b6fa080119a993420a00f7b20662ba9597c49263",
+    "missing_dependencies": [],
+    "nodes": [
+      {
+        "action_id": "action_3c9d44b68579a177b7bc87c4b69487c7666daf19d292922a4d89dfb81f3ece93",
+        "action_ref": "endorse-a",
+        "actor": "alice",
+        "kind": "ENDORSE",
+        "topic_id": "location"
+      },
+      {
+        "action_id": "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb",
+        "action_ref": "proposal-a",
+        "actor": "alice",
+        "kind": "PROPOSE",
+        "topic_id": "location"
+      },
+      {
+        "action_id": "action_0c6ab650ec55d16a92821c57103dcd503d9fc1ee60d9f267e2c4764f1659ca5c",
+        "action_ref": "proposal-b",
+        "actor": "bob",
+        "kind": "PROPOSE",
+        "topic_id": "location"
+      }
+    ],
+    "profile": "ORL-CHAT-GRAPH-2-D01"
+  },
+  "inputs": {
+    "boundary": {
+      "expected_observation_refs": [],
+      "schema": "ORL-CHAT-BOUNDARY-2-D01",
+      "state": "OPEN"
+    },
+    "context": {
+      "conversation_id": "conversation-competing-proposals",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "SINGLE_DECLARED_ENDORSER",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 1
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "observations": [
+      {
+        "action": {
+          "action_ref": "proposal-a",
+          "actor": "alice",
+          "conversation_id": "conversation-competing-proposals",
+          "declared_value": "Room A",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "location"
+        },
+        "observation_ref": "obs-proposal-a",
+        "presentation": "Use Room A.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-a"
+      },
+      {
+        "action": {
+          "action_ref": "proposal-b",
+          "actor": "bob",
+          "conversation_id": "conversation-competing-proposals",
+          "declared_value": "Room B",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "location"
+        },
+        "observation_ref": "obs-proposal-b",
+        "presentation": "Use Room B.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-b"
+      },
+      {
+        "action": {
+          "action_ref": "endorse-a",
+          "actor": "alice",
+          "conversation_id": "conversation-competing-proposals",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal-a"
+          ],
+          "topic_id": "location"
+        },
+        "observation_ref": "obs-endorse-a",
+        "presentation": "Alice endorses Room A.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-a"
+      }
+    ]
+  },
+  "private_bundle_id": "private_bundle_d5683e1721dac24c08d82af16bd410cc802fd147bf754ddb6781604e0fa5cc3b",
+  "profile": "ORL-CHAT-PRIVATE-BUNDLE-2-D01",
+  "public_receipt": {
+    "action_set_id": "action_set_253525ace1fe033684c0ce599c2cf9feea25ed79bda7d4f32af0a31e78634557",
+    "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+    "boundary_receipt_id": "boundary_receipt_ed05b610bb2b5971887ec8a7bd3f759337ad9266d1bf3663750b96e439ea766a",
+    "boundary_state": "OPEN",
+    "context_id": "context_d1adc8ceca8e1358c584eaf245735b3f24cfb2a7578f928b4e86e970c7b795d3",
+    "conversation_id": "conversation-competing-proposals",
+    "conversation_resolution_id": "conversation_resolution_3ff0b25e74a0b0c842543d91241f1bf4b0fb96bfa585d225498b17df8e65d775",
+    "execution_authority": "NONE",
+    "graph_root": "graph_9f7f6a02ac6297483a6b61f7b6fa080119a993420a00f7b20662ba9597c49263",
+    "profile": "ORL-CHAT-PUBLIC-RECEIPT-2-D01",
+    "public_receipt_id": "public_receipt_ba1f7fc34f8e56aeea54257a16c08e68764e25963b402d532c3b3de615b7a77d",
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "state_counts": {
+      "ABSTAIN": 1,
+      "INCOMPLETE": 0,
+      "RESOLVED": 0
+    },
+    "topic_receipt_root": "topic_receipt_root_1b59ab1d37f7df0ed78fdbdeb008ffc57619ecfc374845b46d146ec9be6d06d7",
+    "topic_summaries": [
+      {
+        "active_action_ids": [
+          "action_0c6ab650ec55d16a92821c57103dcd503d9fc1ee60d9f267e2c4764f1659ca5c",
+          "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb"
+        ],
+        "active_endorser_count": 0,
+        "active_objector_count": 0,
+        "execution_authority": "NONE",
+        "participation_satisfied": null,
+        "reason_code": "MULTIPLE_ACTIVE_PROPOSALS",
+        "resolved_action_id": null,
+        "state": "ABSTAIN",
+        "topic_id": "location",
+        "topic_receipt_id": "topic_receipt_3c9ad923003e147b15ca35744ccd2b634c1634f0d9c7c999dafdada10a16e1b8"
+      }
+    ],
+    "version": "2.0.0"
+  },
+  "result": "ACCEPTED",
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "self_verification": {
+    "errors": [],
+    "expected_conversation_resolution_id": "conversation_resolution_3ff0b25e74a0b0c842543d91241f1bf4b0fb96bfa585d225498b17df8e65d775",
+    "expected_private_bundle_id": "private_bundle_d5683e1721dac24c08d82af16bd410cc802fd147bf754ddb6781604e0fa5cc3b",
+    "expected_public_receipt_id": "public_receipt_ba1f7fc34f8e56aeea54257a16c08e68764e25963b402d532c3b3de615b7a77d",
+    "profile": "ORL-CHAT-PRODUCER-VERIFICATION-2-D01",
+    "valid": true
+  },
+  "topics": {
+    "receipts": [
+      {
+        "action_ids": [
+          "action_0c6ab650ec55d16a92821c57103dcd503d9fc1ee60d9f267e2c4764f1659ca5c",
+          "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb",
+          "action_3c9d44b68579a177b7bc87c4b69487c7666daf19d292922a4d89dfb81f3ece93"
+        ],
+        "actions": [
+          {
+            "action_id": "action_3c9d44b68579a177b7bc87c4b69487c7666daf19d292922a4d89dfb81f3ece93",
+            "action_ref": "endorse-a",
+            "active_proposal": false,
+            "actor": "alice",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "proposal-a"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb",
+            "action_ref": "proposal-a",
+            "active_proposal": true,
+            "actor": "alice",
+            "declared_value": "Room A",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_0c6ab650ec55d16a92821c57103dcd503d9fc1ee60d9f267e2c4764f1659ca5c",
+            "action_ref": "proposal-b",
+            "active_proposal": true,
+            "actor": "bob",
+            "declared_value": "Room B",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          }
+        ],
+        "active_action_ids": [
+          "action_0c6ab650ec55d16a92821c57103dcd503d9fc1ee60d9f267e2c4764f1659ca5c",
+          "action_19a32183059d6e7879f730ba002ed90a2f318e73fe1e0bcddc9796c736914ffb"
+        ],
+        "active_action_refs": [
+          "proposal-a",
+          "proposal-b"
+        ],
+        "active_endorsers": [],
+        "active_objectors": [],
+        "active_signal_conflicts": [],
+        "cycle_action_refs": [],
+        "execution_authority": "NONE",
+        "missing_dependencies": [],
+        "participation": null,
+        "profile": "ORL-CHAT-TOPIC-RECEIPT-2-D01",
+        "reason_code": "MULTIPLE_ACTIVE_PROPOSALS",
+        "resolved_action_id": null,
+        "resolved_action_ref": null,
+        "resolved_declared_value": null,
+        "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+        "signal_conflicts": [],
+        "state": "ABSTAIN",
+        "superseded_action_refs": [],
+        "topic_id": "location",
+        "topic_receipt_id": "topic_receipt_3c9ad923003e147b15ca35744ccd2b634c1634f0d9c7c999dafdada10a16e1b8",
+        "withdrawn_action_refs": []
+      }
+    ],
+    "state_counts": {
+      "ABSTAIN": 1,
+      "INCOMPLETE": 0,
+      "RESOLVED": 0
+    },
+    "topic_receipt_root": "topic_receipt_root_1b59ab1d37f7df0ed78fdbdeb008ffc57619ecfc374845b46d146ec9be6d06d7"
+  },
+  "version": "2.0.0"
+}

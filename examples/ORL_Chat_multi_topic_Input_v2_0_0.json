@@ -1,0 +1,92 @@
+{
+  "boundary": {
+    "expected_observation_refs": [],
+    "schema": "ORL-CHAT-BOUNDARY-2-D01",
+    "state": "OPEN"
+  },
+  "context": {
+    "conversation_id": "conversation-multi-topic",
+    "execution_authority": "NONE",
+    "participation": {
+      "participants": [
+        "alice",
+        "bob"
+      ],
+      "profile": "SINGLE_DECLARED_ENDORSER",
+      "required_endorsers": [],
+      "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+      "threshold": 1
+    },
+    "purpose_id": "active-instructions",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "schema": "ORL-CHAT-CONTEXT-2-D01"
+  },
+  "observations": [
+    {
+      "action": {
+        "action_ref": "time-proposal",
+        "actor": "alice",
+        "conversation_id": "conversation-multi-topic",
+        "declared_value": "5 PM",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "time"
+      },
+      "observation_ref": "obs-time-proposal",
+      "presentation": "Meet at 5 PM.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "time-endorse",
+        "actor": "bob",
+        "conversation_id": "conversation-multi-topic",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "time-proposal"
+        ],
+        "topic_id": "time"
+      },
+      "observation_ref": "obs-time-endorse",
+      "presentation": "Bob endorses 5 PM.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-b"
+    },
+    {
+      "action": {
+        "action_ref": "room-a",
+        "actor": "alice",
+        "conversation_id": "conversation-multi-topic",
+        "declared_value": "Room A",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "room"
+      },
+      "observation_ref": "obs-room-a",
+      "presentation": "Use Room A.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "room-b",
+        "actor": "bob",
+        "conversation_id": "conversation-multi-topic",
+        "declared_value": "Room B",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "room"
+      },
+      "observation_ref": "obs-room-b",
+      "presentation": "Use Room B.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-b"
+    }
+  ]
+}

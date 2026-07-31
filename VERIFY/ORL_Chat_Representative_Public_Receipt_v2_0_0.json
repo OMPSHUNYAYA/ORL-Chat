@@ -1,0 +1,38 @@
+{
+  "action_set_id": "action_set_1bb6e197013be491b47040f975c2e7b58db098f12446420958827d3c8e0d659c",
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary_receipt_id": "boundary_receipt_fd8865635a4dae714cfcdb2c3c5f7e4a75eba335672bb572c4b7fe8ea927bab8",
+  "boundary_state": "SEALED",
+  "context_id": "context_56b6517c609287e421a4ca9c5fd28dfc15bf316d3a09d8b763e4c1bfa4dbc800",
+  "conversation_id": "conversation-corrected-instruction",
+  "conversation_resolution_id": "conversation_resolution_df4421ee64f82483068d4b33fcf47d5f128edafd54e526588fd47c69333afe13",
+  "execution_authority": "NONE",
+  "graph_root": "graph_35428d7039e1d7ac217947b070e1f56077c7ebee98bee31a1384a951a36d4c3e",
+  "profile": "ORL-CHAT-PUBLIC-RECEIPT-2-D01",
+  "public_receipt_id": "public_receipt_a6de717ba14f084890eb46a33865b868c23422478bd040fc3f32950d4c0e684b",
+  "purpose_id": "active-instruction",
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "state_counts": {
+    "ABSTAIN": 0,
+    "INCOMPLETE": 0,
+    "RESOLVED": 1
+  },
+  "topic_receipt_root": "topic_receipt_root_b99c5ae55c77293802d7376f3795aff8cea568a45f4ef156fad7d71b4691be9e",
+  "topic_summaries": [
+    {
+      "active_action_ids": [
+        "action_db249a8c56a48c2e7579a5c09ebeb3faf84c54cf688bb12ce9a22f46bff59261"
+      ],
+      "active_endorser_count": 2,
+      "active_objector_count": 0,
+      "execution_authority": "NONE",
+      "participation_satisfied": true,
+      "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+      "resolved_action_id": "action_db249a8c56a48c2e7579a5c09ebeb3faf84c54cf688bb12ce9a22f46bff59261",
+      "state": "RESOLVED",
+      "topic_id": "meeting-time",
+      "topic_receipt_id": "topic_receipt_b242b9e60c0e686f442385273d87cf9d43356a2ba0bd60eaf2076467aca95301"
+    }
+  ],
+  "version": "2.0.0"
+}

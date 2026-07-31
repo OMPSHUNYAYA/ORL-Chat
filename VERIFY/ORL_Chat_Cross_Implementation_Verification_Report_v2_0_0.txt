@@ -1,0 +1,19 @@
+ORL-Chat v2.0.0 Live Cross-Implementation Verification
+
+Command
+
+python -B verifier/ORL_Chat_Cross_Language_Cross_Check_v2_0_0.py --all-examples
+
+Result
+
+Shipped inputs: 17
+Python-JavaScript canonical bundle parity: 17/17 PARITY
+Text profile: ORL-CHAT-UNICODE-SCALAR-EXACT-2-D01
+
+Comparison boundary
+
+Each input is resolved independently by the Python reference kernel and JavaScript resolver. Each implementation removes only its own self_verification stamp. The remaining canonical artifact text is compared byte-for-byte.
+
+The input set includes accepted, refused, graph-depth, cycle, identity-conflict, composed/decomposed Unicode, astral-key, frozen boundary-whitespace refusal, and frozen-format refusal cases.
+
+The result establishes parity for the checked inputs and declared profiles. It does not establish source authenticity, authorization, semantic truth, or third-party certification.

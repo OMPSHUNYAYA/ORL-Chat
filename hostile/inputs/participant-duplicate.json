@@ -1,0 +1,101 @@
+{
+  "boundary": {
+    "expected_observation_refs": [
+      "obs-proposal",
+      "obs-amend-5",
+      "obs-endorse-5-a",
+      "obs-endorse-5-b"
+    ],
+    "schema": "ORL-CHAT-BOUNDARY-2-D01",
+    "state": "SEALED"
+  },
+  "context": {
+    "conversation_id": "conversation-capsule-lineage",
+    "execution_authority": "NONE",
+    "participation": {
+      "participants": [
+        "alice",
+        "alice"
+      ],
+      "profile": "ALL_DECLARED_PARTICIPANTS",
+      "required_endorsers": [],
+      "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+      "threshold": 2
+    },
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "schema": "ORL-CHAT-CONTEXT-2-D01"
+  },
+  "observations": [
+    {
+      "action": {
+        "action_ref": "proposal-3pm",
+        "actor": "alice",
+        "conversation_id": "conversation-capsule-lineage",
+        "declared_value": "3 PM",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "meeting-time"
+      },
+      "observation_ref": "obs-proposal",
+      "presentation": "Meet at 3 PM",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-5pm",
+        "actor": "alice",
+        "conversation_id": "conversation-capsule-lineage",
+        "declared_value": "5 PM",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "proposal-3pm"
+        ],
+        "topic_id": "meeting-time"
+      },
+      "observation_ref": "obs-amend-5",
+      "presentation": "Correction: meet at 5 PM",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "endorse-5pm-alice",
+        "actor": "alice",
+        "conversation_id": "conversation-capsule-lineage",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-5pm"
+        ],
+        "topic_id": "meeting-time"
+      },
+      "observation_ref": "obs-endorse-5-a",
+      "presentation": "Alice confirms 5 PM",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "endorse-5pm-bob",
+        "actor": "bob",
+        "conversation_id": "conversation-capsule-lineage",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-5pm"
+        ],
+        "topic_id": "meeting-time"
+      },
+      "observation_ref": "obs-endorse-5-b",
+      "presentation": "Bob confirms 5 PM",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-b"
+    }
+  ]
+}

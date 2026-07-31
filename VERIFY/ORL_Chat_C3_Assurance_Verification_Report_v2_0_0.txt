@@ -1,0 +1,21 @@
+ORL-Chat v2.0.0 C3 Adversarial Assurance and Conversation-State Capsule
+
+CAPSULE: 12/12 PASS
+COMPARISON: 7/7 PASS
+FALSIFICATION: 12/12 PASS
+GRAPH_CYCLE: 9/9 PASS
+GRAPH_DEPTH: 13/13 PASS
+HOSTILE: 26/26 PASS
+MUTATION: 17/17 PASS
+PARSER: 8/8 PASS
+RESOURCE: 10/10 PASS
+WITNESS: 40/40 PASS
+TOTAL: 154/154 PASS
+
+Scope:
+- Strict hostile-input refusal.
+- Graph-depth and dependency-cycle assurance within declared resource bounds.
+- Boundary resource checks.
+- Conversation-state capsule creation, privacy separation, verification, and comparison.
+- Falsification and deterministic mutation detection.
+- No execution authority is granted.

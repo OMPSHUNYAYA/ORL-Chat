@@ -1,0 +1,148 @@
+{
+  "boundary": {
+    "expected_observation_refs": [],
+    "schema": "ORL-CHAT-BOUNDARY-2-D01",
+    "state": "OPEN"
+  },
+  "context": {
+    "conversation_id": "conversation-inactive-signal-conflict",
+    "execution_authority": "NONE",
+    "participation": {
+      "participants": [
+        "alice",
+        "bob"
+      ],
+      "profile": "ALL_DECLARED_PARTICIPANTS",
+      "required_endorsers": [],
+      "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+      "threshold": 2
+    },
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "schema": "ORL-CHAT-CONTEXT-2-D01"
+  },
+  "observations": [
+    {
+      "action": {
+        "action_ref": "active",
+        "actor": "alice",
+        "conversation_id": "conversation-inactive-signal-conflict",
+        "declared_value": "A",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "topic"
+      },
+      "observation_ref": "inactive-conflict-0",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node"
+    },
+    {
+      "action": {
+        "action_ref": "inactive",
+        "actor": "bob",
+        "conversation_id": "conversation-inactive-signal-conflict",
+        "declared_value": "B",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "topic"
+      },
+      "observation_ref": "inactive-conflict-1",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node"
+    },
+    {
+      "action": {
+        "action_ref": "withdraw-inactive",
+        "actor": "bob",
+        "conversation_id": "conversation-inactive-signal-conflict",
+        "declared_value": null,
+        "kind": "WITHDRAW",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "inactive"
+        ],
+        "topic_id": "topic"
+      },
+      "observation_ref": "inactive-conflict-2",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node"
+    },
+    {
+      "action": {
+        "action_ref": "endorse-active-a",
+        "actor": "alice",
+        "conversation_id": "conversation-inactive-signal-conflict",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "active"
+        ],
+        "topic_id": "topic"
+      },
+      "observation_ref": "inactive-conflict-3",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node"
+    },
+    {
+      "action": {
+        "action_ref": "endorse-active-b",
+        "actor": "bob",
+        "conversation_id": "conversation-inactive-signal-conflict",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "active"
+        ],
+        "topic_id": "topic"
+      },
+      "observation_ref": "inactive-conflict-4",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node"
+    },
+    {
+      "action": {
+        "action_ref": "endorse-inactive",
+        "actor": "bob",
+        "conversation_id": "conversation-inactive-signal-conflict",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "inactive"
+        ],
+        "topic_id": "topic"
+      },
+      "observation_ref": "inactive-conflict-5",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node"
+    },
+    {
+      "action": {
+        "action_ref": "object-inactive",
+        "actor": "bob",
+        "conversation_id": "conversation-inactive-signal-conflict",
+        "declared_value": null,
+        "kind": "OBJECT",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "inactive"
+        ],
+        "topic_id": "topic"
+      },
+      "observation_ref": "inactive-conflict-6",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node"
+    }
+  ]
+}

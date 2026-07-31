@@ -1,0 +1,29 @@
+ORL-Chat v2.0.0 Seeded Generated-Property Verification
+
+Command
+
+python -B verifier/ORL_Chat_Seeded_Property_Verifier_v2_0_0.py --seed 20260731 --cases 32
+
+Result
+
+CROSS_LANGUAGE: 128/128 PASS
+DUPLICATE: 32/32 PASS
+ORDER: 32/32 PASS
+PARTITION: 32/32 PASS
+STATE: 32/32 PASS
+CASES: 32/32 PASS
+ASSERTIONS: 256/256 PASS
+
+Profile
+
+Seed: 20260731
+Generated cases: 32
+Assertions: 256
+Text profile: ORL-CHAT-UNICODE-SCALAR-EXACT-2-D01
+PRNG profile: ORL-CHAT-SPLITMIX64-2-D01
+
+Scope
+
+The verifier generates bounded proposal, amendment, withdrawal, endorsement, objection, missing-dependency, cycle, and conflict structures. It checks Python-JavaScript canonical identity, reversed order, partition and merge, exact duplicate absorption, and expected state precedence.
+
+The fixed seed and fixed SplitMix64 profile make the generated suite reproducible across supported Python runtimes. It complements rather than replaces the frozen corpus and vectors.

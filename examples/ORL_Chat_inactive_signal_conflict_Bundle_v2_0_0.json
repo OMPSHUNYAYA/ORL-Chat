@@ -1,0 +1,774 @@
+{
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary": {
+    "boundary_receipt_id": "boundary_receipt_cba222f316c42b5c861fa4d6aa11c4d35a446a62b6ebbc5b3d93660f1107d3f4",
+    "declared_state": "OPEN",
+    "expected_observation_refs": [],
+    "missing_observation_refs": [],
+    "observed_observation_refs": [
+      "inactive-conflict-0",
+      "inactive-conflict-1",
+      "inactive-conflict-2",
+      "inactive-conflict-3",
+      "inactive-conflict-4",
+      "inactive-conflict-5",
+      "inactive-conflict-6"
+    ],
+    "observed_observation_set_id": "observation_set_e58059c792f9c51177c53ba4c350996783d9d2d3d6df22b5dfdddb23b482d50f",
+    "profile": "ORL-CHAT-BOUNDARY-RECEIPT-2-D01",
+    "state": "OPEN",
+    "unexpected_observation_refs": []
+  },
+  "context": {
+    "context": {
+      "conversation_id": "conversation-inactive-signal-conflict",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "ALL_DECLARED_PARTICIPANTS",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 2
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "context_id": "context_96b096fdb52941d793c7138eb7838bad1bbd4ed5643f8c3a438b207f731e6bf2",
+    "validation_state": "ACCEPTED"
+  },
+  "conversation_resolution_id": "conversation_resolution_2a9b786acde0aeb4de003a6981d996a26aafccb7e09a1595a2de18f82e954c2e",
+  "evidence": {
+    "action_ref_to_id": {
+      "active": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+      "endorse-active-a": "action_76ab1fddb4387ed8e9ec51e280ccc7d1fe6e74225048c208f7205a631b1b0675",
+      "endorse-active-b": "action_14cc82b880d55591ea9117c35f3425ead81c9796b252327fcc92ef356d246bcd",
+      "endorse-inactive": "action_ae0724296120900f4ec7d9c434a46fd6821b0c9680e2d331613498cbcd6cd496",
+      "inactive": "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4",
+      "object-inactive": "action_05e508db710877efcb45b0d2d050849aee662f00f267a752234c7cef830af45b",
+      "withdraw-inactive": "action_5979a49e2c76fa3edfdf7243e80261af00d35e92dc79656287f95ca5a0215dff"
+    },
+    "action_set_id": "action_set_e206de6461972bc95af3ce51af2bd30d9e93f324f80909e90ac2807921cee9ef",
+    "actions": [
+      {
+        "action": {
+          "action_ref": "object-inactive",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "OBJECT",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "inactive"
+          ],
+          "topic_id": "topic"
+        },
+        "action_id": "action_05e508db710877efcb45b0d2d050849aee662f00f267a752234c7cef830af45b",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_e8021b598b23fb37ad80b26156712e765038648e9801b4d414fd5440e940de65"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_e8021b598b23fb37ad80b26156712e765038648e9801b4d414fd5440e940de65",
+            "presentation": ""
+          }
+        ],
+        "sources": [
+          "node"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "endorse-active-b",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "active"
+          ],
+          "topic_id": "topic"
+        },
+        "action_id": "action_14cc82b880d55591ea9117c35f3425ead81c9796b252327fcc92ef356d246bcd",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_fa685a8103ab3aa4b4cbaa7deb79e6022f52e892571dac0d08f1b37cf2408535"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_fa685a8103ab3aa4b4cbaa7deb79e6022f52e892571dac0d08f1b37cf2408535",
+            "presentation": ""
+          }
+        ],
+        "sources": [
+          "node"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "withdraw-inactive",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "WITHDRAW",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "inactive"
+          ],
+          "topic_id": "topic"
+        },
+        "action_id": "action_5979a49e2c76fa3edfdf7243e80261af00d35e92dc79656287f95ca5a0215dff",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_1206ce3897b6ea6159af34ffebf195fa12c2cd95e877587f2f75a1bfbaa11670"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_1206ce3897b6ea6159af34ffebf195fa12c2cd95e877587f2f75a1bfbaa11670",
+            "presentation": ""
+          }
+        ],
+        "sources": [
+          "node"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "endorse-active-a",
+          "actor": "alice",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "active"
+          ],
+          "topic_id": "topic"
+        },
+        "action_id": "action_76ab1fddb4387ed8e9ec51e280ccc7d1fe6e74225048c208f7205a631b1b0675",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_6c6ccdd1672e376a895c94c6d9476f1d18f9a16ae8f9b56b104e3adfd12a0d5c"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_6c6ccdd1672e376a895c94c6d9476f1d18f9a16ae8f9b56b104e3adfd12a0d5c",
+            "presentation": ""
+          }
+        ],
+        "sources": [
+          "node"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "active",
+          "actor": "alice",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": "A",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "topic"
+        },
+        "action_id": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_49ce924ed9a66450f9fd3875dec71bdb4530fc1bd29af3483ccc7abcaf3b9c0b"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_49ce924ed9a66450f9fd3875dec71bdb4530fc1bd29af3483ccc7abcaf3b9c0b",
+            "presentation": ""
+          }
+        ],
+        "sources": [
+          "node"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "endorse-inactive",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "inactive"
+          ],
+          "topic_id": "topic"
+        },
+        "action_id": "action_ae0724296120900f4ec7d9c434a46fd6821b0c9680e2d331613498cbcd6cd496",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_d9e4efbfd018de072a2540dfd32e172998c634f2ee5924973fa4b43a8f86210b"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_d9e4efbfd018de072a2540dfd32e172998c634f2ee5924973fa4b43a8f86210b",
+            "presentation": ""
+          }
+        ],
+        "sources": [
+          "node"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "inactive",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": "B",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "topic"
+        },
+        "action_id": "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_f65ca17551516c0f7554e6682b21f7dd7f0ac7dc274ec31016add58529c400eb"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_f65ca17551516c0f7554e6682b21f7dd7f0ac7dc274ec31016add58529c400eb",
+            "presentation": ""
+          }
+        ],
+        "sources": [
+          "node"
+        ]
+      }
+    ],
+    "exact_observation_duplicate_count": 0,
+    "observation_multiplicity_count": 0,
+    "observation_set_id": "observation_set_e58059c792f9c51177c53ba4c350996783d9d2d3d6df22b5dfdddb23b482d50f",
+    "observations": [
+      {
+        "action_id": "action_5979a49e2c76fa3edfdf7243e80261af00d35e92dc79656287f95ca5a0215dff",
+        "observation_id": "observation_1206ce3897b6ea6159af34ffebf195fa12c2cd95e877587f2f75a1bfbaa11670",
+        "observation_ref": "inactive-conflict-2",
+        "presentation": "",
+        "source": "node"
+      },
+      {
+        "action_id": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+        "observation_id": "observation_49ce924ed9a66450f9fd3875dec71bdb4530fc1bd29af3483ccc7abcaf3b9c0b",
+        "observation_ref": "inactive-conflict-0",
+        "presentation": "",
+        "source": "node"
+      },
+      {
+        "action_id": "action_76ab1fddb4387ed8e9ec51e280ccc7d1fe6e74225048c208f7205a631b1b0675",
+        "observation_id": "observation_6c6ccdd1672e376a895c94c6d9476f1d18f9a16ae8f9b56b104e3adfd12a0d5c",
+        "observation_ref": "inactive-conflict-3",
+        "presentation": "",
+        "source": "node"
+      },
+      {
+        "action_id": "action_ae0724296120900f4ec7d9c434a46fd6821b0c9680e2d331613498cbcd6cd496",
+        "observation_id": "observation_d9e4efbfd018de072a2540dfd32e172998c634f2ee5924973fa4b43a8f86210b",
+        "observation_ref": "inactive-conflict-5",
+        "presentation": "",
+        "source": "node"
+      },
+      {
+        "action_id": "action_05e508db710877efcb45b0d2d050849aee662f00f267a752234c7cef830af45b",
+        "observation_id": "observation_e8021b598b23fb37ad80b26156712e765038648e9801b4d414fd5440e940de65",
+        "observation_ref": "inactive-conflict-6",
+        "presentation": "",
+        "source": "node"
+      },
+      {
+        "action_id": "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4",
+        "observation_id": "observation_f65ca17551516c0f7554e6682b21f7dd7f0ac7dc274ec31016add58529c400eb",
+        "observation_ref": "inactive-conflict-1",
+        "presentation": "",
+        "source": "node"
+      },
+      {
+        "action_id": "action_14cc82b880d55591ea9117c35f3425ead81c9796b252327fcc92ef356d246bcd",
+        "observation_id": "observation_fa685a8103ab3aa4b4cbaa7deb79e6022f52e892571dac0d08f1b37cf2408535",
+        "observation_ref": "inactive-conflict-4",
+        "presentation": "",
+        "source": "node"
+      }
+    ],
+    "raw_observation_count": 7,
+    "unique_action_count": 7,
+    "unique_observation_count": 7,
+    "validation_state": "ACCEPTED"
+  },
+  "execution_authority": "NONE",
+  "graph": {
+    "cycle_action_refs": [],
+    "edges": [
+      {
+        "relation": "OBJECT",
+        "source_action_id": "action_05e508db710877efcb45b0d2d050849aee662f00f267a752234c7cef830af45b",
+        "source_action_ref": "object-inactive",
+        "target_action_id": "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4",
+        "target_action_ref": "inactive"
+      },
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_14cc82b880d55591ea9117c35f3425ead81c9796b252327fcc92ef356d246bcd",
+        "source_action_ref": "endorse-active-b",
+        "target_action_id": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+        "target_action_ref": "active"
+      },
+      {
+        "relation": "WITHDRAW",
+        "source_action_id": "action_5979a49e2c76fa3edfdf7243e80261af00d35e92dc79656287f95ca5a0215dff",
+        "source_action_ref": "withdraw-inactive",
+        "target_action_id": "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4",
+        "target_action_ref": "inactive"
+      },
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_76ab1fddb4387ed8e9ec51e280ccc7d1fe6e74225048c208f7205a631b1b0675",
+        "source_action_ref": "endorse-active-a",
+        "target_action_id": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+        "target_action_ref": "active"
+      },
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_ae0724296120900f4ec7d9c434a46fd6821b0c9680e2d331613498cbcd6cd496",
+        "source_action_ref": "endorse-inactive",
+        "target_action_id": "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4",
+        "target_action_ref": "inactive"
+      }
+    ],
+    "graph_root": "graph_3c01a377976eef7291be5bb33d83abdf3e9dda86a2b6bd8a715fb80d44a29c3c",
+    "missing_dependencies": [],
+    "nodes": [
+      {
+        "action_id": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+        "action_ref": "active",
+        "actor": "alice",
+        "kind": "PROPOSE",
+        "topic_id": "topic"
+      },
+      {
+        "action_id": "action_76ab1fddb4387ed8e9ec51e280ccc7d1fe6e74225048c208f7205a631b1b0675",
+        "action_ref": "endorse-active-a",
+        "actor": "alice",
+        "kind": "ENDORSE",
+        "topic_id": "topic"
+      },
+      {
+        "action_id": "action_14cc82b880d55591ea9117c35f3425ead81c9796b252327fcc92ef356d246bcd",
+        "action_ref": "endorse-active-b",
+        "actor": "bob",
+        "kind": "ENDORSE",
+        "topic_id": "topic"
+      },
+      {
+        "action_id": "action_ae0724296120900f4ec7d9c434a46fd6821b0c9680e2d331613498cbcd6cd496",
+        "action_ref": "endorse-inactive",
+        "actor": "bob",
+        "kind": "ENDORSE",
+        "topic_id": "topic"
+      },
+      {
+        "action_id": "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4",
+        "action_ref": "inactive",
+        "actor": "bob",
+        "kind": "PROPOSE",
+        "topic_id": "topic"
+      },
+      {
+        "action_id": "action_05e508db710877efcb45b0d2d050849aee662f00f267a752234c7cef830af45b",
+        "action_ref": "object-inactive",
+        "actor": "bob",
+        "kind": "OBJECT",
+        "topic_id": "topic"
+      },
+      {
+        "action_id": "action_5979a49e2c76fa3edfdf7243e80261af00d35e92dc79656287f95ca5a0215dff",
+        "action_ref": "withdraw-inactive",
+        "actor": "bob",
+        "kind": "WITHDRAW",
+        "topic_id": "topic"
+      }
+    ],
+    "profile": "ORL-CHAT-GRAPH-2-D01"
+  },
+  "inputs": {
+    "boundary": {
+      "expected_observation_refs": [],
+      "schema": "ORL-CHAT-BOUNDARY-2-D01",
+      "state": "OPEN"
+    },
+    "context": {
+      "conversation_id": "conversation-inactive-signal-conflict",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "ALL_DECLARED_PARTICIPANTS",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 2
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "observations": [
+      {
+        "action": {
+          "action_ref": "active",
+          "actor": "alice",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": "A",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "topic"
+        },
+        "observation_ref": "inactive-conflict-0",
+        "presentation": "",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node"
+      },
+      {
+        "action": {
+          "action_ref": "inactive",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": "B",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "topic"
+        },
+        "observation_ref": "inactive-conflict-1",
+        "presentation": "",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node"
+      },
+      {
+        "action": {
+          "action_ref": "withdraw-inactive",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "WITHDRAW",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "inactive"
+          ],
+          "topic_id": "topic"
+        },
+        "observation_ref": "inactive-conflict-2",
+        "presentation": "",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node"
+      },
+      {
+        "action": {
+          "action_ref": "endorse-active-a",
+          "actor": "alice",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "active"
+          ],
+          "topic_id": "topic"
+        },
+        "observation_ref": "inactive-conflict-3",
+        "presentation": "",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node"
+      },
+      {
+        "action": {
+          "action_ref": "endorse-active-b",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "active"
+          ],
+          "topic_id": "topic"
+        },
+        "observation_ref": "inactive-conflict-4",
+        "presentation": "",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node"
+      },
+      {
+        "action": {
+          "action_ref": "endorse-inactive",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "inactive"
+          ],
+          "topic_id": "topic"
+        },
+        "observation_ref": "inactive-conflict-5",
+        "presentation": "",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node"
+      },
+      {
+        "action": {
+          "action_ref": "object-inactive",
+          "actor": "bob",
+          "conversation_id": "conversation-inactive-signal-conflict",
+          "declared_value": null,
+          "kind": "OBJECT",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "inactive"
+          ],
+          "topic_id": "topic"
+        },
+        "observation_ref": "inactive-conflict-6",
+        "presentation": "",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node"
+      }
+    ]
+  },
+  "private_bundle_id": "private_bundle_10b86aafaf08f263204c5552644ba73c147aed37b051c91be5fa469e6882d8c1",
+  "profile": "ORL-CHAT-PRIVATE-BUNDLE-2-D01",
+  "public_receipt": {
+    "action_set_id": "action_set_e206de6461972bc95af3ce51af2bd30d9e93f324f80909e90ac2807921cee9ef",
+    "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+    "boundary_receipt_id": "boundary_receipt_cba222f316c42b5c861fa4d6aa11c4d35a446a62b6ebbc5b3d93660f1107d3f4",
+    "boundary_state": "OPEN",
+    "context_id": "context_96b096fdb52941d793c7138eb7838bad1bbd4ed5643f8c3a438b207f731e6bf2",
+    "conversation_id": "conversation-inactive-signal-conflict",
+    "conversation_resolution_id": "conversation_resolution_2a9b786acde0aeb4de003a6981d996a26aafccb7e09a1595a2de18f82e954c2e",
+    "execution_authority": "NONE",
+    "graph_root": "graph_3c01a377976eef7291be5bb33d83abdf3e9dda86a2b6bd8a715fb80d44a29c3c",
+    "profile": "ORL-CHAT-PUBLIC-RECEIPT-2-D01",
+    "public_receipt_id": "public_receipt_7139b581e3277c08d73eb36ceaf1020f29d440f3f7a51165c66427e10b37965c",
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "state_counts": {
+      "ABSTAIN": 0,
+      "INCOMPLETE": 0,
+      "RESOLVED": 1
+    },
+    "topic_receipt_root": "topic_receipt_root_7ba60b229eb55f9f73ec90a48e9cc7c4bd5039f9ea9e57f6614eaeec8dd085c8",
+    "topic_summaries": [
+      {
+        "active_action_ids": [
+          "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc"
+        ],
+        "active_endorser_count": 2,
+        "active_objector_count": 0,
+        "execution_authority": "NONE",
+        "participation_satisfied": true,
+        "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "resolved_action_id": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+        "state": "RESOLVED",
+        "topic_id": "topic",
+        "topic_receipt_id": "topic_receipt_20336550e809d9cea8df579cf7e979441f28889b8fa36cf86d4e38f22fd41598"
+      }
+    ],
+    "version": "2.0.0"
+  },
+  "result": "ACCEPTED",
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "self_verification": {
+    "errors": [],
+    "expected_conversation_resolution_id": "conversation_resolution_2a9b786acde0aeb4de003a6981d996a26aafccb7e09a1595a2de18f82e954c2e",
+    "expected_private_bundle_id": "private_bundle_10b86aafaf08f263204c5552644ba73c147aed37b051c91be5fa469e6882d8c1",
+    "expected_public_receipt_id": "public_receipt_7139b581e3277c08d73eb36ceaf1020f29d440f3f7a51165c66427e10b37965c",
+    "profile": "ORL-CHAT-PRODUCER-VERIFICATION-2-D01",
+    "valid": true
+  },
+  "topics": {
+    "receipts": [
+      {
+        "action_ids": [
+          "action_05e508db710877efcb45b0d2d050849aee662f00f267a752234c7cef830af45b",
+          "action_14cc82b880d55591ea9117c35f3425ead81c9796b252327fcc92ef356d246bcd",
+          "action_5979a49e2c76fa3edfdf7243e80261af00d35e92dc79656287f95ca5a0215dff",
+          "action_76ab1fddb4387ed8e9ec51e280ccc7d1fe6e74225048c208f7205a631b1b0675",
+          "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+          "action_ae0724296120900f4ec7d9c434a46fd6821b0c9680e2d331613498cbcd6cd496",
+          "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4"
+        ],
+        "actions": [
+          {
+            "action_id": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+            "action_ref": "active",
+            "active_proposal": true,
+            "actor": "alice",
+            "declared_value": "A",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_76ab1fddb4387ed8e9ec51e280ccc7d1fe6e74225048c208f7205a631b1b0675",
+            "action_ref": "endorse-active-a",
+            "active_proposal": false,
+            "actor": "alice",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "active"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_14cc82b880d55591ea9117c35f3425ead81c9796b252327fcc92ef356d246bcd",
+            "action_ref": "endorse-active-b",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "active"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_ae0724296120900f4ec7d9c434a46fd6821b0c9680e2d331613498cbcd6cd496",
+            "action_ref": "endorse-inactive",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "inactive"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_c60dca880753c77f4d46639e3bf02109e25ba1974a47edfbfd223c4504926ae4",
+            "action_ref": "inactive",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": "B",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": true
+          },
+          {
+            "action_id": "action_05e508db710877efcb45b0d2d050849aee662f00f267a752234c7cef830af45b",
+            "action_ref": "object-inactive",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "OBJECT",
+            "superseded": false,
+            "targets": [
+              "inactive"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_5979a49e2c76fa3edfdf7243e80261af00d35e92dc79656287f95ca5a0215dff",
+            "action_ref": "withdraw-inactive",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "WITHDRAW",
+            "superseded": false,
+            "targets": [
+              "inactive"
+            ],
+            "withdrawn": false
+          }
+        ],
+        "active_action_ids": [
+          "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc"
+        ],
+        "active_action_refs": [
+          "active"
+        ],
+        "active_endorsers": [
+          "alice",
+          "bob"
+        ],
+        "active_objectors": [],
+        "active_signal_conflicts": [],
+        "cycle_action_refs": [],
+        "execution_authority": "NONE",
+        "missing_dependencies": [],
+        "participation": {
+          "endorsement_count": 2,
+          "endorsers": [
+            "alice",
+            "bob"
+          ],
+          "missing": [],
+          "participants": [
+            "alice",
+            "bob"
+          ],
+          "profile": "ALL_DECLARED_PARTICIPANTS",
+          "required_endorsers": [],
+          "satisfied": true,
+          "surplus": [],
+          "threshold": 2
+        },
+        "profile": "ORL-CHAT-TOPIC-RECEIPT-2-D01",
+        "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "resolved_action_id": "action_796746c202421764cdbce5fad9d02923792fb92e71fb77693131634c913ed9fc",
+        "resolved_action_ref": "active",
+        "resolved_declared_value": "A",
+        "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+        "signal_conflicts": [
+          {
+            "actor": "bob",
+            "signal_action_refs": [
+              "endorse-inactive",
+              "object-inactive"
+            ],
+            "target_action_ref": "inactive"
+          }
+        ],
+        "state": "RESOLVED",
+        "superseded_action_refs": [],
+        "topic_id": "topic",
+        "topic_receipt_id": "topic_receipt_20336550e809d9cea8df579cf7e979441f28889b8fa36cf86d4e38f22fd41598",
+        "withdrawn_action_refs": [
+          "inactive"
+        ]
+      }
+    ],
+    "state_counts": {
+      "ABSTAIN": 0,
+      "INCOMPLETE": 0,
+      "RESOLVED": 1
+    },
+    "topic_receipt_root": "topic_receipt_root_7ba60b229eb55f9f73ec90a48e9cc7c4bd5039f9ea9e57f6614eaeec8dd085c8"
+  },
+  "version": "2.0.0"
+}

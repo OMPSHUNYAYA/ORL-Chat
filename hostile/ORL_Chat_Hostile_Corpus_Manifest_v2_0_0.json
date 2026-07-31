@@ -1,0 +1,246 @@
+{
+  "entries": [
+    {
+      "expected_reason_substring": null,
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/top-level-extra-field.json",
+      "kind": "resolver-input",
+      "name": "top-level-extra-field"
+    },
+    {
+      "expected_reason_substring": "context.schema",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/context-schema.json",
+      "kind": "resolver-input",
+      "name": "context-schema"
+    },
+    {
+      "expected_reason_substring": "ruleset_profile",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/context-ruleset.json",
+      "kind": "resolver-input",
+      "name": "context-ruleset"
+    },
+    {
+      "expected_reason_substring": "execution_authority",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/context-authority.json",
+      "kind": "resolver-input",
+      "name": "context-authority"
+    },
+    {
+      "expected_reason_substring": "participation.profile",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/participation-profile.json",
+      "kind": "resolver-input",
+      "name": "participation-profile"
+    },
+    {
+      "expected_reason_substring": "participants",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/participant-duplicate.json",
+      "kind": "resolver-input",
+      "name": "participant-duplicate"
+    },
+    {
+      "expected_reason_substring": "threshold",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/negative-threshold.json",
+      "kind": "resolver-input",
+      "name": "negative-threshold"
+    },
+    {
+      "expected_reason_substring": "observations",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/observations-not-array.json",
+      "kind": "resolver-input",
+      "name": "observations-not-array"
+    },
+    {
+      "expected_reason_substring": "unsupported field extra",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/observation-extra-field.json",
+      "kind": "resolver-input",
+      "name": "observation-extra-field"
+    },
+    {
+      "expected_reason_substring": "source",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/observation-empty-source.json",
+      "kind": "resolver-input",
+      "name": "observation-empty-source"
+    },
+    {
+      "expected_reason_substring": "kind",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/unsupported-action-kind.json",
+      "kind": "resolver-input",
+      "name": "unsupported-action-kind"
+    },
+    {
+      "expected_reason_substring": "targets",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/missing-relation-target.json",
+      "kind": "resolver-input",
+      "name": "missing-relation-target"
+    },
+    {
+      "expected_reason_substring": "self-target",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/self-target.json",
+      "kind": "resolver-input",
+      "name": "self-target"
+    },
+    {
+      "expected_reason_substring": "cross-topic",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/cross-topic-target.json",
+      "kind": "resolver-input",
+      "name": "cross-topic-target"
+    },
+    {
+      "expected_reason_substring": "conversation_id",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/cross-conversation-target.json",
+      "kind": "resolver-input",
+      "name": "cross-conversation-target"
+    },
+    {
+      "expected_reason_substring": "actor is not admitted",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/nonparticipant-signal.json",
+      "kind": "resolver-input",
+      "name": "nonparticipant-signal"
+    },
+    {
+      "expected_reason_substring": "observation_ref content conflict",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/observation-ref-conflict.json",
+      "kind": "resolver-input",
+      "name": "observation-ref-conflict"
+    },
+    {
+      "expected_reason_substring": "action_ref content conflict",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/action-ref-conflict.json",
+      "kind": "resolver-input",
+      "name": "action-ref-conflict"
+    },
+    {
+      "expected_reason_substring": "boundary.schema",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/boundary-schema.json",
+      "kind": "resolver-input",
+      "name": "boundary-schema"
+    },
+    {
+      "expected_reason_substring": "boundary.state",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/boundary-state.json",
+      "kind": "resolver-input",
+      "name": "boundary-state"
+    },
+    {
+      "expected_reason_substring": "expected_observation_refs",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/boundary-duplicate-ref.json",
+      "kind": "resolver-input",
+      "name": "boundary-duplicate-ref"
+    },
+    {
+      "expected_reason_substring": "floating-point",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/floating-declared-value.json",
+      "kind": "resolver-input",
+      "name": "floating-declared-value"
+    },
+    {
+      "expected_reason_substring": "maximum nesting depth",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/declared-value-depth.json",
+      "kind": "resolver-input",
+      "name": "declared-value-depth"
+    },
+    {
+      "expected_reason_substring": "presentation",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/presentation-carriage-return.json",
+      "kind": "resolver-input",
+      "name": "presentation-carriage-return"
+    },
+    {
+      "expected_reason_substring": "format",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/identifier-frozen-format.json",
+      "kind": "resolver-input",
+      "name": "identifier-frozen-format"
+    },
+    {
+      "expected_reason_substring": "context",
+      "expected_result": "REFUSED",
+      "file": "hostile/inputs/context-not-object.json",
+      "kind": "resolver-input",
+      "name": "context-not-object"
+    },
+    {
+      "expected_result": "REFUSED",
+      "file": "hostile/raw/duplicate-json-key.json",
+      "kind": "strict-parser",
+      "name": "duplicate-json-key",
+      "strict_canonical_only": false
+    },
+    {
+      "expected_result": "REFUSED",
+      "file": "hostile/raw/floating-json-number.json",
+      "kind": "strict-parser",
+      "name": "floating-json-number",
+      "strict_canonical_only": false
+    },
+    {
+      "expected_result": "REFUSED",
+      "file": "hostile/raw/integer-above-exact-range.json",
+      "kind": "strict-parser",
+      "name": "integer-above-exact-range",
+      "strict_canonical_only": false
+    },
+    {
+      "expected_result": "REFUSED",
+      "file": "hostile/raw/integer-below-exact-range.json",
+      "kind": "strict-parser",
+      "name": "integer-below-exact-range",
+      "strict_canonical_only": false
+    },
+    {
+      "expected_result": "REFUSED",
+      "file": "hostile/raw/integer-extreme-length.json",
+      "kind": "strict-parser",
+      "name": "integer-extreme-length",
+      "strict_canonical_only": false
+    },
+    {
+      "expected_result": "REFUSED",
+      "file": "hostile/raw/utf8-bom.json",
+      "kind": "strict-parser",
+      "name": "utf8-bom",
+      "strict_canonical_only": false
+    },
+    {
+      "expected_result": "REFUSED",
+      "file": "hostile/raw/noncanonical-json.json",
+      "kind": "strict-parser",
+      "name": "noncanonical-json",
+      "strict_canonical_only": true
+    },
+    {
+      "expected_result": "REFUSED",
+      "file": "hostile/raw/trailing-content.json",
+      "kind": "strict-parser",
+      "name": "trailing-content",
+      "strict_canonical_only": true
+    }
+  ],
+  "execution_authority": "NONE",
+  "manifest_id": "hostile_manifest_dbb2bf8a851a2420800e9757ea68f855239135f04c577e957e37354213d9d8ee",
+  "profile": "ORL-CHAT-HOSTILE-CORPUS-2-C01",
+  "version": "2.0.0"
+}

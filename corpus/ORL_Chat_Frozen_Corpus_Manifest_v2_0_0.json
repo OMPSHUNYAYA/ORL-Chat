@@ -1,0 +1,125 @@
+{
+  "corpus_profile": "ORL-CHAT-CORPUS-2-D01",
+  "entries": [
+    {
+      "conversation_resolution_id": "conversation_resolution_df4421ee64f82483068d4b33fcf47d5f128edafd54e526588fd47c69333afe13",
+      "file": "ORL_Chat_corrected_instruction_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_202a26abba92a2367dc5f2c168a2145bd09f9b34ec682f99bd088520e6af3048",
+      "public_receipt_id": "public_receipt_a6de717ba14f084890eb46a33865b868c23422478bd040fc3f32950d4c0e684b",
+      "result": "ACCEPTED",
+      "scenario": "corrected-instruction",
+      "sha256": "bfdb9210ce750cdf6aacd26cf762066fc147cb580d33ae2e26fdbdbe009e2c5e"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_a7f6241fc270acd978549f2163e0f39eea782e68776388ac082b5588d50563c2",
+      "file": "ORL_Chat_missing_endorsement_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_1be6e059065090ab3661d9d24e701d5ac0d3be5fcf675453d913224912d92bf6",
+      "public_receipt_id": "public_receipt_cbc3bd2626c7e5a5d9ebd0a48e2a4c9ace87ae2afa7acd9f3029289bc68eb5bd",
+      "result": "ACCEPTED",
+      "scenario": "missing-endorsement",
+      "sha256": "7c54faf7bf18b21d0f3673a1f6874b7ea4f3238cf42c28b215ead5851b52c9c0"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_3ff0b25e74a0b0c842543d91241f1bf4b0fb96bfa585d225498b17df8e65d775",
+      "file": "ORL_Chat_competing_proposals_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_d5683e1721dac24c08d82af16bd410cc802fd147bf754ddb6781604e0fa5cc3b",
+      "public_receipt_id": "public_receipt_ba1f7fc34f8e56aeea54257a16c08e68764e25963b402d532c3b3de615b7a77d",
+      "result": "ACCEPTED",
+      "scenario": "competing-proposals",
+      "sha256": "49fb60c2e7d5f8dbc13cb5ce78e6e41dea1ef9dfe856bb24d02cd4fece54f876"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_93e4a0c1c151e813bcb9f43813a78b1645398f6050881468330f5a466a4739e8",
+      "file": "ORL_Chat_withdrawal_repair_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_de3028faa51945fc1a66a8cb5a9213ec97239fe48f194fc63ad7d6db15579601",
+      "public_receipt_id": "public_receipt_491aa3ac2d0b73ac1368344117675136f09be592062183b4a3deb202c45cc932",
+      "result": "ACCEPTED",
+      "scenario": "withdrawal-repair",
+      "sha256": "127454b2c93f8bb4010e5464100855c48933e6ff84ff50a9c76fa3ff894f05b9"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_972419337e0011fad7d72d31c4c30dfa6b20d0e5a83c9fba3c31b7234a522508",
+      "file": "ORL_Chat_observation_multiplicity_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_580f40b3df684947b1f527599c0e053c461ef7f8efd31ed01ae9f4644dec7262",
+      "public_receipt_id": "public_receipt_7d6e0c7b4988bae33c86af2eaf4c6a486f979b2829f9def69bdf1229b9f84ae1",
+      "result": "ACCEPTED",
+      "scenario": "observation-multiplicity",
+      "sha256": "d5b8077db9930e2478d915dec72184761c56c78c91d7e50c044bbdd76802fcfa"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_872ba467e436cfa1e63642675d2f8ca53c951fcba3407833e2c08d70cd9c1a9a",
+      "file": "ORL_Chat_missing_dependency_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_b0c4110c20670c7aa7f56ab6a4ce3a37b3bf915d942700e8e148590274c894a0",
+      "public_receipt_id": "public_receipt_fffd7d620a0f5c94dddb014e94ab7122614c2c780e429bed25c1dcdad5f22526",
+      "result": "ACCEPTED",
+      "scenario": "missing-dependency",
+      "sha256": "845b098a1ba899e3c6249e43256eafaedac5dab3539bceb2905343cf3ba1199a"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_ecc0f17f7a0cd143807e34fd18357a632a9c4c9458d0dd00c94bdc2e4d163b56",
+      "file": "ORL_Chat_cycle_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_c38fc5c4255000fd6be6318f1315be91423acf48d810554ce218a4fe313862bc",
+      "public_receipt_id": "public_receipt_9e4b45e095c7cc1d435253db63aef120c577f63f5fefa79a0ae991009f692df3",
+      "result": "ACCEPTED",
+      "scenario": "cycle",
+      "sha256": "bacee4a7f422f196be5304c3cd4642467c585556ec32ac6366dee989255295a9"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_2993248233928abe147989f1a17012131d12eb7bfeed9b501753d2dc4b55ed92",
+      "file": "ORL_Chat_objected_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_3ead7c11946555458b48daf684294f1e33386bc30eecdc7d9c6a77379edc7523",
+      "public_receipt_id": "public_receipt_03d88f4456097d7f9c99559f142e2f2e55d844e7756f338855b18a999de3ff37",
+      "result": "ACCEPTED",
+      "scenario": "objected",
+      "sha256": "e51a89318b7c46f0592fb4d4044ccb2f176482fad4f1837165c5f4b91d8fd332"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_db1c72ef4e33db6b09c82871f490fa311e0d01f7a4add34441afa4ff4051ade2",
+      "file": "ORL_Chat_signal_conflict_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_fd15903e3c2233cb369792e6f6e8507ac8552a5799c4c2fb64c7c2f6e300680b",
+      "public_receipt_id": "public_receipt_f237903da300fb9dc9860b904f44eacd12797e96c490cb2e0d7382242bf92f16",
+      "result": "ACCEPTED",
+      "scenario": "signal-conflict",
+      "sha256": "5af4d52bdb10ba0e779fad6c181692a3ca2339e4af66ec4c2a6640c415d3666e"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_2a9b786acde0aeb4de003a6981d996a26aafccb7e09a1595a2de18f82e954c2e",
+      "file": "ORL_Chat_inactive_signal_conflict_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_10b86aafaf08f263204c5552644ba73c147aed37b051c91be5fa469e6882d8c1",
+      "public_receipt_id": "public_receipt_7139b581e3277c08d73eb36ceaf1020f29d440f3f7a51165c66427e10b37965c",
+      "result": "ACCEPTED",
+      "scenario": "inactive-signal-conflict",
+      "sha256": "14525e75864b02f7ba336428362b6c5b4f477d2b4451b630ccfdd10e17a6ac04"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_4019a89b8494d8f406d035b7a05e7c27621c264a98db3976a5e8b4f6009a77d1",
+      "file": "ORL_Chat_exact_participant_set_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_2414433aafe038e99dc472e39d026b55c55aecf9a8363bb6f37d0634817b2d82",
+      "public_receipt_id": "public_receipt_5486562c427b8bd682d15a9370f74996fb1fa8f5e36d6cc97dd3da839fea60e6",
+      "result": "ACCEPTED",
+      "scenario": "exact-participant-set",
+      "sha256": "8b13990c547fdbb5c798237f49f39ef45f83d2f54f25d1b14dd433b9fc889061"
+    },
+    {
+      "conversation_resolution_id": "conversation_resolution_dd687c5e110b604566e73056ad008a5e2c5d749633cb6b2d3acd0c3fd7b3c910",
+      "file": "ORL_Chat_multi_topic_Bundle_v2_0_0.json",
+      "private_bundle_id": "private_bundle_a5794e8c8748a9d0602a3bf4e0d191e99a8fe32b9be6990c34dd5c4c607c283f",
+      "public_receipt_id": "public_receipt_49fb9e5f19dc7db663e64c5560433c72194b7383ab21f4997a7026674a6055c6",
+      "result": "ACCEPTED",
+      "scenario": "multi-topic",
+      "sha256": "cd7ede829cad6eca2512352adfbe13f0b7ae472f3e596f66b1ccfaf6ac7aa315"
+    },
+    {
+      "conversation_resolution_id": null,
+      "file": "ORL_Chat_identifier_conflict_Bundle_v2_0_0.json",
+      "private_bundle_id": null,
+      "public_receipt_id": null,
+      "result": "REFUSED",
+      "scenario": "identifier-conflict",
+      "sha256": "c660b19c84cc28e5e0bafd902b1b9a6727f1cd549e03c885aa2b2c3f4c48b8da"
+    }
+  ],
+  "manifest_id": "corpus_manifest_5ead9eea29ff0f67081b22a5cdc802240d2a547ecf324f2fea8641e9653ed578",
+  "profile": "ORL-CHAT-CORPUS-MANIFEST-2-D01",
+  "version": "2.0.0"
+}

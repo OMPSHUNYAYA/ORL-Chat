@@ -1,0 +1,89 @@
+{
+  "boundary": {
+    "expected_observation_refs": [
+      "obs-proposal",
+      "obs-endorse-alice",
+      "obs-endorse-carol"
+    ],
+    "schema": "ORL-CHAT-BOUNDARY-2-D01",
+    "state": "SEALED"
+  },
+  "context": {
+    "conversation_id": "conversation-exact-participant-set",
+    "execution_authority": "NONE",
+    "participation": {
+      "participants": [
+        "alice",
+        "bob",
+        "carol"
+      ],
+      "profile": "EXACT_DECLARED_PARTICIPANT_SET",
+      "required_endorsers": [
+        "alice",
+        "carol"
+      ],
+      "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+      "threshold": 2
+    },
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "schema": "ORL-CHAT-CONTEXT-2-D01"
+  },
+  "observations": [
+    {
+      "action": {
+        "action_ref": "proposal",
+        "actor": "bob",
+        "conversation_id": "conversation-exact-participant-set",
+        "declared_value": {
+          "mode": "bounded",
+          "value": 7
+        },
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-proposal",
+      "presentation": "Use bounded mode with value 7.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-b"
+    },
+    {
+      "action": {
+        "action_ref": "endorse-alice",
+        "actor": "alice",
+        "conversation_id": "conversation-exact-participant-set",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "proposal"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-endorse-alice",
+      "presentation": "Alice endorses.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "endorse-carol",
+        "actor": "carol",
+        "conversation_id": "conversation-exact-participant-set",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "proposal"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-endorse-carol",
+      "presentation": "Carol endorses.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-c"
+    }
+  ]
+}

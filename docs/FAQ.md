@@ -1,1026 +1,379 @@
-# ⭐ FAQ — ORL-Chat
+# ORL-Chat v2.0.0
 
-**Deterministic Bounded Conversation-State Resolution**
+## Frequently Asked Questions
 
-ORL-Chat is a public deterministic reference model for resolving a bounded conversation state from supported message fragments and explicit relationships.
+ORL-Chat is a bounded reference implementation for deterministic conversation-evidence reconciliation. It resolves declared typed actions and relationships under a versioned structural contract while keeping language interpretation, identity, consent, delivery, truth, authorization, and execution outside its authority boundary.
 
-The governing relation is:
+## Contents
 
-`same deduplicated supported message fragments + same resolver rules -> same bounded conversation-state result`
-
-ORL-Chat is developed within the Shunyaya Framework.
-
----
-
-# SECTION A — Purpose and Positioning
-
-## A1. What is ORL-Chat?
-
-ORL-Chat is a deterministic reference model for resolving a bounded conversation state.
-
-It evaluates:
-
-- supported message fragments
-- declared message kinds
-- explicit target relationships
-- deterministic resolver rules
-
-It does not perform unrestricted natural-language understanding.
+1. [Purpose and Scope](#1-purpose-and-scope)
+2. [Declared Evidence and Supported Actions](#2-declared-evidence-and-supported-actions)
+3. [Resolution Outcomes and Evidence Boundaries](#3-resolution-outcomes-and-evidence-boundaries)
+4. [Receipts, Bundles, and Conversation-State Capsules](#4-receipts-bundles-and-conversation-state-capsules)
+5. [Capsule Comparison Relations](#5-capsule-comparison-relations)
+6. [Verification, Browser Use, and Canonical Data](#6-verification-browser-use-and-canonical-data)
+7. [Modification, Integration, and Deployment](#7-modification-integration-and-deployment)
 
 ---
 
-## A2. What problem does ORL-Chat explore?
+## 1. Purpose and Scope
 
-Conversation fragments may be:
+### 1.1 What problem does ORL-Chat address?
 
-- incomplete
-- delayed
-- duplicated
-- received in different orders
-- divided across nodes
+ORL-Chat resolves the current bounded state of declared proposals, amendments, withdrawals, endorsements, and objections without allowing message arrival position or wall-clock time to become the resolution authority.
 
-ORL-Chat explores whether a declared conversation state can be reconstructed from explicit relationships rather than from timestamps or fragment arrival position.
+Its governing contract is:
 
----
+`same admitted canonical evidence + same bound context + same rules, text profile, and participation profile + same boundary -> same bounded conversation-state bundle or deterministic refusal`
 
-## A3. What does “orderless” mean?
+### 1.2 Does ORL-Chat understand unrestricted conversation language?
 
-It means fragment arrival order is not used as resolution authority within the supported model.
+No. ORL-Chat resolves declared typed actions and relationships under a bounded ruleset.
 
-For a supported permutation `P(E)` containing the same fragments, the intended invariant is:
+A human, parser, or AI system may propose typed structure, but the proposed structure remains subject to strict intake, canonicalization, validation, and deterministic resolution.
 
-`R_v(P(E)) = R_v(E)`
+### 1.3 Does ORL-Chat decide what a sentence means?
 
-The current Python demonstration verifies this across all `120` permutations of the supplied five-message scenario.
+No. Presentation text may be retained in the private reconstruction material, but it does not determine canonical action identity or the bounded resolution result.
 
-It is not a universal proof for arbitrary conversations or implementations.
+ORL-Chat resolves declared structure, not unrestricted semantics.
 
----
+### 1.4 Does a `RESOLVED` topic prove that the declared value is factually true?
 
-## A4. Is time irrelevant?
+No. `RESOLVED` establishes the bounded state of admitted declared evidence under the selected rules and participation profile. It does not establish factual truth.
 
-No.
+### 1.5 Does an endorsement prove authenticated consent?
 
-Time may still be useful for:
+No. An endorsement is a declared structural signal. Authentication, identity proofing, consent verification, and legal validity remain outside ORL-Chat.
 
-- display
-- history
-- monitoring
-- operations
-- legal or policy requirements
+### 1.6 Does ORL-Chat prove that a message was delivered, read, or understood?
 
-The current resolver does not use timestamps or wall-clock time to classify the supplied conversation state.
+No. Delivery, receipt, reading, comprehension, and source authenticity require separate evidence and systems.
 
----
+### 1.7 Does ORL-Chat replace a chat platform or messaging protocol?
 
-## A5. Does ORL-Chat require synchronization?
+No. Transport, storage, delivery, encryption, availability, user interfaces, and messaging protocols remain separate responsibilities.
 
-The supplied scenario does not require synchronized clocks or simultaneous fragment delivery.
+### 1.8 Does ORL-Chat replace a consensus system?
 
-The two nodes begin with different local fragment collections and later receive the same supported evidence through a scripted sharing step.
-
-ORL-Chat does not provide a synchronization, networking, reliable-broadcast, or delivery protocol.
+No. ORL-Chat resolves declared typed evidence under a bounded ruleset. It does not establish distributed, social, legal, political, or organizational consensus.
 
 ---
 
-## A6. Is ORL-Chat a chat application?
+## 2. Declared Evidence and Supported Actions
 
-No.
+### 2.1 Which actions are supported?
 
-It is not:
+The ORL-Chat v2.0.0 grammar supports:
 
-- a messaging platform
-- a transport protocol
-- a user-interface replacement
-- a moderation system
-- an AI language model
+- `PROPOSE`
+- `AMEND`
+- `WITHDRAW`
+- `ENDORSE`
+- `OBJECT`
 
-It is a bounded conversation-state resolver.
+Unsupported action types are not silently interpreted.
 
----
+### 2.2 What is the difference between an observation and an action?
 
-## A7. Is ORL-Chat an interpretation engine?
+An observation records a source-side presentation of an action. Multiple observations may refer to one canonical action.
 
-Only in a narrow structural sense.
+`observation multiplicity != action multiplicity`
 
-It selects a declared value from explicit relationships among supported messages.
+This separation allows relay or source multiplicity to remain visible without multiplying the underlying conversational action.
 
-It does not infer unrestricted human meaning, intent, sarcasm, emotion, truth, or social context.
+### 2.3 What happens to exact duplicate observations?
 
----
+Exact duplicates are absorbed. They do not create additional canonical actions or alter the bounded result.
 
-## A8. What is the core idea in one line?
+### 2.4 What is a relay observation?
 
-`explicit message relationships + deterministic rules -> bounded conversation-state result`
+A relay observation is a distinct observation path carrying the same canonical action. It can preserve evidence that an action appeared through multiple observation paths without creating a second action.
 
----
+### 2.5 What happens when an identifier is reused with different content?
 
-## A9. Is ORL-Chat a conservative extension of ordinary chat?
+Conflicting reuse of an observation reference or action reference is refused before topic resolution.
 
-Not as a universal theorem.
+`same identifier + different canonical content -> REFUSED`
 
-The current demonstration shows that a declared correction chain can produce a bounded result consistent with the supplied scenario.
+### 2.6 Which participation profiles are supported?
 
-It does not prove equivalence with every reasonable human interpretation.
+ORL-Chat v2.0.0 supports:
 
----
+- `NO_ENDORSEMENT_REQUIRED`
+- `SINGLE_DECLARED_ENDORSER`
+- `ALL_DECLARED_PARTICIPANTS`
+- `EXACT_DECLARED_PARTICIPANT_SET`
+- `DECLARED_THRESHOLD`
 
-## A10. Can ORL-Chat coexist with existing systems?
-
-Potentially, as a research or reference layer for:
-
-- structured correction chains
-- amendment tracking
-- offline instruction reconciliation
-- multi-agent proposal tracking
-- deterministic conversation auditing
-
-Real deployment would require additional security, identity, transport, policy, and validation layers.
+These profiles evaluate declared evidence. They do not authenticate participants or prove consent.
 
 ---
 
-# SECTION B — Supported Structural Model
+## 3. Resolution Outcomes and Evidence Boundaries
 
-## B1. What is a conversation in the current model?
+### 3.1 Which resolution outcomes are available?
 
-A collection of supported message fragments grouped by topic and connected through explicit target relationships.
+- `RESOLVED`: one active proposal remains and the selected participation profile is satisfied.
+- `INCOMPLETE`: the admitted evidence is valid but insufficient for resolution.
+- `ABSTAIN`: the admitted evidence contains a bounded unresolved disagreement or conflict.
+- `REFUSED`: the submitted structure fails strict intake or validation.
 
-The resolver evaluates the relationship graph rather than treating display sequence as authority.
+### 3.2 Why is `REFUSED` separate from `INCOMPLETE`?
+
+`REFUSED` concerns invalid, conflicting, malformed, or unsupported input that is not admitted into topic resolution.
+
+`INCOMPLETE` concerns valid admitted input that lacks sufficient evidence for a bounded result.
+
+### 3.3 What happens when two incompatible proposals remain active?
+
+ORL-Chat does not force a winner. The topic resolves to `ABSTAIN` under the supported rules.
+
+### 3.4 Can a withdrawal repair an earlier disagreement?
+
+Yes. A supported withdrawal can remove one proposal from the active frontier. If one compatible proposal remains and the participation profile is satisfied, the topic can resolve.
+
+This is a structural relationship within the admitted evidence graph. It is not a claim that wall-clock sequence determines the result.
+
+### 3.5 What does `OPEN` mean?
+
+`OPEN` means the observed evidence set is not declared complete under the selected evidence-boundary contract.
+
+### 3.6 What does `SEALED` mean?
+
+`SEALED` means the declared expected observation-reference set exactly matches the observed reference set.
+
+It does not prove that no undisclosed message or evidence exists elsewhere.
+
+### 3.7 What precedence applies when several topic conditions coexist?
+
+After strict validation, ORL-Chat applies this reason-code precedence:
+
+`DEPENDENCY_CYCLE > PARTICIPANT_SIGNAL_CONFLICT > MULTIPLE_ACTIVE_PROPOSALS > MISSING_DEPENDENCY > NO_ACTIVE_PROPOSAL > ACTIVE_PROPOSAL_OBJECTED > participation evaluation`
+
+The final participation evaluation produces `RESOLVED` when satisfied and `INCOMPLETE / PARTICIPATION_INCOMPLETE` otherwise.
+
+### 3.8 How are dependency cycles handled?
+
+A structurally valid cycle within the declared graph-depth bound is admitted and produces `ABSTAIN / DEPENDENCY_CYCLE`. It is not treated as an intake refusal.
+
+### 3.9 What is the maximum supported graph depth?
+
+ORL-Chat declares `MAX_GRAPH_DEPTH = 256`. From any action, at most 256 dependency edges may be followed before reaching a terminal action or a repeated action. A chain containing 257 actions connected by 256 edges is admitted. A chain requiring 257 edges is refused with a deterministic error shared by the Python and JavaScript implementations.
 
 ---
 
-## B2. What fields are used?
+## 4. Receipts, Bundles, and Conversation-State Capsules
 
-The committed scenario uses fields such as:
+### 4.1 What is the public receipt?
+
+The public receipt is a portable structural summary containing identities, topic states, reason codes, participation summaries, and boundary status without exposing raw presentation text or raw declared values.
+
+### 4.2 What is the private reconstruction bundle?
+
+The private reconstruction bundle contains the admitted observations, presentations, declared values, relationship graph, witnesses, and reconstruction material required for complete verification.
+
+### 4.3 What is a Conversation-State Capsule?
+
+A Conversation-State Capsule is a portable, privacy-separated state derived from a verified private bundle.
+
+It carries structural identities, topic states, value commitments, witness codes, and evidence coverage without carrying raw presentations, raw declared values, participant names, observation sources, or action references.
+
+### 4.4 Is a value commitment encryption?
+
+No. A value commitment is a deterministic identity commitment. It is not encryption and does not provide confidentiality by itself.
+
+Low-entropy values may be guessable through enumeration.
+
+### 4.5 Can a Conversation-State Capsule authorize execution?
+
+No. Every capsule declares:
+
+`execution_authority = NONE`
+
+A downstream system must perform its own identity, authorization, policy, safety, legality, and current-state checks.
+
+---
+
+## 5. Capsule Comparison Relations
+
+### 5.1 What does `IDENTICAL` mean?
+
+`IDENTICAL` means the canonical capsule identities match.
+
+### 5.2 What does `COMPATIBLE` mean?
+
+`COMPATIBLE` means the declared comparison context matches and the common topics do not contain divergent resolved-value commitments.
+
+### 5.3 What does `SUPERSEDES` mean?
+
+`SUPERSEDES` means the right capsule contains a strict action-set extension that changes the bounded structural state without producing resolved-value divergence.
+
+### 5.4 Does `SUPERSEDES` mean later in time?
+
+No. `SUPERSEDES` is a structural relation. It is not derived from timestamps or wall-clock chronology.
+
+### 5.5 Does `SUPERSEDES` establish legal priority or authority?
+
+No. It does not establish legal priority, consent, organizational authority, execution permission, or enforceability.
+
+### 5.6 What does `DIVERGES` mean?
+
+`DIVERGES` means a common topic resolves to a different declared-value commitment.
+
+### 5.7 What does `INCOMPARABLE` mean?
+
+`INCOMPARABLE` means the declared comparison context differs, so the bounded comparison profile does not authorize a substantive relation.
+
+### 5.8 What does `UNSUPPORTED` mean?
+
+`UNSUPPORTED` means that at least one capsule fails structural verification or cannot be evaluated under the supported comparison contract.
+
+---
+
+## 6. Verification, Browser Use, and Canonical Data
+
+### 6.1 Why can the browser show a `file:` origin warning?
+
+Browsers treat local `file:` URLs as restricted or unique security origins. This may limit script, file, frame, or resource behavior even when the laboratory itself opens.
+
+From the `Public_Release` directory, start a local server:
 
 ```text
-id
-topic
-kind
-text
-value
-targets
+python -m http.server 8000
 ```
 
-A formal versioned schema is not yet part of the current implementation.
-
----
-
-## B3. Which message kinds are supported?
-
-The current resolver supports:
-
-- `OPEN`
-- `REPLACE`
-- `RETRACT`
-- `CONFIRM`
-
-Unknown kinds are treated as invalid within the evaluated topic.
-
----
-
-## B4. What does OPEN do?
-
-`OPEN` introduces a proposal.
-
-In the current resolver, it must:
-
-- contain a value
-- have no targets
-
----
-
-## B5. What does REPLACE do?
-
-`REPLACE` supersedes its valid target proposals and introduces a replacement value.
-
-It must:
-
-- identify at least one target
-- reference targets present in the topic
-- depend on structurally valid targets
-- contain a value
-
----
-
-## B6. What does RETRACT do?
-
-`RETRACT` removes its valid targeted proposal from the active set.
-
-It must reference at least one structurally valid target.
-
----
-
-## B7. What does CONFIRM do?
-
-`CONFIRM` confirms its valid targeted proposal when that proposal remains active.
-
-A confirmation does not independently prove real-world agreement, authorization, or truth.
-
----
-
-## B8. Can the model be extended?
-
-Yes, but richer message kinds and policies would require:
-
-- a formal schema
-- versioned rules
-- explicit refusal behavior
-- conformance tests
-- migration rules
-- stronger conflict handling
-
----
-
-# SECTION C — Resolution States
-
-## C1. What are the current resolution states?
-
-The current resolver returns:
-
-- `RESOLVED`
-- `INCOMPLETE`
-- `ABSTAIN`
-
-These are model classifications, not general judgments about human communication.
-
----
-
-## C2. When is a topic RESOLVED?
-
-The current resolver produces `RESOLVED` when exactly one active proposal is confirmed.
-
-Conceptually:
-
-`one confirmed active proposal -> RESOLVED`
-
----
-
-## C3. When is a topic INCOMPLETE?
-
-Examples include:
-
-- one active proposal without confirmation
-- missing dependencies
-- no resolvable proposal
-
-Conceptually:
-
-`missing required relationship -> INCOMPLETE`
-
----
-
-## C4. When is a topic ABSTAIN?
-
-Examples include:
-
-- multiple confirmed active proposals
-- multiple conflicting active proposals
-
-Conceptually:
-
-`conflicting active structure -> ABSTAIN`
-
----
-
-## C5. Why not guess when evidence is incomplete?
-
-Because the current model is designed to avoid inventing missing relationships or values.
-
-`INCOMPLETE` preserves the unresolved state.
-
----
-
-## C6. Why not automatically repair conflicts?
-
-Automatic repair would require additional policy and authority not defined by the current model.
-
-`ABSTAIN` preserves the conflict rather than silently choosing one branch.
-
----
-
-## C7. Can states change when new evidence arrives?
-
-Yes.
-
-A topic can move, for example, from:
-
-`INCOMPLETE -> RESOLVED`
-
-It can also move from a previously resolved local view to another state if materially conflicting evidence is later introduced.
-
-The current model does not define immutable finality.
-
----
-
-## C8. Does RESOLVED mean true?
-
-No.
-
-`RESOLVED` means the declared resolver conditions were satisfied.
-
-It does not prove:
-
-- factual truth
-- speaker identity
-- authorization
-- legal validity
-- social agreement
-- real-world acceptance
-
----
-
-# SECTION D — Same-Evidence Node Equality
-
-## D1. What does same-evidence equality mean?
-
-Let:
-
-- `E` be a supported message-fragment collection
-- `D(E)` be exact-duplicate absorption
-- `R_v(E)` be the resolver output under ruleset version `v`
-
-For two nodes:
-
-`D(E_i) = D(E_j) -> R_v(E_i) = R_v(E_j)`
-
-Nodes with the same deduplicated supported fragments and the same resolver rules produce the same bounded result.
-
----
-
-## D2. Must nodes begin with the same data?
-
-No.
-
-In the supplied scenario, Node-A and Node-B begin with different fragments.
-
-Equality is expected only after both hold the same deduplicated supported fragment set.
-
----
-
-## D3. Does ORL-Chat guarantee convergence when nodes permanently hold different evidence?
-
-No.
-
-Materially different evidence can produce different results.
-
-ORL-Chat does not force agreement across unequal evidence sets.
-
----
-
-## D4. Is this consensus?
-
-No.
-
-Same-evidence deterministic equality is not consensus.
-
-The current model does not implement:
-
-- voting
-- leader election
-- quorum rules
-- Byzantine agreement
-- reliable broadcast
-- distributed finality
-
----
-
-## D5. Is a coordinator required?
-
-The resolver itself does not require a coordinator for the committed same-evidence calculation.
-
-However, the demonstration uses a scripted sharing step to place the fragments at both nodes.
-
-How evidence is transported or coordinated is outside the current model.
-
----
-
-## D6. Is continuous connectivity required?
-
-Not for the supplied scenario.
-
-The nodes may begin separately and share evidence later.
-
-The model does not prove delivery under network failure or guarantee that sharing will occur.
-
----
-
-# SECTION E — Arrival-Order Independence
-
-## E1. What exactly is tested?
-
-The Python reference implementation evaluates every permutation of the five unique committed messages.
-
-`5! = 120`
-
-For each permutation, it compares the resulting bounded conversation-state signature with the baseline result.
-
----
-
-## E2. What is the expected permutation result?
+Then open either laboratory through the local server:
 
 ```text
-checked_permutations     = 120
-permutation_independence = True
+http://localhost:8000/demo/ORL_Chat_Structural_Lab_v2_0_0.html
+http://localhost:8000/demo/ORL_Chat_Capsule_Lab_v2_0_0.html
 ```
 
-This result applies to the supplied five-message scenario under the current Python implementation.
+Stop the server with `Ctrl+C`.
+
+### 6.2 Is the browser only displaying frozen results?
+
+No. The supplied JavaScript implementation computes supported results, reconstructs bundles, creates and verifies capsules, compares capsules, and performs tamper, order, partition, privacy, and parity checks.
+
+Sixteen frozen vectors provide expected identities for bounded conformance verification, including an over-depth graph refusal case.
+
+### 6.3 Is the Python verifier independent of the producer kernel?
+
+The Python verifier is separately implemented and does not import the producer kernel. The JavaScript resolver is also separately implemented.
+
+This demonstrates separate implementation reconstruction and cross-language parity. It does not constitute independent third-party certification.
+
+### 6.4 Why are floating-point JSON numbers refused?
+
+The canonical contract avoids cross-runtime ambiguity by accepting exact interoperable integers and refusing unsupported floating-point forms.
+
+### 6.5 Are duplicate JSON keys allowed?
+
+No. Duplicate keys are refused because ordinary parsers may silently retain different values and thereby create ambiguous evidence.
+
+### 6.6 How does ORL-Chat handle Unicode normalization?
+
+ORL-Chat does not normalize admitted strings. It preserves exact Unicode code-point sequences under `ORL-CHAT-UNICODE-SCALAR-EXACT-2-D01`.
+
+`"café" != "cafe\u0301"`
+
+Both sequences may be admitted, but they remain structurally distinct.
+
+### 6.7 Does text validation depend on the runtime Unicode database?
+
+No. The producer, independent verifier, and JavaScript resolver use the same frozen explicit boundary-whitespace, control, format, and surrogate code-point tables. They do not use runtime NFC normalization, runtime Unicode category data, or runtime `strip()` or `trim()` tables for admission.
+
+### 6.8 Is `--strict-canonical` required for ordinary integration input?
+
+No. It is a verification mode for files that must already use canonical artifact bytes. Ordinary strict JSON can be canonicalized with the reference kernel before publication or hashing.
+
+### 6.9 What is the difference between a parser refusal and a `REFUSED` bundle?
+
+A parser refusal occurs before a conversation document exists. It reports a strict-JSON intake error and has no bundle or `refusal_id`.
+
+A `REFUSED` bundle is produced after successful JSON parsing when the submitted structure violates the supported semantic, identity, relationship, or resource contract.
+
+`strict-parser refusal != canonical REFUSED bundle`
+
+### 6.10 Which integers are accepted?
+
+Strict JSON accepts integers in this inclusive range:
+
+`-9007199254740991 <= integer <= 9007199254740991`
+
+Python and JavaScript compare the decimal token against this boundary before constructing runtime numbers. Tokens outside the range are parser refusals.
+
+### 6.11 What is the live cross-implementation checker?
+
+It resolves the same fresh input through Python and JavaScript, removes only each implementation's `self_verification` stamp, and compares the remaining canonical bundle bytes. It also supports raw strict-parser outcome parity through `--all-parser-cases`.
+
+### 6.12 What is the seeded property verifier?
+
+It uses a fixed seed to generate bounded valid graphs and checks cross-language parity, order invariance, partition invariance, duplicate absorption, and expected state precedence. It reports generated cases separately from the assertion total.
+
+### 6.13 Does the package include a SHA-256 manifest?
+
+Yes. The minimal manifest is:
+
+`hashes/SHA256SUMS.txt`
+
+It covers 14 verification-critical files:
+
+- Four core implementation files.
+- Six principal verifier files.
+- The shared cross-platform verification runner.
+- Three corpus or vector-root files.
+
+Root files, documentation, browser HTML presentation files, examples, reports, hostile fixtures, falsification fixtures, generators, and generated capsule sub-artifacts are intentionally outside the minimal hash scope.
+
+### 6.14 What does the SHA-256 manifest establish?
+
+The manifest supports byte-level integrity checking for the selected files. It does not establish semantic correctness, source authenticity, legal approval, or production suitability.
+
+The selected files must still be evaluated through the supplied verification paths.
 
 ---
 
-## E3. Is that a universal proof of order independence?
+## 7. Modification, Integration, and Deployment
 
-No.
+### 7.1 Can the implementation be modified?
 
-It does not establish order independence for:
+Yes, subject to the terms in `LICENSE`.
 
-- arbitrary message counts
-- arbitrary schemas
-- arbitrary relationship graphs
-- malformed data
-- hostile inputs
-- independent implementations
+Modified files should be clearly identified as modified and verified under their own identities. Modifications must not imply that they were verified, approved, or endorsed by the original project maintainers.
 
----
+### 7.2 Is ORL-Chat production certified?
 
-## E4. Why can the supplied scenario be order-independent?
+No. ORL-Chat v2.0.0 is a bounded public reference implementation.
 
-The resolver processes messages through explicit dependencies and deterministic depth ordering rather than preserving input arrival position as authority.
+Production use requires independent domain validation and appropriate source authentication, authorization, security, privacy, safety, legal, operational, monitoring, recovery, and deployment controls.
 
----
+### 7.3 Can an AI or parser supply ORL-Chat input?
 
-## E5. Does display order still matter?
+Yes. A human, parser, or AI system may propose typed actions and relationships.
 
-Display order can matter to users, user experience, and interpretation.
+The proposal remains subject to the same strict intake, validation, canonicalization, context binding, and deterministic resolution as any other submitted structure.
 
-ORL-Chat only demonstrates that the current bounded resolver result does not depend on the supplied fragment arrival permutation.
+### 7.4 What should a downstream system verify before executing an action?
 
----
+A downstream system should independently verify:
 
-## E6. Is permutation testing scalable?
+- Identity and source authenticity.
+- Authorization and current authority.
+- Current state and dependency validity.
+- Safety and domain constraints.
+- Legal and organizational requirements.
+- Policy and compliance conditions.
+- Replay and duplication protections.
+- Execution limits and recovery controls.
 
-Not by exhaustive enumeration alone.
+ORL-Chat does not grant execution authority.
 
-The number of permutations grows factorially.
+### 7.5 What is the recommended integration boundary?
 
-Future versions should combine:
+A bounded integration can follow this pattern:
 
-- selected permutation corpora
-- metamorphic tests
-- property-based tests
-- graph-specific invariants
-- adversarial vectors
+`human or AI proposal -> declared typed structure -> ORL-Chat resolution -> independent action admission -> execute or refuse -> verification receipt`
 
----
-
-# SECTION F — Exact Duplicate Absorption
-
-## F1. How are exact duplicates identified?
-
-The current duplicate key includes:
-
-```text
-id
-topic
-kind
-text
-value
-targets
-```
-
----
-
-## F2. What property is demonstrated?
-
-Applying duplicate absorption twice has the same effect as applying it once:
-
-`D(D(E)) = D(E)`
-
-An identical repeated fragment is evaluated once in the current model.
-
----
-
-## F3. Does this provide replay protection?
-
-Not generally.
-
-It does not establish:
-
-- sender authentication
-- transport idempotency
-- message authenticity
-- nonce validation
-- conflict-safe identifier reuse
-- complete replay-attack prevention
-
----
-
-## F4. What happens if the same identifier is reused with different content?
-
-The current implementation does not safely reject every such conflict.
-
-Conflicting identifier reuse is a future hardening requirement.
-
----
-
-# SECTION G — Supplied Scenario
-
-## G1. What is the committed scenario?
-
-The scenario contains:
-
-```text
-M1 = opening proposal
-M2 = replacement proposal
-M3 = retraction
-M4 = final replacement
-M5 = confirmation
-```
-
----
-
-## G2. How are the fragments initially divided?
-
-```text
-Node-A = M1, M2
-Node-B = M3, M4, M5
-```
-
----
-
-## G3. What are the expected pre-merge states?
-
-```text
-Node-A = INCOMPLETE
-Node-B = INCOMPLETE
-```
-
-Both local views lack relationships needed for the final resolved state.
-
----
-
-## G4. What is the expected post-merge result?
-
-```text
-State       = RESOLVED
-Final Value = Meeting at 5 PM
-```
-
----
-
-## G5. Why does the result become “Meeting at 5 PM”?
-
-Because the explicit correction, retraction, replacement, and confirmation relationships leave one active confirmed proposal under the current rules.
-
-The result is produced from the declared graph.
-
-It is not inferred from unrestricted natural-language interpretation.
-
----
-
-## G6. What is the expected node-equality result?
-
-```text
-converged_after_merge = True
-```
-
-This means both nodes produce the same bounded state after receiving the same deduplicated supported evidence.
-
----
-
-## G7. Does the scenario prove that all real conversations can be resolved this way?
-
-No.
-
-It is a deliberately small structural example.
-
----
-
-# SECTION H — Python Demonstration
-
-## H1. What does the Python demo implement?
-
-It includes:
-
-- scenario loading
-- exact duplicate absorption
-- bounded fragment union
-- dependency validation
-- cycle detection
-- deterministic relationship processing
-- topic-state resolution
-- pre-merge and post-merge comparison
-- exhaustive permutation checking for the supplied scenario
-- canonical JSON serialization for signatures and SHA-256 hashing
-- optional sorted, human-readable JSON result output
-
----
-
-## H2. How do I run it?
-
-```text
-python demo/orl_chat_demo.py
-```
-
----
-
-## H3. How do I write the result JSON?
-
-```text
-python demo/orl_chat_demo.py --write-output
-```
-
----
-
-## H4. Does the Python demo use timestamps?
-
-No timestamps or wall-clock values are used to classify the committed conversation state.
-
----
-
-## H5. Does the Python demo require internet access?
-
-No live server, GPS, NTP, or database is required after the repository is available locally.
-
----
-
-## H6. Are all displayed no-time, no-order, and no-sync claims independently derived?
-
-No.
-
-Some labels in the current result object are declared as `True` rather than reconstructed from separate independent tests.
-
-The README and documentation therefore treat these claims narrowly.
-
----
-
-## H7. Is the SHA-256 result a formal proof certificate?
-
-No.
-
-It is a deterministic hash of the current bounded result object.
-
-It is not yet an independently reconstructed, schema-bound, ruleset-bound certificate.
-
----
-
-# SECTION I — Browser Demonstration
-
-## I1. What does the browser demo do?
-
-It visually presents:
-
-- scrambled message arrival
-- different partial node views
-- a scripted merge
-- the correction chain
-- the expected final bounded result
-
----
-
-## I2. Does the browser run the full Python resolver?
-
-No.
-
-The current browser demo is a scripted visual presentation.
-
----
-
-## I3. Does the browser enumerate all 120 permutations?
-
-No.
-
-The browser displays the Python reference result but does not independently execute the full permutation test.
-
----
-
-## I4. What does “Replay Proof” mean in the current browser?
-
-It should be interpreted as a scripted visual replay of the Python reference result.
-
-It is not an independently reconstructed browser proof.
-
----
-
-## I5. Should the browser be updated later?
-
-Yes.
-
-A stronger revision should either:
-
-- implement the resolver and conformance tests directly in the browser; or
-- relabel the interface as a visual reference-result presentation
-
----
-
-# SECTION J — Meaning and Interpretation
-
-## J1. What does “meaning” mean in ORL-Chat?
-
-It means the declared value selected by the current relationship graph and resolver rules.
-
-For the supplied scenario:
-
-`resolved declared value = Meeting at 5 PM`
-
----
-
-## J2. Does ORL-Chat understand natural language?
-
-No.
-
-It does not perform semantic parsing, inference, or language-model reasoning.
-
----
-
-## J3. Can ORL-Chat determine sarcasm or hidden intent?
-
-No.
-
----
-
-## J4. Can it determine factual truth?
-
-No.
-
----
-
-## J5. Can it determine whether a participant really agreed?
-
-No.
-
-A `CONFIRM` fragment satisfies a current resolver relationship.
-
-It does not authenticate the sender or establish legal agreement.
-
----
-
-## J6. Does it replace human interpretation?
-
-No.
-
-It resolves only the explicit bounded state declared by the supported fragments and rules.
-
----
-
-# SECTION K — Safety and Boundaries
-
-## K1. Does ORL-Chat guarantee conversational safety?
-
-No.
-
-`INCOMPLETE` and `ABSTAIN` reduce forced resolution within the model, but they do not provide universal safety.
-
----
-
-## K2. Does it authenticate messages?
-
-No.
-
----
-
-## K3. Does it encrypt messages?
-
-No.
-
----
-
-## K4. Does it provide access control?
-
-No.
-
----
-
-## K5. Does it guarantee delivery?
-
-No.
-
----
-
-## K6. Does it prevent malicious inputs?
-
-No.
-
-Complete hostile-input validation is not part of the current implementation.
-
----
-
-## K7. Is it production-ready?
-
-No.
-
-The current implementation is a bounded public reference model.
-
----
-
-## K8. Can it be used as a legal agreement engine?
-
-No.
-
----
-
-## K9. Can it replace a moderation system?
-
-No.
-
----
-
-## K10. Can it resolve arbitrary conflicts?
-
-No.
-
-It classifies some declared conflicts as `ABSTAIN`.
-
-It does not repair or negotiate them.
-
----
-
-# SECTION L — Verification
-
-## L1. What can be verified today?
-
-For the committed Python scenario, a reviewer can verify:
-
-- expected pre-merge states
-- expected post-merge state
-- expected final declared value
-- same-evidence node equality
-- all `120` supplied-scenario permutations
-- deterministic result hashing
-- frozen demo-file hashes
-
----
-
-## L2. What does a successful scenario check establish?
-
-It shows that the committed implementation produced the documented outputs for the committed inputs.
-
----
-
-## L3. What does a frozen SHA-256 match establish?
-
-`same file bytes -> same SHA-256 hash`
-
-It establishes artifact identity.
-
----
-
-## L4. What does a hash match not establish?
-
-It does not by itself prove:
-
-- semantic truth
-- behavioral correctness
-- independent reconstruction
-- cross-language conformance
-- message authenticity
-- security
-- production safety
-
----
-
-## L5. Is Python-browser equality currently verified?
-
-No.
-
-The browser does not independently execute the same resolver.
-
----
-
-# SECTION M — Current Technical Limitations
-
-## M1. What are the main limitations?
-
-The current implementation has:
-
-- no formal versioned input schema
-- incomplete explicit refusal behavior
-- possible exceptions on malformed required fields
-- unsafe handling of some conflicting identifier reuse
-- declared rather than independently derived status labels
-- factorial exhaustive permutation scaling
-- no independent receipt reconstruction
-- no Python-browser conformance proof
-- no production security model
-
----
-
-## M2. Why document these limitations?
-
-Because ORL-Chat is a reference model, and its demonstrated result should not be confused with a complete communication system.
-
----
-
-# SECTION N — Future Technical Direction
-
-## N1. What should a stronger revision add?
-
-Priority additions include:
-
-- formal versioned message schema
-- explicit invalid-input refusal
-- conflict-safe identifier handling
-- canonical byte serialization
-- deterministic byte-wise ordering
-- shared Python-browser resolver logic
-- assertion-based expected outputs
-- malformed-input vectors
-- cycle and missing-dependency vectors
-- duplicate and identifier-conflict vectors
-- adversarial relationship graphs
-- scalable metamorphic testing
-- independent reconstruction
-- versioned resolver receipts
-- separately defined structural closure
-
----
-
-## N2. What is the future target relation?
-
-`same validated canonical message fragments + same ruleset version -> same independently verified bounded conversation-state result`
-
-This stronger target is not part of the current release.
-
----
-
-# SECTION O — Possible Uses
-
-## O1. Where could the model be explored?
-
-Potential research and reference areas include:
-
-- structured amendments
-- correction and retraction chains
-- offline instruction reconciliation
-- multi-agent proposal tracking
-- deterministic conversation audit trails
-- bounded conversational state machines
-
----
-
-## O2. What would real deployment require?
-
-At minimum:
-
-- identity
-- authentication
-- authorization
-- secure transport
-- delivery semantics
-- schema validation
-- policy governance
-- operational monitoring
-- adversarial testing
-- human review paths
-
----
-
-# SECTION P — Skeptical Questions
-
-## P1. Isn’t this just a state machine?
-
-The current implementation is a bounded deterministic state resolver over an explicit relationship graph.
-
-That is a fair and technically useful description.
-
-Its contribution is the demonstrated use of structure rather than arrival order as resolution authority for the supplied conversational scenario.
-
----
-
-## P2. Is order never important in conversation?
-
-Order can be important to presentation, context, human interpretation, and many protocols.
-
-ORL-Chat only shows that the current declared result can be reconstructed from explicit relationships without treating fragment arrival position as authority.
-
----
-
-## P3. Is time never important in communication?
-
-No.
-
-Time may be essential for deadlines, expiry, causality policies, legal records, and operations.
-
-The supplied resolver simply does not use time to classify its bounded scenario.
-
----
-
-## P4. Why call it ORL-Chat?
-
-Because it applies ORL’s structure-first reconciliation idea to a small conversational correction chain.
-
----
-
-## P5. Does ORL-Chat prove that meaning comes only from structure?
-
-No.
-
-It demonstrates that one bounded declared conversation state can be resolved from explicit structure.
-
-It makes no universal philosophical claim about human meaning.
-
----
-
-# ⭐ Final One-Line Summary
-
-**ORL-Chat is a deterministic bounded conversation-state reference model in which nodes holding the same deduplicated supported message fragments and applying the same resolver rules produce the same declared result, while unrestricted language understanding, truth, identity, delivery, consensus, security, and production readiness remain outside the current implementation.**
+ORL-Chat resolves the declared conversation state. A separate admission or execution system must determine whether any real-world action is authorized and safe.

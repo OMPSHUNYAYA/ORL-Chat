@@ -1,0 +1,77 @@
+{
+  "boundary": {
+    "expected_observation_refs": [],
+    "schema": "ORL-CHAT-BOUNDARY-2-D01",
+    "state": "OPEN"
+  },
+  "context": {
+    "conversation_id": "conversation-signal-conflict",
+    "execution_authority": "NONE",
+    "participation": {
+      "participants": [
+        "alice"
+      ],
+      "profile": "SINGLE_DECLARED_ENDORSER",
+      "required_endorsers": [],
+      "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+      "threshold": 1
+    },
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "schema": "ORL-CHAT-CONTEXT-2-D01"
+  },
+  "observations": [
+    {
+      "action": {
+        "action_ref": "proposal",
+        "actor": "alice",
+        "conversation_id": "conversation-signal-conflict",
+        "declared_value": "Proceed",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-proposal",
+      "presentation": "Proceed.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "endorse",
+        "actor": "alice",
+        "conversation_id": "conversation-signal-conflict",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "proposal"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-endorse",
+      "presentation": "Alice endorses.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "object",
+        "actor": "alice",
+        "conversation_id": "conversation-signal-conflict",
+        "declared_value": null,
+        "kind": "OBJECT",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "proposal"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-object",
+      "presentation": "Alice objects.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    }
+  ]
+}

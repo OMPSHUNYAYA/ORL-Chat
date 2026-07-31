@@ -1,0 +1,12 @@
+{
+  "comparison_id": "capsule_comparison_043b9a11e75b4237bb09ec469320d0bdff0afc6c828906e6970f82d9a4cf1fc0",
+  "left_capsule_id": "conversation_state_capsule_6580ac397c69bcc7a2cebb6e25e2359a3f649f2db9627b104cda9b5d391b1984",
+  "left_valid": true,
+  "profile": "ORL-CHAT-CAPSULE-COMPARISON-2-C01",
+  "reasons": [
+    "CAPSULE_IDENTITIES_MATCH"
+  ],
+  "relation": "IDENTICAL",
+  "right_capsule_id": "conversation_state_capsule_6580ac397c69bcc7a2cebb6e25e2359a3f649f2db9627b104cda9b5d391b1984",
+  "right_valid": true
+}

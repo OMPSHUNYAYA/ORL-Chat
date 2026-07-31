@@ -1,0 +1,544 @@
+{
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary": {
+    "boundary_receipt_id": "boundary_receipt_33a70a3d66b563d5be3c860a871e212381da98b88d389c836ab95a25400aad58",
+    "declared_state": "OPEN",
+    "expected_observation_refs": [],
+    "missing_observation_refs": [],
+    "observed_observation_refs": [
+      "obs-room-a",
+      "obs-room-b",
+      "obs-time-endorse",
+      "obs-time-proposal"
+    ],
+    "observed_observation_set_id": "observation_set_64f48723026f5e9f945f3056215b8bea00aa9a4eb632ba01489c3d5937e9bb8a",
+    "profile": "ORL-CHAT-BOUNDARY-RECEIPT-2-D01",
+    "state": "OPEN",
+    "unexpected_observation_refs": []
+  },
+  "context": {
+    "context": {
+      "conversation_id": "conversation-multi-topic",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "SINGLE_DECLARED_ENDORSER",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 1
+      },
+      "purpose_id": "active-instructions",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "context_id": "context_68d80eca3b817a5869ee06c56ae464012166120ace7bdb707eed3359c6a77fe0",
+    "validation_state": "ACCEPTED"
+  },
+  "conversation_resolution_id": "conversation_resolution_dd687c5e110b604566e73056ad008a5e2c5d749633cb6b2d3acd0c3fd7b3c910",
+  "evidence": {
+    "action_ref_to_id": {
+      "room-a": "action_406f1edf189e49a7827a03b15f8839578715b7a5d034abf4ec6c0281bb67373c",
+      "room-b": "action_3fe94155bd7091e46186c3b963e786520b07eed020b53dab4fcf21797c378b10",
+      "time-endorse": "action_48be0c49d0bde0e2286c1ed0ed4796d4ac0981a63ca4083030d83c90668482d6",
+      "time-proposal": "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db"
+    },
+    "action_set_id": "action_set_d2a85e61960d09f7ddd80efba2271b952e0dc35bd03a5b3cddaeca863a3e6dc3",
+    "actions": [
+      {
+        "action": {
+          "action_ref": "time-proposal",
+          "actor": "alice",
+          "conversation_id": "conversation-multi-topic",
+          "declared_value": "5 PM",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "time"
+        },
+        "action_id": "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_83c18409df85d4449f2a32bd8266b42e785f49bb0f70cec1440068a15268bcdf"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_83c18409df85d4449f2a32bd8266b42e785f49bb0f70cec1440068a15268bcdf",
+            "presentation": "Meet at 5 PM."
+          }
+        ],
+        "sources": [
+          "node-a"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "room-b",
+          "actor": "bob",
+          "conversation_id": "conversation-multi-topic",
+          "declared_value": "Room B",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "room"
+        },
+        "action_id": "action_3fe94155bd7091e46186c3b963e786520b07eed020b53dab4fcf21797c378b10",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_d074682b29c1004400b667dfeddf7feba2376415335f5c0f98e34088fef1880d"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_d074682b29c1004400b667dfeddf7feba2376415335f5c0f98e34088fef1880d",
+            "presentation": "Use Room B."
+          }
+        ],
+        "sources": [
+          "node-b"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "room-a",
+          "actor": "alice",
+          "conversation_id": "conversation-multi-topic",
+          "declared_value": "Room A",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "room"
+        },
+        "action_id": "action_406f1edf189e49a7827a03b15f8839578715b7a5d034abf4ec6c0281bb67373c",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_a19a949d9143aff5e827b257d637e17da9c4170345e14b5aa187721a93142ba9"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_a19a949d9143aff5e827b257d637e17da9c4170345e14b5aa187721a93142ba9",
+            "presentation": "Use Room A."
+          }
+        ],
+        "sources": [
+          "node-a"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "time-endorse",
+          "actor": "bob",
+          "conversation_id": "conversation-multi-topic",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "time-proposal"
+          ],
+          "topic_id": "time"
+        },
+        "action_id": "action_48be0c49d0bde0e2286c1ed0ed4796d4ac0981a63ca4083030d83c90668482d6",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_6ef27e716d04b2e01dbe3358824a0b7d0a9c8ff6226f9a3c4533b79733cc8892"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_6ef27e716d04b2e01dbe3358824a0b7d0a9c8ff6226f9a3c4533b79733cc8892",
+            "presentation": "Bob endorses 5 PM."
+          }
+        ],
+        "sources": [
+          "node-b"
+        ]
+      }
+    ],
+    "exact_observation_duplicate_count": 0,
+    "observation_multiplicity_count": 0,
+    "observation_set_id": "observation_set_64f48723026f5e9f945f3056215b8bea00aa9a4eb632ba01489c3d5937e9bb8a",
+    "observations": [
+      {
+        "action_id": "action_48be0c49d0bde0e2286c1ed0ed4796d4ac0981a63ca4083030d83c90668482d6",
+        "observation_id": "observation_6ef27e716d04b2e01dbe3358824a0b7d0a9c8ff6226f9a3c4533b79733cc8892",
+        "observation_ref": "obs-time-endorse",
+        "presentation": "Bob endorses 5 PM.",
+        "source": "node-b"
+      },
+      {
+        "action_id": "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db",
+        "observation_id": "observation_83c18409df85d4449f2a32bd8266b42e785f49bb0f70cec1440068a15268bcdf",
+        "observation_ref": "obs-time-proposal",
+        "presentation": "Meet at 5 PM.",
+        "source": "node-a"
+      },
+      {
+        "action_id": "action_406f1edf189e49a7827a03b15f8839578715b7a5d034abf4ec6c0281bb67373c",
+        "observation_id": "observation_a19a949d9143aff5e827b257d637e17da9c4170345e14b5aa187721a93142ba9",
+        "observation_ref": "obs-room-a",
+        "presentation": "Use Room A.",
+        "source": "node-a"
+      },
+      {
+        "action_id": "action_3fe94155bd7091e46186c3b963e786520b07eed020b53dab4fcf21797c378b10",
+        "observation_id": "observation_d074682b29c1004400b667dfeddf7feba2376415335f5c0f98e34088fef1880d",
+        "observation_ref": "obs-room-b",
+        "presentation": "Use Room B.",
+        "source": "node-b"
+      }
+    ],
+    "raw_observation_count": 4,
+    "unique_action_count": 4,
+    "unique_observation_count": 4,
+    "validation_state": "ACCEPTED"
+  },
+  "execution_authority": "NONE",
+  "graph": {
+    "cycle_action_refs": [],
+    "edges": [
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_48be0c49d0bde0e2286c1ed0ed4796d4ac0981a63ca4083030d83c90668482d6",
+        "source_action_ref": "time-endorse",
+        "target_action_id": "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db",
+        "target_action_ref": "time-proposal"
+      }
+    ],
+    "graph_root": "graph_0b488903506bd10a7eeab65878931e9a7d7f0b973da243c70ca050af7f378ea1",
+    "missing_dependencies": [],
+    "nodes": [
+      {
+        "action_id": "action_406f1edf189e49a7827a03b15f8839578715b7a5d034abf4ec6c0281bb67373c",
+        "action_ref": "room-a",
+        "actor": "alice",
+        "kind": "PROPOSE",
+        "topic_id": "room"
+      },
+      {
+        "action_id": "action_3fe94155bd7091e46186c3b963e786520b07eed020b53dab4fcf21797c378b10",
+        "action_ref": "room-b",
+        "actor": "bob",
+        "kind": "PROPOSE",
+        "topic_id": "room"
+      },
+      {
+        "action_id": "action_48be0c49d0bde0e2286c1ed0ed4796d4ac0981a63ca4083030d83c90668482d6",
+        "action_ref": "time-endorse",
+        "actor": "bob",
+        "kind": "ENDORSE",
+        "topic_id": "time"
+      },
+      {
+        "action_id": "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db",
+        "action_ref": "time-proposal",
+        "actor": "alice",
+        "kind": "PROPOSE",
+        "topic_id": "time"
+      }
+    ],
+    "profile": "ORL-CHAT-GRAPH-2-D01"
+  },
+  "inputs": {
+    "boundary": {
+      "expected_observation_refs": [],
+      "schema": "ORL-CHAT-BOUNDARY-2-D01",
+      "state": "OPEN"
+    },
+    "context": {
+      "conversation_id": "conversation-multi-topic",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "SINGLE_DECLARED_ENDORSER",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 1
+      },
+      "purpose_id": "active-instructions",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "observations": [
+      {
+        "action": {
+          "action_ref": "time-proposal",
+          "actor": "alice",
+          "conversation_id": "conversation-multi-topic",
+          "declared_value": "5 PM",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "time"
+        },
+        "observation_ref": "obs-time-proposal",
+        "presentation": "Meet at 5 PM.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-a"
+      },
+      {
+        "action": {
+          "action_ref": "time-endorse",
+          "actor": "bob",
+          "conversation_id": "conversation-multi-topic",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "time-proposal"
+          ],
+          "topic_id": "time"
+        },
+        "observation_ref": "obs-time-endorse",
+        "presentation": "Bob endorses 5 PM.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-b"
+      },
+      {
+        "action": {
+          "action_ref": "room-a",
+          "actor": "alice",
+          "conversation_id": "conversation-multi-topic",
+          "declared_value": "Room A",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "room"
+        },
+        "observation_ref": "obs-room-a",
+        "presentation": "Use Room A.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-a"
+      },
+      {
+        "action": {
+          "action_ref": "room-b",
+          "actor": "bob",
+          "conversation_id": "conversation-multi-topic",
+          "declared_value": "Room B",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "room"
+        },
+        "observation_ref": "obs-room-b",
+        "presentation": "Use Room B.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-b"
+      }
+    ]
+  },
+  "private_bundle_id": "private_bundle_a5794e8c8748a9d0602a3bf4e0d191e99a8fe32b9be6990c34dd5c4c607c283f",
+  "profile": "ORL-CHAT-PRIVATE-BUNDLE-2-D01",
+  "public_receipt": {
+    "action_set_id": "action_set_d2a85e61960d09f7ddd80efba2271b952e0dc35bd03a5b3cddaeca863a3e6dc3",
+    "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+    "boundary_receipt_id": "boundary_receipt_33a70a3d66b563d5be3c860a871e212381da98b88d389c836ab95a25400aad58",
+    "boundary_state": "OPEN",
+    "context_id": "context_68d80eca3b817a5869ee06c56ae464012166120ace7bdb707eed3359c6a77fe0",
+    "conversation_id": "conversation-multi-topic",
+    "conversation_resolution_id": "conversation_resolution_dd687c5e110b604566e73056ad008a5e2c5d749633cb6b2d3acd0c3fd7b3c910",
+    "execution_authority": "NONE",
+    "graph_root": "graph_0b488903506bd10a7eeab65878931e9a7d7f0b973da243c70ca050af7f378ea1",
+    "profile": "ORL-CHAT-PUBLIC-RECEIPT-2-D01",
+    "public_receipt_id": "public_receipt_49fb9e5f19dc7db663e64c5560433c72194b7383ab21f4997a7026674a6055c6",
+    "purpose_id": "active-instructions",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "state_counts": {
+      "ABSTAIN": 1,
+      "INCOMPLETE": 0,
+      "RESOLVED": 1
+    },
+    "topic_receipt_root": "topic_receipt_root_8f97f762c5a3fe91b821e0f77405d95dc848a310bf64f97b79da73b72ef825ab",
+    "topic_summaries": [
+      {
+        "active_action_ids": [
+          "action_3fe94155bd7091e46186c3b963e786520b07eed020b53dab4fcf21797c378b10",
+          "action_406f1edf189e49a7827a03b15f8839578715b7a5d034abf4ec6c0281bb67373c"
+        ],
+        "active_endorser_count": 0,
+        "active_objector_count": 0,
+        "execution_authority": "NONE",
+        "participation_satisfied": null,
+        "reason_code": "MULTIPLE_ACTIVE_PROPOSALS",
+        "resolved_action_id": null,
+        "state": "ABSTAIN",
+        "topic_id": "room",
+        "topic_receipt_id": "topic_receipt_f4d6657023e162fac511d5746996d83342f4dde75b4d1b7405578489c75b7520"
+      },
+      {
+        "active_action_ids": [
+          "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db"
+        ],
+        "active_endorser_count": 1,
+        "active_objector_count": 0,
+        "execution_authority": "NONE",
+        "participation_satisfied": true,
+        "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "resolved_action_id": "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db",
+        "state": "RESOLVED",
+        "topic_id": "time",
+        "topic_receipt_id": "topic_receipt_8a94196173ea689c571c95e6c7c941704484630039abf01474267174a8525c29"
+      }
+    ],
+    "version": "2.0.0"
+  },
+  "result": "ACCEPTED",
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "self_verification": {
+    "errors": [],
+    "expected_conversation_resolution_id": "conversation_resolution_dd687c5e110b604566e73056ad008a5e2c5d749633cb6b2d3acd0c3fd7b3c910",
+    "expected_private_bundle_id": "private_bundle_a5794e8c8748a9d0602a3bf4e0d191e99a8fe32b9be6990c34dd5c4c607c283f",
+    "expected_public_receipt_id": "public_receipt_49fb9e5f19dc7db663e64c5560433c72194b7383ab21f4997a7026674a6055c6",
+    "profile": "ORL-CHAT-PRODUCER-VERIFICATION-2-D01",
+    "valid": true
+  },
+  "topics": {
+    "receipts": [
+      {
+        "action_ids": [
+          "action_3fe94155bd7091e46186c3b963e786520b07eed020b53dab4fcf21797c378b10",
+          "action_406f1edf189e49a7827a03b15f8839578715b7a5d034abf4ec6c0281bb67373c"
+        ],
+        "actions": [
+          {
+            "action_id": "action_406f1edf189e49a7827a03b15f8839578715b7a5d034abf4ec6c0281bb67373c",
+            "action_ref": "room-a",
+            "active_proposal": true,
+            "actor": "alice",
+            "declared_value": "Room A",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_3fe94155bd7091e46186c3b963e786520b07eed020b53dab4fcf21797c378b10",
+            "action_ref": "room-b",
+            "active_proposal": true,
+            "actor": "bob",
+            "declared_value": "Room B",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          }
+        ],
+        "active_action_ids": [
+          "action_3fe94155bd7091e46186c3b963e786520b07eed020b53dab4fcf21797c378b10",
+          "action_406f1edf189e49a7827a03b15f8839578715b7a5d034abf4ec6c0281bb67373c"
+        ],
+        "active_action_refs": [
+          "room-a",
+          "room-b"
+        ],
+        "active_endorsers": [],
+        "active_objectors": [],
+        "active_signal_conflicts": [],
+        "cycle_action_refs": [],
+        "execution_authority": "NONE",
+        "missing_dependencies": [],
+        "participation": null,
+        "profile": "ORL-CHAT-TOPIC-RECEIPT-2-D01",
+        "reason_code": "MULTIPLE_ACTIVE_PROPOSALS",
+        "resolved_action_id": null,
+        "resolved_action_ref": null,
+        "resolved_declared_value": null,
+        "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+        "signal_conflicts": [],
+        "state": "ABSTAIN",
+        "superseded_action_refs": [],
+        "topic_id": "room",
+        "topic_receipt_id": "topic_receipt_f4d6657023e162fac511d5746996d83342f4dde75b4d1b7405578489c75b7520",
+        "withdrawn_action_refs": []
+      },
+      {
+        "action_ids": [
+          "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db",
+          "action_48be0c49d0bde0e2286c1ed0ed4796d4ac0981a63ca4083030d83c90668482d6"
+        ],
+        "actions": [
+          {
+            "action_id": "action_48be0c49d0bde0e2286c1ed0ed4796d4ac0981a63ca4083030d83c90668482d6",
+            "action_ref": "time-endorse",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "time-proposal"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db",
+            "action_ref": "time-proposal",
+            "active_proposal": true,
+            "actor": "alice",
+            "declared_value": "5 PM",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          }
+        ],
+        "active_action_ids": [
+          "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db"
+        ],
+        "active_action_refs": [
+          "time-proposal"
+        ],
+        "active_endorsers": [
+          "bob"
+        ],
+        "active_objectors": [],
+        "active_signal_conflicts": [],
+        "cycle_action_refs": [],
+        "execution_authority": "NONE",
+        "missing_dependencies": [],
+        "participation": {
+          "endorsement_count": 1,
+          "endorsers": [
+            "bob"
+          ],
+          "missing": [],
+          "participants": [
+            "alice",
+            "bob"
+          ],
+          "profile": "SINGLE_DECLARED_ENDORSER",
+          "required_endorsers": [],
+          "satisfied": true,
+          "surplus": [],
+          "threshold": 1
+        },
+        "profile": "ORL-CHAT-TOPIC-RECEIPT-2-D01",
+        "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "resolved_action_id": "action_30c7c4024e1e2334aa6dccbc314eefc9004e096faddc2c61671b5355ee4ec1db",
+        "resolved_action_ref": "time-proposal",
+        "resolved_declared_value": "5 PM",
+        "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+        "signal_conflicts": [],
+        "state": "RESOLVED",
+        "superseded_action_refs": [],
+        "topic_id": "time",
+        "topic_receipt_id": "topic_receipt_8a94196173ea689c571c95e6c7c941704484630039abf01474267174a8525c29",
+        "withdrawn_action_refs": []
+      }
+    ],
+    "state_counts": {
+      "ABSTAIN": 1,
+      "INCOMPLETE": 0,
+      "RESOLVED": 1
+    },
+    "topic_receipt_root": "topic_receipt_root_8f97f762c5a3fe91b821e0f77405d95dc848a310bf64f97b79da73b72ef825ab"
+  },
+  "version": "2.0.0"
+}

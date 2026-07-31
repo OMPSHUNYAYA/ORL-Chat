@@ -1,0 +1,101 @@
+ORL-Chat v2.0.0 Script Verification Report
+
+1. Reference kernel producer audit
+
+Command:
+python -B demo/ORL_Chat_Reference_Kernel_v2_0_0.py --self-test
+
+BOUNDARY: 5/5 PASS
+IDENTITY: 6/6 PASS
+MERGE: 5/5 PASS
+PARTICIPATION: 14/14 PASS
+PARTITION: 32/32 PASS
+PERMUTATION: 2763/2763 PASS
+PRIVACY: 5/5 PASS
+REFERENCE: 66/66 PASS
+REGRESSION: 7/7 PASS
+STRICT_JSON: 11/11 PASS
+TAMPER: 8/8 PASS
+TEXT_PROFILE: 8/8 PASS
+VALIDATION: 25/25 PASS
+TOTAL: 2955/2955 PASS
+
+2. Independent verifier self-test
+
+Command:
+python -B verifier/ORL_Chat_Independent_Verifier_v2_0_0.py --self-test
+
+BOUNDARY: 5/5 PASS
+FILE: 3/3 PASS
+IDENTITY: 5/5 PASS
+ORDER: 72/72 PASS
+PARSER: 10/10 PASS
+PARTICIPATION: 14/14 PASS
+PARTITION: 16/16 PASS
+PRIVACY: 3/3 PASS
+RECONSTRUCTION: 5/5 PASS
+REFUSAL: 3/3 PASS
+STATES: 13/13 PASS
+TAMPER: 9/9 PASS
+TEXT_PROFILE: 6/6 PASS
+VALIDATION: 8/8 PASS
+VERIFICATION: 1/1 PASS
+TOTAL: 173/173 PASS
+
+3. Frozen corpus verification
+
+Command:
+python -B verifier/ORL_Chat_Independent_Verifier_v2_0_0.py --verify-corpus corpus/ORL_Chat_Frozen_Corpus_Manifest_v2_0_0.json --strict-canonical
+
+result: PASS
+entries: 13/13 PASS
+
+4. Cross-language vectors
+
+Reproducibility: PASS
+Vectors: 17
+Browser parity: 442/442 PASS
+
+5. Live cross-implementation verification
+
+Command:
+python -B verifier/ORL_Chat_Cross_Language_Cross_Check_v2_0_0.py --all-examples
+
+TOTAL: 17/17 PARITY
+
+6. Strict-parser outcome parity
+
+Command:
+python -B verifier/ORL_Chat_Cross_Language_Cross_Check_v2_0_0.py --all-parser-cases
+
+TOTAL: 8/8 PARSER PARITY
+
+7. Seeded generated properties
+
+Command:
+python -B verifier/ORL_Chat_Seeded_Property_Verifier_v2_0_0.py --seed 20260731 --cases 32
+
+CROSS_LANGUAGE: 128/128 PASS
+DUPLICATE: 32/32 PASS
+ORDER: 32/32 PASS
+PARTITION: 32/32 PASS
+STATE: 32/32 PASS
+PRNG_PROFILE: ORL-CHAT-SPLITMIX64-2-D01
+CASES: 32/32 PASS
+ASSERTIONS: 256/256 PASS
+
+8. Conversation-State Capsule unit audit
+
+CAPSULE: 2/2 PASS
+COMPARISON: 3/3 PASS
+PARSER: 5/5 PASS
+WITNESS: 4/4 PASS
+TOTAL: 14/14 PASS
+
+9. Adversarial assurance
+
+TOTAL: 154/154 PASS
+
+10. Capsule cross-language parity
+
+TOTAL: 310/310 PASS

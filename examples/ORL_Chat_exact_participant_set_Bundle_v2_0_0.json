@@ -1,0 +1,472 @@
+{
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary": {
+    "boundary_receipt_id": "boundary_receipt_957e5bd4ea37dbed0c30b5dfa65e457bd9ac9f03d9a7c84ad3ace99ae5656f06",
+    "declared_state": "SEALED",
+    "expected_observation_refs": [
+      "obs-endorse-alice",
+      "obs-endorse-carol",
+      "obs-proposal"
+    ],
+    "missing_observation_refs": [],
+    "observed_observation_refs": [
+      "obs-endorse-alice",
+      "obs-endorse-carol",
+      "obs-proposal"
+    ],
+    "observed_observation_set_id": "observation_set_18c82571facd42b7254d8dcd789079ef0908258b69b8f892c31397394188b669",
+    "profile": "ORL-CHAT-BOUNDARY-RECEIPT-2-D01",
+    "state": "SEALED",
+    "unexpected_observation_refs": []
+  },
+  "context": {
+    "context": {
+      "conversation_id": "conversation-exact-participant-set",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob",
+          "carol"
+        ],
+        "profile": "EXACT_DECLARED_PARTICIPANT_SET",
+        "required_endorsers": [
+          "alice",
+          "carol"
+        ],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 2
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "context_id": "context_d3e60bdb98010646e4b5457d1a8ee42166ae3b646774fd4bf536dfd5f1526342",
+    "validation_state": "ACCEPTED"
+  },
+  "conversation_resolution_id": "conversation_resolution_4019a89b8494d8f406d035b7a05e7c27621c264a98db3976a5e8b4f6009a77d1",
+  "evidence": {
+    "action_ref_to_id": {
+      "endorse-alice": "action_c9583dc134740672599ce68d620e8f08a2ee382a5c368cb1ed2da6ad3d3453b7",
+      "endorse-carol": "action_f41fc73fc02ac3e7326dab17c58c3e6b6737bda0dff790db4fe5a273efde1ad5",
+      "proposal": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4"
+    },
+    "action_set_id": "action_set_8ce474760726f3b61522ca94ab1997cc08f412f93d8c8118762d5876d38fadc0",
+    "actions": [
+      {
+        "action": {
+          "action_ref": "endorse-alice",
+          "actor": "alice",
+          "conversation_id": "conversation-exact-participant-set",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal"
+          ],
+          "topic_id": "instruction"
+        },
+        "action_id": "action_c9583dc134740672599ce68d620e8f08a2ee382a5c368cb1ed2da6ad3d3453b7",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_40a4f5253fc3f041fc9a3b3df550cedd663704f4c635441e986cde43e9bf9144"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_40a4f5253fc3f041fc9a3b3df550cedd663704f4c635441e986cde43e9bf9144",
+            "presentation": "Alice endorses."
+          }
+        ],
+        "sources": [
+          "node-a"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "proposal",
+          "actor": "bob",
+          "conversation_id": "conversation-exact-participant-set",
+          "declared_value": {
+            "mode": "bounded",
+            "value": 7
+          },
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "instruction"
+        },
+        "action_id": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_d75fdda655710c932fe5283a1639c9ae0e48f5e38fb8983e9fb10fb5fc8a47cc"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_d75fdda655710c932fe5283a1639c9ae0e48f5e38fb8983e9fb10fb5fc8a47cc",
+            "presentation": "Use bounded mode with value 7."
+          }
+        ],
+        "sources": [
+          "node-b"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "endorse-carol",
+          "actor": "carol",
+          "conversation_id": "conversation-exact-participant-set",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal"
+          ],
+          "topic_id": "instruction"
+        },
+        "action_id": "action_f41fc73fc02ac3e7326dab17c58c3e6b6737bda0dff790db4fe5a273efde1ad5",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_3982ba12dff8002a804e0d627a93e070d367ad1dc4c9a0bd3bf912cfb2c5a51d"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_3982ba12dff8002a804e0d627a93e070d367ad1dc4c9a0bd3bf912cfb2c5a51d",
+            "presentation": "Carol endorses."
+          }
+        ],
+        "sources": [
+          "node-c"
+        ]
+      }
+    ],
+    "exact_observation_duplicate_count": 0,
+    "observation_multiplicity_count": 0,
+    "observation_set_id": "observation_set_18c82571facd42b7254d8dcd789079ef0908258b69b8f892c31397394188b669",
+    "observations": [
+      {
+        "action_id": "action_f41fc73fc02ac3e7326dab17c58c3e6b6737bda0dff790db4fe5a273efde1ad5",
+        "observation_id": "observation_3982ba12dff8002a804e0d627a93e070d367ad1dc4c9a0bd3bf912cfb2c5a51d",
+        "observation_ref": "obs-endorse-carol",
+        "presentation": "Carol endorses.",
+        "source": "node-c"
+      },
+      {
+        "action_id": "action_c9583dc134740672599ce68d620e8f08a2ee382a5c368cb1ed2da6ad3d3453b7",
+        "observation_id": "observation_40a4f5253fc3f041fc9a3b3df550cedd663704f4c635441e986cde43e9bf9144",
+        "observation_ref": "obs-endorse-alice",
+        "presentation": "Alice endorses.",
+        "source": "node-a"
+      },
+      {
+        "action_id": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+        "observation_id": "observation_d75fdda655710c932fe5283a1639c9ae0e48f5e38fb8983e9fb10fb5fc8a47cc",
+        "observation_ref": "obs-proposal",
+        "presentation": "Use bounded mode with value 7.",
+        "source": "node-b"
+      }
+    ],
+    "raw_observation_count": 3,
+    "unique_action_count": 3,
+    "unique_observation_count": 3,
+    "validation_state": "ACCEPTED"
+  },
+  "execution_authority": "NONE",
+  "graph": {
+    "cycle_action_refs": [],
+    "edges": [
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_c9583dc134740672599ce68d620e8f08a2ee382a5c368cb1ed2da6ad3d3453b7",
+        "source_action_ref": "endorse-alice",
+        "target_action_id": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+        "target_action_ref": "proposal"
+      },
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_f41fc73fc02ac3e7326dab17c58c3e6b6737bda0dff790db4fe5a273efde1ad5",
+        "source_action_ref": "endorse-carol",
+        "target_action_id": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+        "target_action_ref": "proposal"
+      }
+    ],
+    "graph_root": "graph_018223627746d6ee8892d4a824c5a9fade57da6abf4b2f40567ed61ff9bb3b6a",
+    "missing_dependencies": [],
+    "nodes": [
+      {
+        "action_id": "action_c9583dc134740672599ce68d620e8f08a2ee382a5c368cb1ed2da6ad3d3453b7",
+        "action_ref": "endorse-alice",
+        "actor": "alice",
+        "kind": "ENDORSE",
+        "topic_id": "instruction"
+      },
+      {
+        "action_id": "action_f41fc73fc02ac3e7326dab17c58c3e6b6737bda0dff790db4fe5a273efde1ad5",
+        "action_ref": "endorse-carol",
+        "actor": "carol",
+        "kind": "ENDORSE",
+        "topic_id": "instruction"
+      },
+      {
+        "action_id": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+        "action_ref": "proposal",
+        "actor": "bob",
+        "kind": "PROPOSE",
+        "topic_id": "instruction"
+      }
+    ],
+    "profile": "ORL-CHAT-GRAPH-2-D01"
+  },
+  "inputs": {
+    "boundary": {
+      "expected_observation_refs": [
+        "obs-proposal",
+        "obs-endorse-alice",
+        "obs-endorse-carol"
+      ],
+      "schema": "ORL-CHAT-BOUNDARY-2-D01",
+      "state": "SEALED"
+    },
+    "context": {
+      "conversation_id": "conversation-exact-participant-set",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob",
+          "carol"
+        ],
+        "profile": "EXACT_DECLARED_PARTICIPANT_SET",
+        "required_endorsers": [
+          "alice",
+          "carol"
+        ],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 2
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "observations": [
+      {
+        "action": {
+          "action_ref": "proposal",
+          "actor": "bob",
+          "conversation_id": "conversation-exact-participant-set",
+          "declared_value": {
+            "mode": "bounded",
+            "value": 7
+          },
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "instruction"
+        },
+        "observation_ref": "obs-proposal",
+        "presentation": "Use bounded mode with value 7.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-b"
+      },
+      {
+        "action": {
+          "action_ref": "endorse-alice",
+          "actor": "alice",
+          "conversation_id": "conversation-exact-participant-set",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal"
+          ],
+          "topic_id": "instruction"
+        },
+        "observation_ref": "obs-endorse-alice",
+        "presentation": "Alice endorses.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-a"
+      },
+      {
+        "action": {
+          "action_ref": "endorse-carol",
+          "actor": "carol",
+          "conversation_id": "conversation-exact-participant-set",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal"
+          ],
+          "topic_id": "instruction"
+        },
+        "observation_ref": "obs-endorse-carol",
+        "presentation": "Carol endorses.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-c"
+      }
+    ]
+  },
+  "private_bundle_id": "private_bundle_2414433aafe038e99dc472e39d026b55c55aecf9a8363bb6f37d0634817b2d82",
+  "profile": "ORL-CHAT-PRIVATE-BUNDLE-2-D01",
+  "public_receipt": {
+    "action_set_id": "action_set_8ce474760726f3b61522ca94ab1997cc08f412f93d8c8118762d5876d38fadc0",
+    "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+    "boundary_receipt_id": "boundary_receipt_957e5bd4ea37dbed0c30b5dfa65e457bd9ac9f03d9a7c84ad3ace99ae5656f06",
+    "boundary_state": "SEALED",
+    "context_id": "context_d3e60bdb98010646e4b5457d1a8ee42166ae3b646774fd4bf536dfd5f1526342",
+    "conversation_id": "conversation-exact-participant-set",
+    "conversation_resolution_id": "conversation_resolution_4019a89b8494d8f406d035b7a05e7c27621c264a98db3976a5e8b4f6009a77d1",
+    "execution_authority": "NONE",
+    "graph_root": "graph_018223627746d6ee8892d4a824c5a9fade57da6abf4b2f40567ed61ff9bb3b6a",
+    "profile": "ORL-CHAT-PUBLIC-RECEIPT-2-D01",
+    "public_receipt_id": "public_receipt_5486562c427b8bd682d15a9370f74996fb1fa8f5e36d6cc97dd3da839fea60e6",
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "state_counts": {
+      "ABSTAIN": 0,
+      "INCOMPLETE": 0,
+      "RESOLVED": 1
+    },
+    "topic_receipt_root": "topic_receipt_root_e38d9232bc01ee7fa7017aaab1a8554164688c954d5e8215fcd00804ada6125a",
+    "topic_summaries": [
+      {
+        "active_action_ids": [
+          "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4"
+        ],
+        "active_endorser_count": 2,
+        "active_objector_count": 0,
+        "execution_authority": "NONE",
+        "participation_satisfied": true,
+        "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "resolved_action_id": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+        "state": "RESOLVED",
+        "topic_id": "instruction",
+        "topic_receipt_id": "topic_receipt_0d1c08e480e712d60901cbfd867677971557fcc81b196015c69aa4d2233c7620"
+      }
+    ],
+    "version": "2.0.0"
+  },
+  "result": "ACCEPTED",
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "self_verification": {
+    "errors": [],
+    "expected_conversation_resolution_id": "conversation_resolution_4019a89b8494d8f406d035b7a05e7c27621c264a98db3976a5e8b4f6009a77d1",
+    "expected_private_bundle_id": "private_bundle_2414433aafe038e99dc472e39d026b55c55aecf9a8363bb6f37d0634817b2d82",
+    "expected_public_receipt_id": "public_receipt_5486562c427b8bd682d15a9370f74996fb1fa8f5e36d6cc97dd3da839fea60e6",
+    "profile": "ORL-CHAT-PRODUCER-VERIFICATION-2-D01",
+    "valid": true
+  },
+  "topics": {
+    "receipts": [
+      {
+        "action_ids": [
+          "action_c9583dc134740672599ce68d620e8f08a2ee382a5c368cb1ed2da6ad3d3453b7",
+          "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+          "action_f41fc73fc02ac3e7326dab17c58c3e6b6737bda0dff790db4fe5a273efde1ad5"
+        ],
+        "actions": [
+          {
+            "action_id": "action_c9583dc134740672599ce68d620e8f08a2ee382a5c368cb1ed2da6ad3d3453b7",
+            "action_ref": "endorse-alice",
+            "active_proposal": false,
+            "actor": "alice",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "proposal"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_f41fc73fc02ac3e7326dab17c58c3e6b6737bda0dff790db4fe5a273efde1ad5",
+            "action_ref": "endorse-carol",
+            "active_proposal": false,
+            "actor": "carol",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "proposal"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+            "action_ref": "proposal",
+            "active_proposal": true,
+            "actor": "bob",
+            "declared_value": {
+              "mode": "bounded",
+              "value": 7
+            },
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          }
+        ],
+        "active_action_ids": [
+          "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4"
+        ],
+        "active_action_refs": [
+          "proposal"
+        ],
+        "active_endorsers": [
+          "alice",
+          "carol"
+        ],
+        "active_objectors": [],
+        "active_signal_conflicts": [],
+        "cycle_action_refs": [],
+        "execution_authority": "NONE",
+        "missing_dependencies": [],
+        "participation": {
+          "endorsement_count": 2,
+          "endorsers": [
+            "alice",
+            "carol"
+          ],
+          "missing": [],
+          "participants": [
+            "alice",
+            "bob",
+            "carol"
+          ],
+          "profile": "EXACT_DECLARED_PARTICIPANT_SET",
+          "required_endorsers": [
+            "alice",
+            "carol"
+          ],
+          "satisfied": true,
+          "surplus": [],
+          "threshold": 2
+        },
+        "profile": "ORL-CHAT-TOPIC-RECEIPT-2-D01",
+        "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "resolved_action_id": "action_dc5afb45e2ffef70b85c666cfaa089ae5287df9852a32f743cc90c98faab54d4",
+        "resolved_action_ref": "proposal",
+        "resolved_declared_value": {
+          "mode": "bounded",
+          "value": 7
+        },
+        "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+        "signal_conflicts": [],
+        "state": "RESOLVED",
+        "superseded_action_refs": [],
+        "topic_id": "instruction",
+        "topic_receipt_id": "topic_receipt_0d1c08e480e712d60901cbfd867677971557fcc81b196015c69aa4d2233c7620",
+        "withdrawn_action_refs": []
+      }
+    ],
+    "state_counts": {
+      "ABSTAIN": 0,
+      "INCOMPLETE": 0,
+      "RESOLVED": 1
+    },
+    "topic_receipt_root": "topic_receipt_root_e38d9232bc01ee7fa7017aaab1a8554164688c954d5e8215fcd00804ada6125a"
+  },
+  "version": "2.0.0"
+}

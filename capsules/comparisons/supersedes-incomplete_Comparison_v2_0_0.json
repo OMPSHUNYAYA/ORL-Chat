@@ -1,0 +1,13 @@
+{
+  "comparison_id": "capsule_comparison_684c74b987168ad1af52173200d85967cdeb84df4a9ccc107a1d12d0836b0986",
+  "left_capsule_id": "conversation_state_capsule_58def6515e0e3b3af6f6791571fff6b4299c41729b4e0146037c0a12fc98f86d",
+  "left_valid": true,
+  "profile": "ORL-CHAT-CAPSULE-COMPARISON-2-C01",
+  "reasons": [
+    "RIGHT_ACTION_SET_STRICTLY_EXTENDS_LEFT",
+    "STRUCTURAL_STATE_CHANGED_WITHOUT_RESOLVED_VALUE_DIVERGENCE"
+  ],
+  "relation": "SUPERSEDES",
+  "right_capsule_id": "conversation_state_capsule_6580ac397c69bcc7a2cebb6e25e2359a3f649f2db9627b104cda9b5d391b1984",
+  "right_valid": true
+}

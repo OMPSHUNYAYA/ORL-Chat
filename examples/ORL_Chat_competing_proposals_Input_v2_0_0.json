@@ -1,0 +1,76 @@
+{
+  "boundary": {
+    "expected_observation_refs": [],
+    "schema": "ORL-CHAT-BOUNDARY-2-D01",
+    "state": "OPEN"
+  },
+  "context": {
+    "conversation_id": "conversation-competing-proposals",
+    "execution_authority": "NONE",
+    "participation": {
+      "participants": [
+        "alice",
+        "bob"
+      ],
+      "profile": "SINGLE_DECLARED_ENDORSER",
+      "required_endorsers": [],
+      "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+      "threshold": 1
+    },
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "schema": "ORL-CHAT-CONTEXT-2-D01"
+  },
+  "observations": [
+    {
+      "action": {
+        "action_ref": "proposal-a",
+        "actor": "alice",
+        "conversation_id": "conversation-competing-proposals",
+        "declared_value": "Room A",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "location"
+      },
+      "observation_ref": "obs-proposal-a",
+      "presentation": "Use Room A.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "proposal-b",
+        "actor": "bob",
+        "conversation_id": "conversation-competing-proposals",
+        "declared_value": "Room B",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "location"
+      },
+      "observation_ref": "obs-proposal-b",
+      "presentation": "Use Room B.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-b"
+    },
+    {
+      "action": {
+        "action_ref": "endorse-a",
+        "actor": "alice",
+        "conversation_id": "conversation-competing-proposals",
+        "declared_value": null,
+        "kind": "ENDORSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "proposal-a"
+        ],
+        "topic_id": "location"
+      },
+      "observation_ref": "obs-endorse-a",
+      "presentation": "Alice endorses Room A.",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    }
+  ]
+}

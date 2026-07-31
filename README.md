@@ -1,588 +1,453 @@
-# ⭐ ORL-Chat
+# ORL-Chat v2.0.0
 
-**Deterministic Bounded Conversation-State Resolution**
+## Deterministic Bounded Conversation-Evidence Reconciliation
 
-![ORL-Chat](https://img.shields.io/badge/ORL--Chat-Bounded%20Conversation%20Resolution-black)
-![Deterministic](https://img.shields.io/badge/Deterministic-Same--Evidence%20Resolution-green)
-![Structure-Based](https://img.shields.io/badge/Resolution-Explicit%20Relationships-purple)
-![No-Time-Authority](https://img.shields.io/badge/Timestamps-Not%20Resolution%20Authority-lightgrey)
-![Order-Independent](https://img.shields.io/badge/Arrival%20Order-Not%20Resolution%20Authority-lightgrey)
-![Permutation-Tested](https://img.shields.io/badge/Supplied%20Scenario-120%20Permutations-orange)
-![Open-Use](https://img.shields.io/badge/Reference%20Implementation-Open%20Use-blue)
+ORL-Chat resolves the current declared state of supported proposals, amendments, withdrawals, endorsements, and objections from validated canonical conversation evidence.
 
-![ORL-Chat Verify](https://github.com/OMPSHUNYAYA/ORL-Chat/actions/workflows/orl-chat-verify.yml/badge.svg)
+Its governing contract is:
 
-**A public deterministic reference model for resolving a bounded conversation state from supported message fragments and explicit relationships.**
+`same admitted canonical conversation evidence + same bound conversation context + same ruleset + same text profile + same participation profile + same boundary declaration -> same bounded conversation-state bundle or deterministic refusal`
 
-ORL-Chat extends ORL into a conversational example domain.
+Message arrival position and wall-clock timestamps are not used as resolution authority within the declared model.
 
-For the supplied scenario, two nodes begin with different message fragments. After both receive the same deduplicated supported fragment set and apply the same resolver rules, they produce the same bounded conversation-state result.
-
-The governing relation is:
-
-`same deduplicated supported message fragments + same resolver rules -> same bounded conversation-state result`
-
-ORL-Chat is developed within the Shunyaya Framework.
-
----
-
-## ⚡ Try It in 30 Seconds
-
-Open the browser demonstration:
-
-`demo/orl_chat_interactive_demo.html`
-
-Use:
-
-- **Scramble Arrival**
-- **Resolve Structure**
-- **Replay Proof** — a scripted visual replay of the Python reference result
-
-The browser presents the supplied scenario visually.
-
-Then run the Python reference implementation:
-
-```text
-python demo/orl_chat_demo.py
-```
-
-To write the result JSON:
-
-```text
-python demo/orl_chat_demo.py --write-output
-```
-
-Expected primary result:
-
-```text
-State       = RESOLVED
-Final Value = Meeting at 5 PM
-```
-
-The Python implementation also checks all `5! = 120` permutations of the supplied five-message scenario.
+ORL-Chat operates on declared typed structure. It does not infer unrestricted language meaning, authenticate participants, prove factual truth, establish legal agreement, authorize an action, or execute an instruction.
 
 ---
 
 ## 🧭 Visual Overview
 
-![ORL-Chat Structural Overview](docs/ORL-Chat-Structural-Meaning-Overview.png)
+![ORL-Chat Structural Overview](docs/ORL-Chat-Structural-Overview.png)
 
 ---
 
-## 🔗 Quick Links
+## What the Package Provides
 
-### 📘 Documentation
-
-- [Quickstart](docs/Quickstart.md)
-- [FAQ](docs/FAQ.md)
-- [Test Guide](docs/Test-Guide.md)
-- [Model and Invariant Sketch](docs/Proof-Sketch.md)
-- [Structural Overview](docs/ORL-Chat-Structural-Meaning-Overview.png)
-
-### ⚡ Demonstrations
-
-- [Python Reference Demo](demo/orl_chat_demo.py)
-- [Browser Demonstration](demo/orl_chat_interactive_demo.html)
-
-### 🔍 Verification
-
-- [Verification Instructions](VERIFY/VERIFY.txt)
-- [Frozen Demo Hashes](VERIFY/FREEZE_DEMO_SHA256.txt)
-
-### 📂 Repository Layout
-
-- [demo/](demo/) — Python reference implementation and browser presentation
-- [docs/](docs/) — model, usage, testing, and visual documentation
-- [inputs/](inputs/) — committed supported message-fragment scenarios
-- [outputs/](outputs/) — generated deterministic result files
-- [VERIFY/](VERIFY/) — execution and artifact-identity guidance
+- A deterministic Python reference kernel.
+- A separately implemented Python verifier that does not import the producer kernel.
+- A separately implemented JavaScript resolver.
+- Browser laboratories for structural resolution and Conversation-State Capsules.
+- Frozen Python and cross-language parity corpora.
+- Strict JSON intake with duplicate-key, floating-number, out-of-range-integer, unsupported-field, and resource-bound refusal.
+- A runtime-independent exact Unicode scalar-sequence text profile.
+- Iterative typed relationship-graph resolution with `MAX_GRAPH_DEPTH = 256`.
+- Explicit `RESOLVED`, `INCOMPLETE`, `ABSTAIN`, and pre-resolution `REFUSED` states.
+- Participation profiles and declared evidence-boundary states.
+- Public receipts and private reconstruction bundles.
+- Privacy-separated Conversation-State Capsules.
+- Deterministic capsule verification and comparison.
+- A live Python-JavaScript cross-implementation checker.
+- A reproducible seeded property verifier for generated bounded graphs.
+- Hostile-input, falsification, mutation, graph-depth, cycle, privacy, order, partition, duplicate, relay, and tamper assurance.
 
 ---
 
-## 💡 Core Model
+## Quick Start
 
-ORL-Chat does not perform unrestricted language understanding.
+### Requirements
 
-It resolves a bounded conversation state from:
+- Python 3.9 or later.
+- Node.js 18 or later for JavaScript verification.
+- A modern browser for the laboratories.
 
-- supported message fragments
-- explicit message kinds
-- explicit target relationships
-- deterministic resolver rules
+### Complete verification
 
-Conceptually:
-
-`bounded_conversation_state = resolve(supported_message_fragments, resolver_rules)`
-
-For the current model, messages use one of four kinds:
-
-- `OPEN`
-- `REPLACE`
-- `RETRACT`
-- `CONFIRM`
-
-Relationships are expressed through explicit target message identifiers.
-
----
-
-## 🧩 Current Supported Message Shape
-
-The committed scenario uses message records containing fields such as:
+From the `Public_Release` directory, use any one of these commands:
 
 ```text
-id
-topic
-kind
-text
-value
-targets
+python -B VERIFY_ALL.py
+VERIFY_ALL.bat
+./verify_all.sh
 ```
 
-Example shape:
+`VERIFY_ALL.py` is the shared cross-platform runner. The Windows and shell files are thin wrappers. Every path stops at the first failing stage and prints:
 
 ```text
-{
-  "id": "M2",
-  "topic": "meeting_time",
-  "kind": "REPLACE",
-  "text": "Correction: 4 PM",
-  "value": "Meeting at 4 PM",
-  "targets": ["M1"]
-}
+ORL-Chat v2.0.0 complete verification: PASS
 ```
 
-The current demonstrations expect values shaped like the committed scenario.
+when every included verification stage succeeds.
 
-A formal versioned schema and complete invalid-input refusal profile are future hardening targets.
+### Open the browser laboratories
 
----
-
-## 🔥 Current Resolution Rules
-
-### OPEN
-
-An `OPEN` message introduces a proposal.
-
-For the current resolver, it must:
-
-- have no targets
-- contain a value
-
-### REPLACE
-
-A `REPLACE` message supersedes its valid targets and introduces a new value.
-
-It must:
-
-- identify at least one target
-- reference targets present in the evaluated topic
-- depend on structurally valid targets
-- contain a replacement value
-
-### RETRACT
-
-A `RETRACT` message removes its valid targeted proposal from the active set.
-
-It must:
-
-- identify at least one target
-- reference targets present in the evaluated topic
-- depend on structurally valid targets
-
-### CONFIRM
-
-A `CONFIRM` message confirms its valid targeted proposal when that proposal remains active.
-
-It must:
-
-- identify at least one target
-- reference targets present in the evaluated topic
-- depend on structurally valid targets
-
----
-
-## ⚖️ Resolution States
-
-### RESOLVED
-
-The current resolver produces `RESOLVED` when exactly one active proposal is also confirmed.
-
-Conceptually:
-
-`one confirmed active proposal -> RESOLVED`
-
-The output includes the surviving proposal identifier, text, and declared value.
-
-### INCOMPLETE
-
-The current resolver produces `INCOMPLETE` when, for example:
-
-- one active proposal lacks confirmation
-- required dependencies are missing
-- no proposal can yet be resolved
-
-Conceptually:
-
-`missing required relationship -> INCOMPLETE`
-
-### ABSTAIN
-
-The current resolver produces `ABSTAIN` when, for example:
-
-- multiple confirmed active proposals remain
-- multiple conflicting active proposals remain
-
-Conceptually:
-
-`conflicting active structure -> ABSTAIN`
-
-These are resolver classifications within the declared model.
-
-They are not judgments about human intent, legal agreement, truth, or conversational safety in general.
-
----
-
-## 🔁 Same-Evidence Node Equality
-
-Let:
-
-- `E` be a supported message-fragment collection
-- `D(E)` be exact-duplicate absorption
-- `R_v(E)` be the resolver output under ruleset version `v`
-
-For two nodes:
-
-`D(E_i) = D(E_j) -> R_v(E_i) = R_v(E_j)`
-
-This means that nodes holding the same deduplicated supported fragments and using the same resolver rules produce the same bounded conversation-state result.
-
-ORL-Chat does not claim equality when nodes permanently hold materially different evidence.
-
----
-
-## 🔀 Arrival-Order Independence
-
-For a supported permutation `P(E)` containing the same message fragments, the intended current-model invariant is:
-
-`R_v(P(E)) = R_v(E)`
-
-The Python reference implementation checks this across all `120` permutations of the supplied five-message scenario.
-
-This is an exhaustive result for that committed scenario.
-
-It is not a universal proof for:
-
-- arbitrary conversation size
-- arbitrary message schemas
-- arbitrary relationship graphs
-- arbitrary implementations
-
-Permutation testing grows factorially and is practical only for small scenarios without additional test strategies.
-
----
-
-## ♻️ Exact Duplicate Absorption
-
-The current duplicate key includes:
+For the most consistent browser behavior, start a local HTTP server from the `Public_Release` directory:
 
 ```text
-id
-topic
-kind
-text
-value
-targets
+python -m http.server 8000
 ```
 
-Applying exact-duplicate absorption twice has the same result as applying it once:
-
-`D(D(E)) = D(E)`
-
-An identical repeated message fragment is therefore evaluated once in the current model.
-
-This does not establish:
-
-- general message replay prevention
-- transport-level idempotency
-- sender authentication
-- message authenticity
-- protection against conflicting reuse of the same identifier
-
----
-
-## 🧭 Supplied Scenario
-
-The committed scenario contains five structurally related messages:
+Then open:
 
 ```text
-M1 = opening proposal
-M2 = replacement proposal
-M3 = retraction
-M4 = final replacement
-M5 = confirmation
+http://localhost:8000/demo/ORL_Chat_Structural_Lab_v2_0_0.html
+http://localhost:8000/demo/ORL_Chat_Capsule_Lab_v2_0_0.html
 ```
 
-The two nodes begin with different fragments:
+Stop the server with `Ctrl+C`.
+
+The HTML files may also be opened directly, but some browsers display `file:` origin warnings or restrict local resource behavior.
+
+---
+
+## Current Verification Evidence
+
+The included verification reports record the following passing results:
 
 ```text
-Node-A = M1, M2
-Node-B = M3, M4, M5
+Python reference kernel:                         2955/2955 PASS
+Independent Python verifier:                      173/173 PASS
+Frozen Python corpus:                               13/13 PASS
+Cross-language vector reproducibility:                  PASS
+JavaScript resolver and cross-language parity:     442/442 PASS
+Live Python-JavaScript bundle cross-check:             17/17 PARITY
+Strict-parser Python-JavaScript cross-check:             8/8 PARSER PARITY
+Seeded generated-property cases:                       32/32 PASS
+Seeded generated-property assertions:                 256/256 PASS
+Conversation-State Capsule unit audit:                 14/14 PASS
+Adversarial assurance:                                154/154 PASS
+Capsule cross-language parity:                        310/310 PASS
+Selected-file SHA-256 verification:                        PASS
 ```
 
-Before sharing, both local views are expected to be incomplete.
+The live Python-JavaScript and seeded-property verifiers decode Node subprocess output explicitly as strict UTF-8, so their behavior does not depend on the Windows active code page.
 
-After both nodes receive the same supported fragments, the current resolver follows the declared relationships and produces:
+These results apply only to the declared v2.0.0 schemas, profiles, corpora, limits, implementations, and verification artifacts. Producer audits, parity checks, and separate implementation reconstruction do not constitute independent third-party certification.
+
+---
+
+## Processing Model
+
+`raw JSON -> strict intake and exact-integer admission -> exact text-profile validation -> canonical evidence -> observation identity -> action identity -> exact duplicate absorption -> typed relationship graph -> active proposal frontier -> participation evaluation -> topic receipts -> boundary receipt -> public receipt + private bundle -> Conversation-State Capsule`
+
+The resolver derives state from the admitted canonical graph rather than simulating a chat timeline.
+
+---
+
+## Supported Action Grammar
+
+- `PROPOSE`
+- `AMEND`
+- `WITHDRAW`
+- `ENDORSE`
+- `OBJECT`
+
+`PROPOSE` and `AMEND` can produce active proposals. `WITHDRAW` removes a supported target from the active frontier. `ENDORSE` and `OBJECT` contribute declared participation signals.
+
+Presentation text is retained in the private bundle but does not determine action identity or resolution.
+
+---
+
+## Resolution and Refusal States
+
+- `RESOLVED`: exactly one supported active proposal remains and the declared participation profile is satisfied.
+- `INCOMPLETE`: valid admitted structure is insufficient for resolution.
+- `ABSTAIN`: valid admitted structure contains a bounded disagreement or conflict that prevents a single result.
+- `REFUSED`: malformed, unsupported, cross-context, identity-conflicting, or resource-invalid input is rejected before topic resolution.
+
+Strict-JSON intake occurs before a conversation document exists. Parser refusals are surfaced as intake errors and do not carry a bundle identity.
+
+Inputs that pass strict-JSON intake but violate the supported structural contract produce canonical `REFUSED` bundles with deterministic `refusal_id` values.
+
+`strict-parser refusal != canonical REFUSED bundle`
+
+Validation refusal occurs before topic resolution:
+
+`invalid or resource-invalid structure -> REFUSED`
+
+For admitted topic evidence, the reason-code precedence is:
+
+`DEPENDENCY_CYCLE > PARTICIPANT_SIGNAL_CONFLICT > MULTIPLE_ACTIVE_PROPOSALS > MISSING_DEPENDENCY > NO_ACTIVE_PROPOSAL > ACTIVE_PROPOSAL_OBJECTED > participation evaluation`
+
+At the final participation step, the topic becomes `RESOLVED` when the selected profile is satisfied and otherwise becomes `INCOMPLETE / PARTICIPATION_INCOMPLETE`. This precedence prevents a lower-priority condition from masking a higher-priority structural conflict.
+
+---
+
+## Participation Profiles
+
+- `NO_ENDORSEMENT_REQUIRED`
+- `SINGLE_DECLARED_ENDORSER`
+- `ALL_DECLARED_PARTICIPANTS`
+- `EXACT_DECLARED_PARTICIPANT_SET`
+- `DECLARED_THRESHOLD`
+
+These profiles evaluate declared evidence. They do not authenticate people or prove consent.
+
+---
+
+## Declared Graph-Depth Bound
+
+ORL-Chat declares:
+
+`MAX_GRAPH_DEPTH = 256`
+
+From any action, the resolver may follow at most 256 dependency edges before reaching a terminal action or a repeated action. A path requiring an additional edge is refused deterministically with:
+
+`action <action_ref>: dependency chain exceeds maximum depth`
+
+`256 dependency edges / 257 actions -> admitted`
+
+`257 dependency edges / 258 actions -> REFUSED`
+
+Cycle discovery and dependency-readiness evaluation use iterative traversal in the Python producer, independent Python verifier, and JavaScript resolver. A supported cycle within the declared bound remains admitted and resolves to `ABSTAIN / DEPENDENCY_CYCLE`; exceeding the graph-depth bound produces `REFUSED` before topic resolution.
+
+---
+
+## Evidence Boundary
+
+- `OPEN`: the observed evidence set is not declared complete.
+- `SEALED`: the declared expected observation-reference set exactly matches the observed set.
+- A requested sealed boundary can resolve to `INCOMPLETE` or `CONFLICT` when the declared and observed sets do not match.
+
+`SEALED` is a bounded evidence-set statement. It does not prove that no undisclosed message exists elsewhere.
+
+---
+
+## Observation and Action Separation
+
+The same conversational action may be observed through more than one source.
+
+`observation multiplicity != action multiplicity`
+
+Exact duplicate observations are absorbed. Relay observations can preserve distinct observation paths while referring to one canonical action. Conflicting reuse of an observation reference or action reference is refused.
+
+---
+
+## Public Receipt and Private Bundle
+
+The public receipt carries a portable structural summary without raw presentation text or raw declared values.
+
+The private bundle retains admitted observations, presentations, declared values, graph structure, witnesses, and reconstruction material.
+
+Both artifacts declare:
+
+`execution_authority = NONE`
+
+---
+
+## Conversation-State Capsule
+
+A Conversation-State Capsule is a portable privacy-separated state derived from a verified private bundle.
+
+`verified private bundle -> structural identities + committed values + witnesses -> capsule`
+
+A capsule contains state, reason, active-frontier identities, evidence coverage, boundary status, and deterministic value commitments without carrying raw message presentations, raw declared values, participant names, observation sources, or action references.
+
+A value commitment supports deterministic comparison within the declared profile. It is not encryption, and low-entropy values may be guessable by enumeration.
+
+Every capsule declares:
+
+`execution_authority = NONE`
+
+---
+
+## Capsule Comparison
+
+Comparison is directional:
+
+`compare(left, right) -> relation of right to left`
+
+Supported relations:
+
+- `IDENTICAL`: the canonical capsule identities match.
+- `COMPATIBLE`: the declared comparison context matches and common topics do not contain divergent resolved-value commitments.
+- `SUPERSEDES`: the right action set strictly extends the left and changes the bounded state without resolved-value divergence.
+- `DIVERGES`: a common topic resolves to a different declared-value commitment.
+- `INCOMPARABLE`: the declared comparison context differs.
+- `UNSUPPORTED`: at least one capsule fails structural verification.
+
+These are bounded structural relations. They are not universal semantic, temporal, legal, or consensus relations.
+
+---
+
+## Main Commands
+
+### Resolve the representative scenario
 
 ```text
-State       = RESOLVED
-Final Value = Meeting at 5 PM
+python -B demo/ORL_Chat_Reference_Kernel_v2_0_0.py --scenario corrected-instruction
 ```
 
-Expected node result:
+### Independently verify a frozen bundle
 
 ```text
-converged_after_merge = True
+python -B verifier/ORL_Chat_Independent_Verifier_v2_0_0.py --verify examples/ORL_Chat_corrected_instruction_Bundle_v2_0_0.json --strict-canonical
 ```
 
-Expected permutation result:
+### Create a capsule
 
 ```text
-checked_permutations    = 120
-permutation_independence = True
+python -B demo/ORL_Chat_Conversation_State_Capsule_v2_0_0.py --create capsules/source_bundles/corrected-resolved_Bundle_v2_0_0.json --strict-canonical --output ORL_Chat_Capsule.json
+```
+
+### Verify a capsule
+
+```text
+python -B demo/ORL_Chat_Conversation_State_Capsule_v2_0_0.py --verify ORL_Chat_Capsule.json --strict-canonical
+```
+
+### Verify a capsule against its source bundle
+
+```text
+python -B demo/ORL_Chat_Conversation_State_Capsule_v2_0_0.py --verify ORL_Chat_Capsule.json --bundle capsules/source_bundles/corrected-resolved_Bundle_v2_0_0.json --strict-canonical
+```
+
+### Compare two capsules
+
+```text
+python -B demo/ORL_Chat_Conversation_State_Capsule_v2_0_0.py --compare capsules/artifacts/base-incomplete_Capsule_v2_0_0.json capsules/artifacts/corrected-resolved_Capsule_v2_0_0.json --strict-canonical
+```
+
+Expected relation:
+
+```text
+SUPERSEDES
+```
+
+### Canonicalize an ordinary strict-JSON document
+
+```text
+python -B demo/ORL_Chat_Reference_Kernel_v2_0_0.py --canonicalize input.json --output canonical_input.json
+```
+
+This writes the canonical artifact form. It does not by itself establish that the document satisfies the ORL-Chat semantic intake contract.
+
+### Cross-check Python and JavaScript on every shipped input
+
+```text
+python -B verifier/ORL_Chat_Cross_Language_Cross_Check_v2_0_0.py --all-examples
+```
+
+### Cross-check strict-parser refusal outcomes
+
+```text
+python -B verifier/ORL_Chat_Cross_Language_Cross_Check_v2_0_0.py --all-parser-cases
+```
+
+Matching parser refusals return exit code `0`. Cross-implementation divergence returns `1`. Tool, path, or runtime failure returns `2`.
+
+### Run the reproducible generated-property verifier
+
+```text
+python -B verifier/ORL_Chat_Seeded_Property_Verifier_v2_0_0.py --seed 20260731 --cases 32
+```
+
+The verifier uses `ORL-CHAT-SPLITMIX64-2-D01`, so the same seed defines the same generated cases across supported Python runtimes.
+
+---
+
+## Package Structure
+
+```text
+Public_Release/
+  README.md
+  LICENSE
+  VERIFY_ALL.py     shared cross-platform verification runner
+  VERIFY_ALL.bat    Windows wrapper
+  verify_all.sh     Linux and macOS wrapper
+  demo/            reference and browser implementations
+  verifier/        independent verification, live cross-check, property, and parity tooling
+  corpus/          frozen bounded conversation scenarios
+  parity/          Python and JavaScript parity vectors
+  capsules/        capsule vectors, artifacts, comparisons, inputs, and bundles
+  hostile/         strict hostile-input corpus
+  falsification/   deliberately altered artifacts
+  examples/        representative inputs and bundles
+  VERIFY/          public verification reports and representative artifacts
+  docs/            architecture, quickstart, FAQ, boundaries, integration, and verification guidance
+  hashes/          minimal SHA-256 manifest for selected verification-critical files
 ```
 
 ---
 
-## 🧠 What “Meaning” Means Here
+## Documentation
 
-In ORL-Chat, “meaning” refers narrowly to the declared value selected by the explicit relationship graph and resolver rules.
-
-For the supplied scenario:
-
-`resolved declared value = Meeting at 5 PM`
-
-ORL-Chat does not infer unrestricted natural-language meaning.
-
-It does not determine:
-
-- sarcasm
-- hidden intent
-- emotional meaning
-- factual truth
-- social context
-- legal agreement
-- speaker identity
-- whether the proposal should be accepted in the real world
-
-The more precise technical term is:
-
-`bounded resolved conversation state`
+- `docs/Quickstart.md`
+- `docs/Architecture.md`
+- `docs/Conversation_State_Capsule.md`
+- `docs/Integration_Guide.md`
+- `docs/Verification_Guide.md`
+- `docs/Claim_and_Threat_Boundary.md`
+- `docs/FAQ.md`
+- `docs/Text_Profile.md`
 
 ---
 
-## ✅ What the Current Python Demonstration Establishes
+## Canonical Data Contract
 
-For the supplied scenario, the Python implementation demonstrates:
+The supported data contract includes:
 
-- different initial node views
-- exact duplicate absorption
-- explicit dependency validation
-- cycle detection
-- deterministic relationship processing
-- `RESOLVED`, `INCOMPLETE`, and `ABSTAIN` model states
-- same-evidence node equality after merge
-- exhaustive evaluation of all `120` arrival permutations
-- canonical JSON serialization for the generated result object
-- SHA-256 hashing of the bounded result object
-- local execution without timestamps, GPS, NTP, database access, or a live server after download
-
-These are bounded scenario and implementation claims.
+- Strict UTF-8 JSON.
+- Duplicate-key refusal.
+- Floating-number, `NaN`, and infinity refusal.
+- Exact interoperable integer range `-9007199254740991` through `9007199254740991`, enforced during strict-JSON parsing.
+- Exact Unicode scalar-sequence preservation without runtime normalization.
+- A frozen control, format, and surrogate rejection table.
+- Fixed supported field sets.
+- Bounded identifiers, text, arrays, objects, values, participants, observations, graph depth, and input bytes.
+- Deterministic canonical JSON identities.
+- Two-space, sorted-key, LF-terminated canonical artifact files.
 
 ---
 
-## 🖥 Browser Demonstration Scope
+## Text Profile
 
-The browser demo is a visual presentation of the supplied scenario.
+ORL-Chat v2.0.0 declares:
 
-It shows:
+`ORL-CHAT-UNICODE-SCALAR-EXACT-2-D01`
 
-- different displayed arrival orders
-- the two partial node views
-- a scripted structural merge
-- the correction and confirmation chain
-- the expected final result
+Strings are preserved as exact Unicode scalar sequences. The implementation does not use the host runtime's Unicode database to normalize text or classify admitted characters.
 
-The current browser demo does not independently execute the full Python resolver or enumerate all `120` permutations.
+- Canonically equivalent sequences remain distinct unless their code points are identical.
+- Identifiers refuse a frozen table of control, format, and surrogate code points.
+- Presentation text and declared-value strings permit LF and TAB but refuse CR and the remaining frozen control, format, and surrogate code points.
+- The same explicit code-point rules are implemented in the Python producer, independent Python verifier, and JavaScript resolver.
 
-Therefore, browser labels such as “permutation tested” or “proof verified” should be interpreted as a visual replay of the Python reference result, not an independently reconstructed browser proof.
+`"café" != "cafe\u0301"`
 
-A later technical revision should either:
-
-- execute the resolver and conformance checks directly in the browser; or
-- label the browser explicitly as a visual reference-result presentation.
+This exact-sequence rule closes runtime Unicode-version drift within the declared text profile. See `docs/Text_Profile.md`.
 
 ---
 
-## 🔐 Result Hash and Artifact Identity
+## Hash Scope
 
-The Python demo computes SHA-256 hashes over canonical JSON representations of the bounded result data.
+The package includes one minimal manifest:
 
-This provides deterministic identity for the generated result object under the current implementation.
+`hashes/SHA256SUMS.txt`
 
-The repository also contains frozen demo-file hashes.
+It covers 14 verification-critical files: four core implementation files, six principal verifier files, the shared verification runner, and three corpus or vector-root files. Root files, documentation, browser HTML files, verification reports, examples, hostile fixtures, falsification fixtures, generators, and generated capsule sub-artifacts are intentionally outside this minimal scope.
 
-Two distinct relations apply:
-
-`same canonical result bytes -> same result hash`
-
-`same file bytes -> same frozen artifact hash`
-
-Neither relation alone proves:
-
-- semantic truth
-- correct human interpretation
-- complete conformance
-- independent reconstruction
-- message authenticity
-- security
-- production readiness
+The manifest supports byte-integrity checking for the selected surface. It does not replace semantic verification, source authentication, or independent review.
 
 ---
 
-## 🛡 Current Boundary
+## Claim Boundary
 
-ORL-Chat does not implement or prove:
+ORL-Chat is a bounded deterministic conversation-evidence resolver. It does not establish:
 
-- unrestricted natural-language understanding
-- universal meaning resolution
-- factual truth
-- speaker identity
-- message authenticity
-- authorization
-- encryption
-- access control
-- delivery guarantees
-- consensus
-- reliable broadcast
-- Byzantine fault tolerance
-- immutable finality
-- conflict repair
-- complete malformed-input validation
-- universal cross-language conformance
-- production readiness
-- safe operation on arbitrary or hostile input
+- Unrestricted natural-language understanding.
+- Factual truth.
+- Source authenticity.
+- Participant identity.
+- Authenticated consent.
+- Message delivery or reading.
+- Legal agreement.
+- Consensus.
+- Authorization.
+- Execution authority.
+- Safety or suitability of an instruction.
+- Completeness beyond the declared evidence boundary.
+- Production suitability without independent domain validation.
+- Semantic equivalence between different Unicode scalar sequences.
 
-ORL-Chat is not:
-
-- a chat application replacement
-- a messaging transport
-- a consensus protocol
-- an AI language model
-- a moderation system
-- a legal agreement engine
-
----
-
-## ⚠️ Current Technical Limitations
-
-The current implementation should be interpreted only against the committed supported scenarios.
-
-Important limitations include:
-
-- no formal versioned input schema
-- incomplete explicit refusal behavior
-- malformed required fields may raise errors
-- conflicting reuse of a message identifier is not safely rejected
-- some no-time, no-order, and no-sync labels are declared rather than independently derived
-- the result hash is not an independently reconstructed certificate
-- exhaustive permutation testing scales factorially
-- the browser demo is scripted rather than a full independent resolver
-- cross-language conformance is not established
-
----
-
-## 🔬 Research and Integration Direction
-
-ORL-Chat may inform future work in:
-
-- structured correction chains
-- offline instruction reconciliation
-- multi-agent proposal tracking
-- deterministic conversation auditing
-- explicit amendment and retraction models
-- bounded conversational state machines
-- independently verifiable resolver receipts
-
-Any real deployment would require additional:
-
-- formal schemas
-- identity and authentication
-- transport security
-- authorization
-- delivery semantics
-- policy definition
-- conflict repair
-- operational controls
-- adversarial testing
-
----
-
-## 🧭 Future Technical Direction
-
-A stronger revision should add:
-
-- a formal versioned message schema
-- explicit invalid-input refusal
-- conflict-safe message identifier handling
-- canonical byte serialization
-- deterministic byte-wise ordering
-- shared Python-browser resolver logic
-- assertion-based expected outputs
-- malformed-input vectors
-- dependency-cycle vectors
-- duplicate and identifier-conflict vectors
-- adversarial relationship graphs
-- scalable permutation and metamorphic testing
-- independent reconstruction
-- versioned resolver receipts
-- a separately defined structural-closure layer
-
-Future target relation:
-
-`same validated canonical message fragments + same ruleset version -> same independently verified bounded conversation-state result`
-
-This stronger target is not part of the current demonstrations.
+A resolved value, verified bundle, or verified capsule does not by itself establish that the value is true, authorized, safe, lawful, current outside the declared evidence, or suitable for execution.
 
 ---
 
 ## 📜 License
 
-See [LICENSE](LICENSE).
+See: [LICENSE](LICENSE)
 
-Reference implementation: **ORL-Chat Open Use License v1.0**
+The ORL-Chat reference implementation and associated verification artifacts are free to use, copy, modify, test, study, and redistribute without a license fee, subject to the license terms stated in the repository.
 
-Unless otherwise stated, architecture descriptions, diagrams, and documentation: **CC BY-NC 4.0**
+Documentation, architecture materials, specifications, diagrams, and explanatory content are subject to the separate terms stated in the LICENSE.
 
----
-
-## 🔗 Related Projects
-
-- [ORL](https://github.com/OMPSHUNYAYA/Orderless-Ledger)
-- [STOCRS](https://github.com/OMPSHUNYAYA/STOCRS)
-- [SSUM-Time](https://github.com/OMPSHUNYAYA/SSUM-Time)
-
----
-
-## ⭐ Final Statement
-
-ORL-Chat demonstrates a bounded structural alternative to using timestamps or message arrival order as conversation-state resolution authority.
-
-For the supplied scenario:
-
-`same deduplicated supported message fragments + same resolver rules -> same bounded resolved conversation state`
-
-The final declared value is:
-
-`Meeting at 5 PM`
-
-This result is produced by explicit message relationships and deterministic resolver rules, not unrestricted natural-language interpretation.
+This repository does not claim recognition as a formal technical standard, security certification, production qualification, or third-party verification.

@@ -1,0 +1,54 @@
+{
+  "action_ids": [
+    "action_c95f3a6cf7db5fb93fe8d336bafc4fd78d7c21e247ff7034a99e4a8d88e7f467"
+  ],
+  "action_set_id": "action_set_c9f1c31b11eace91c237bfca0ac186b1fbe30f4993ace56a9a1deb3621d56201",
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary_receipt_id": "boundary_receipt_71a21d2b9bd163d74d780979d44ae5a5ffb8bf876ade700215e84efb804cb734",
+  "boundary_state": "SEALED",
+  "capsule_id": "conversation_state_capsule_deef0457ff9882fce17b4fa736bf7347c36403b987bac0799c5c3d1c94bdbe36",
+  "context_id": "context_f2fa4393bc24329d8178746c39d87e6dcaf2d3b9bbc24d7225e8d2167fbbef6e",
+  "conversation_id": "conversation-capsule-unrelated",
+  "conversation_resolution_id": "conversation_resolution_0fdd789e773ebb5c79538a3d7a433756c1a99492e4291f8ed5fc97efeeb0ff0a",
+  "execution_authority": "NONE",
+  "graph_root": "graph_5bf80176abcc0f39c270ce78d0b5ebc2491e688486ca1e84acf27ea5a96883ae",
+  "observation_ids": [
+    "observation_1b49f5a977ac14cc41f91924792ab7d6e94501ab0bdbe5fb1765ee7c4485ec52"
+  ],
+  "observation_set_id": "observation_set_975c89a6f07e8c5571a25bcebeb1c35c37b15018d68d3c27803ade0da9998587",
+  "profile": "ORL-CHAT-CONVERSATION-STATE-CAPSULE-2-C01",
+  "purpose_id": "active-instruction",
+  "relationship_edges": [],
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "source_private_bundle_id": "private_bundle_eb2b95c5caacccea7a4a11cff0836b7ab6372bff829f14afda6aa5d927972413",
+  "source_public_receipt_id": "public_receipt_d93292c6754ae2281b9c475bcf6118a3fc58fd97dd0f898eacb05f6d5bc65e8f",
+  "state_counts": {
+    "ABSTAIN": 0,
+    "INCOMPLETE": 1,
+    "RESOLVED": 0
+  },
+  "topics": [
+    {
+      "active_action_ids": [
+        "action_c95f3a6cf7db5fb93fe8d336bafc4fd78d7c21e247ff7034a99e4a8d88e7f467"
+      ],
+      "active_endorser_count": 0,
+      "active_objector_count": 0,
+      "participation_satisfied": false,
+      "reason_code": "PARTICIPATION_INCOMPLETE",
+      "resolved_action_id": null,
+      "resolved_value_commitment": null,
+      "state": "INCOMPLETE",
+      "topic_id": "meeting-time",
+      "topic_receipt_id": "topic_receipt_b75be95ea7a2d8f20d0dac30a9b593ee5de434dff1cc8be4e785626f06a79ac4",
+      "witness_codes": [
+        "ACTIVE_FRONTIER_PRESENT",
+        "BOUNDARY_SEALED",
+        "PARTICIPATION_INCOMPLETE",
+        "REASON_PARTICIPATION_INCOMPLETE",
+        "STATE_INCOMPLETE"
+      ]
+    }
+  ],
+  "version": "2.0.0"
+}

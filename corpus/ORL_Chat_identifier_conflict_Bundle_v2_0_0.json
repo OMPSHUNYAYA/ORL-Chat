@@ -1,0 +1,12 @@
+{
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "errors": [
+    "action_ref content conflict: proposal"
+  ],
+  "execution_authority": "NONE",
+  "profile": "ORL-CHAT-PRIVATE-BUNDLE-2-D01",
+  "refusal_id": "refusal_2272ec2c1432d6035227116b3de8aa5e87175f649fafd1e29b4ef98d08d6cc33",
+  "result": "REFUSED",
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "version": "2.0.0"
+}

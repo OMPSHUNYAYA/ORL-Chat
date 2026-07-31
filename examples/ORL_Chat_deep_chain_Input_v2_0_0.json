@@ -1,0 +1,4665 @@
+{
+  "boundary": {
+    "expected_observation_refs": [],
+    "schema": "ORL-CHAT-BOUNDARY-2-D01",
+    "state": "OPEN"
+  },
+  "context": {
+    "conversation_id": "conversation-deep-chain",
+    "execution_authority": "NONE",
+    "participation": {
+      "participants": [],
+      "profile": "NO_ENDORSEMENT_REQUIRED",
+      "required_endorsers": [],
+      "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+      "threshold": 0
+    },
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "schema": "ORL-CHAT-CONTEXT-2-D01"
+  },
+  "observations": [
+    {
+      "action": {
+        "action_ref": "proposal",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "base value",
+        "kind": "PROPOSE",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-proposal",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0257",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 257",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "proposal"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0257",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0256",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 256",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0257"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0256",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0255",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 255",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0256"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0255",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0254",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 254",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0255"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0254",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0253",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 253",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0254"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0253",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0252",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 252",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0253"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0252",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0251",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 251",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0252"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0251",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0250",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 250",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0251"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0250",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0249",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 249",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0250"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0249",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0248",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 248",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0249"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0248",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0247",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 247",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0248"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0247",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0246",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 246",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0247"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0246",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0245",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 245",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0246"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0245",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0244",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 244",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0245"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0244",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0243",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 243",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0244"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0243",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0242",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 242",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0243"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0242",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0241",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 241",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0242"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0241",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0240",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 240",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0241"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0240",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0239",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 239",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0240"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0239",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0238",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 238",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0239"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0238",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0237",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 237",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0238"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0237",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0236",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 236",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0237"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0236",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0235",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 235",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0236"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0235",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0234",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 234",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0235"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0234",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0233",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 233",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0234"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0233",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0232",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 232",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0233"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0232",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0231",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 231",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0232"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0231",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0230",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 230",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0231"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0230",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0229",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 229",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0230"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0229",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0228",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 228",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0229"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0228",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0227",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 227",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0228"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0227",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0226",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 226",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0227"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0226",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0225",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 225",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0226"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0225",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0224",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 224",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0225"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0224",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0223",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 223",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0224"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0223",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0222",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 222",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0223"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0222",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0221",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 221",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0222"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0221",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0220",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 220",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0221"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0220",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0219",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 219",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0220"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0219",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0218",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 218",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0219"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0218",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0217",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 217",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0218"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0217",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0216",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 216",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0217"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0216",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0215",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 215",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0216"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0215",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0214",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 214",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0215"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0214",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0213",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 213",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0214"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0213",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0212",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 212",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0213"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0212",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0211",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 211",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0212"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0211",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0210",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 210",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0211"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0210",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0209",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 209",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0210"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0209",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0208",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 208",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0209"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0208",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0207",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 207",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0208"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0207",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0206",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 206",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0207"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0206",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0205",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 205",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0206"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0205",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0204",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 204",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0205"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0204",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0203",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 203",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0204"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0203",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0202",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 202",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0203"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0202",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0201",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 201",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0202"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0201",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0200",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 200",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0201"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0200",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0199",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 199",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0200"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0199",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0198",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 198",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0199"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0198",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0197",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 197",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0198"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0197",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0196",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 196",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0197"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0196",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0195",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 195",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0196"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0195",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0194",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 194",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0195"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0194",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0193",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 193",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0194"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0193",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0192",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 192",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0193"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0192",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0191",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 191",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0192"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0191",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0190",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 190",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0191"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0190",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0189",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 189",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0190"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0189",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0188",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 188",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0189"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0188",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0187",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 187",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0188"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0187",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0186",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 186",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0187"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0186",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0185",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 185",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0186"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0185",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0184",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 184",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0185"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0184",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0183",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 183",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0184"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0183",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0182",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 182",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0183"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0182",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0181",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 181",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0182"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0181",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0180",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 180",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0181"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0180",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0179",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 179",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0180"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0179",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0178",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 178",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0179"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0178",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0177",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 177",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0178"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0177",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0176",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 176",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0177"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0176",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0175",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 175",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0176"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0175",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0174",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 174",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0175"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0174",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0173",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 173",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0174"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0173",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0172",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 172",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0173"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0172",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0171",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 171",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0172"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0171",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0170",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 170",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0171"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0170",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0169",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 169",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0170"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0169",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0168",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 168",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0169"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0168",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0167",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 167",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0168"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0167",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0166",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 166",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0167"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0166",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0165",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 165",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0166"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0165",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0164",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 164",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0165"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0164",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0163",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 163",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0164"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0163",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0162",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 162",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0163"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0162",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0161",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 161",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0162"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0161",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0160",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 160",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0161"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0160",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0159",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 159",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0160"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0159",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0158",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 158",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0159"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0158",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0157",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 157",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0158"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0157",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0156",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 156",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0157"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0156",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0155",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 155",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0156"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0155",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0154",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 154",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0155"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0154",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0153",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 153",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0154"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0153",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0152",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 152",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0153"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0152",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0151",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 151",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0152"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0151",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0150",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 150",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0151"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0150",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0149",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 149",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0150"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0149",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0148",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 148",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0149"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0148",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0147",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 147",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0148"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0147",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0146",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 146",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0147"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0146",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0145",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 145",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0146"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0145",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0144",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 144",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0145"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0144",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0143",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 143",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0144"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0143",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0142",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 142",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0143"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0142",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0141",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 141",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0142"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0141",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0140",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 140",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0141"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0140",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0139",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 139",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0140"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0139",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0138",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 138",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0139"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0138",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0137",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 137",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0138"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0137",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0136",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 136",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0137"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0136",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0135",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 135",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0136"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0135",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0134",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 134",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0135"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0134",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0133",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 133",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0134"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0133",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0132",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 132",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0133"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0132",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0131",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 131",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0132"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0131",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0130",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 130",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0131"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0130",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0129",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 129",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0130"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0129",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0128",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 128",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0129"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0128",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0127",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 127",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0128"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0127",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0126",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 126",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0127"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0126",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0125",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 125",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0126"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0125",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0124",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 124",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0125"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0124",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0123",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 123",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0124"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0123",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0122",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 122",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0123"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0122",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0121",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 121",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0122"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0121",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0120",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 120",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0121"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0120",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0119",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 119",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0120"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0119",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0118",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 118",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0119"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0118",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0117",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 117",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0118"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0117",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0116",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 116",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0117"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0116",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0115",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 115",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0116"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0115",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0114",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 114",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0115"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0114",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0113",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 113",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0114"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0113",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0112",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 112",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0113"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0112",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0111",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 111",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0112"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0111",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0110",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 110",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0111"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0110",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0109",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 109",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0110"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0109",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0108",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 108",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0109"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0108",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0107",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 107",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0108"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0107",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0106",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 106",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0107"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0106",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0105",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 105",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0106"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0105",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0104",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 104",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0105"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0104",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0103",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 103",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0104"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0103",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0102",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 102",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0103"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0102",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0101",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 101",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0102"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0101",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0100",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 100",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0101"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0100",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0099",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 99",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0100"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0099",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0098",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 98",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0099"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0098",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0097",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 97",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0098"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0097",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0096",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 96",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0097"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0096",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0095",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 95",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0096"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0095",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0094",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 94",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0095"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0094",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0093",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 93",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0094"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0093",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0092",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 92",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0093"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0092",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0091",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 91",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0092"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0091",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0090",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 90",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0091"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0090",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0089",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 89",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0090"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0089",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0088",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 88",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0089"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0088",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0087",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 87",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0088"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0087",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0086",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 86",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0087"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0086",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0085",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 85",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0086"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0085",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0084",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 84",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0085"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0084",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0083",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 83",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0084"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0083",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0082",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 82",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0083"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0082",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0081",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 81",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0082"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0081",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0080",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 80",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0081"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0080",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0079",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 79",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0080"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0079",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0078",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 78",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0079"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0078",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0077",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 77",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0078"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0077",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0076",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 76",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0077"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0076",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0075",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 75",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0076"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0075",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0074",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 74",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0075"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0074",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0073",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 73",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0074"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0073",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0072",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 72",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0073"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0072",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0071",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 71",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0072"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0071",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0070",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 70",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0071"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0070",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0069",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 69",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0070"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0069",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0068",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 68",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0069"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0068",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0067",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 67",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0068"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0067",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0066",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 66",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0067"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0066",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0065",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 65",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0066"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0065",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0064",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 64",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0065"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0064",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0063",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 63",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0064"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0063",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0062",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 62",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0063"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0062",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0061",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 61",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0062"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0061",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0060",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 60",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0061"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0060",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0059",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 59",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0060"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0059",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0058",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 58",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0059"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0058",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0057",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 57",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0058"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0057",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0056",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 56",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0057"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0056",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0055",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 55",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0056"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0055",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0054",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 54",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0055"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0054",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0053",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 53",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0054"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0053",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0052",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 52",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0053"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0052",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0051",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 51",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0052"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0051",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0050",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 50",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0051"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0050",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0049",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 49",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0050"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0049",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0048",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 48",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0049"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0048",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0047",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 47",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0048"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0047",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0046",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 46",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0047"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0046",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0045",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 45",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0046"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0045",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0044",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 44",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0045"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0044",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0043",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 43",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0044"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0043",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0042",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 42",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0043"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0042",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0041",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 41",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0042"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0041",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0040",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 40",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0041"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0040",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0039",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 39",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0040"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0039",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0038",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 38",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0039"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0038",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0037",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 37",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0038"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0037",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0036",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 36",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0037"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0036",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0035",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 35",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0036"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0035",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0034",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 34",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0035"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0034",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0033",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 33",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0034"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0033",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0032",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 32",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0033"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0032",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0031",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 31",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0032"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0031",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0030",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 30",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0031"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0030",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0029",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 29",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0030"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0029",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0028",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 28",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0029"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0028",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0027",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 27",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0028"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0027",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0026",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 26",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0027"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0026",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0025",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 25",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0026"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0025",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0024",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 24",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0025"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0024",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0023",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 23",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0024"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0023",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0022",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 22",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0023"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0022",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0021",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 21",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0022"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0021",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0020",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 20",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0021"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0020",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0019",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 19",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0020"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0019",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0018",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 18",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0019"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0018",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0017",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 17",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0018"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0017",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0016",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 16",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0017"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0016",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0015",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 15",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0016"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0015",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0014",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 14",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0015"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0014",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0013",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 13",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0014"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0013",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0012",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 12",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0013"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0012",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0011",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 11",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0012"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0011",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0010",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 10",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0011"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0010",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0009",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 9",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0010"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0009",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0008",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 8",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0009"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0008",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0007",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 7",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0008"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0007",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0006",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 6",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0007"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0006",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0005",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 5",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0006"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0005",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0004",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 4",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0005"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0004",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0003",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 3",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0004"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0003",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0002",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 2",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0003"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0002",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    },
+    {
+      "action": {
+        "action_ref": "amend-0001",
+        "actor": "alice",
+        "conversation_id": "conversation-deep-chain",
+        "declared_value": "value 1",
+        "kind": "AMEND",
+        "schema": "ORL-CHAT-ACTION-2-D01",
+        "targets": [
+          "amend-0002"
+        ],
+        "topic_id": "instruction"
+      },
+      "observation_ref": "obs-amend-0001",
+      "presentation": "",
+      "schema": "ORL-CHAT-OBSERVATION-2-D01",
+      "source": "node-a"
+    }
+  ]
+}

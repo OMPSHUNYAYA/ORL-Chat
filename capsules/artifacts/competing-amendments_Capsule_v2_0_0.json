@@ -1,0 +1,84 @@
+{
+  "action_ids": [
+    "action_340e283d4b244efe02fcb8633a10632c1c2b15d10e17ca5e57c87deb62bb0075",
+    "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc",
+    "action_6738f4357543b2a56f9508ee6367d854c5a881839b9c97ed2588151a504e6cef",
+    "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21",
+    "action_90764101ef982add777ca265112051ffeaf1bf22cb79173d252f93f0c718a124"
+  ],
+  "action_set_id": "action_set_7eecc89293daebe497eea5bc290c3859ffd311a84c9919e092f5425ecc30c2c7",
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary_receipt_id": "boundary_receipt_bd8ac7d3351f6b923fb285b20a8e0d1f02448c200e59e8d8e2ee501320803da0",
+  "boundary_state": "SEALED",
+  "capsule_id": "conversation_state_capsule_254856932938a4f19fc92b8b344a75dfa9b606cdccf7ff02ddd38878ab0b4844",
+  "context_id": "context_f24550d128d07476283b3bcb0de9cf679bd1ab9f9acc220dee5a3ec8e053e21f",
+  "conversation_id": "conversation-capsule-lineage",
+  "conversation_resolution_id": "conversation_resolution_2dcbac5be28056b6fca7c36649c0dd25198cc3f31ba8b8ae4b91ddb3e5574af3",
+  "execution_authority": "NONE",
+  "graph_root": "graph_2426b167a73487a590fee9c2adfdbca81761a7c98a0012d28c07152c0bc9bcd8",
+  "observation_ids": [
+    "observation_08c13cf6ccb0077501005360c03ab82d2c8cf3d79ff9fcddc5e06c8d0295373f",
+    "observation_1a8573d9003f645343235adb31c2f693f0688ac4a16945d363ea1843a6054c3c",
+    "observation_2e23ea8d3e1464a4e0d3c61289aa8461b749990b01e83e5100d423c38b269711",
+    "observation_cefeb15dc2da80baf6794ef0a3dab6707b44f3ac01c4726147804a6adb067517",
+    "observation_e12d4ef8083c8f20afa21ec41efd3ca05b4e9aacff2523af21e71319d1c1062c"
+  ],
+  "observation_set_id": "observation_set_8ff683a1899ca757990788ab97d83029f046965cf68ea06063fec0dbc0537dae",
+  "profile": "ORL-CHAT-CONVERSATION-STATE-CAPSULE-2-C01",
+  "purpose_id": "active-instruction",
+  "relationship_edges": [
+    {
+      "relation": "AMEND",
+      "source_action_id": "action_340e283d4b244efe02fcb8633a10632c1c2b15d10e17ca5e57c87deb62bb0075",
+      "target_action_id": "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc"
+    },
+    {
+      "relation": "ENDORSE",
+      "source_action_id": "action_6738f4357543b2a56f9508ee6367d854c5a881839b9c97ed2588151a504e6cef",
+      "target_action_id": "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21"
+    },
+    {
+      "relation": "AMEND",
+      "source_action_id": "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21",
+      "target_action_id": "action_5bd28e841933241aadda4780bc80657f9c5b64a281f5f659f0e196bea4da5fbc"
+    },
+    {
+      "relation": "ENDORSE",
+      "source_action_id": "action_90764101ef982add777ca265112051ffeaf1bf22cb79173d252f93f0c718a124",
+      "target_action_id": "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21"
+    }
+  ],
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "source_private_bundle_id": "private_bundle_770e8bc850e9ca3777aa7b42ea6370b6898c4ec6a090644e3467d63b95176712",
+  "source_public_receipt_id": "public_receipt_eff827e014d9de0bd9c2bab71c3f6bae0b37a1a8664e6614e57bf1118a6d6360",
+  "state_counts": {
+    "ABSTAIN": 1,
+    "INCOMPLETE": 0,
+    "RESOLVED": 0
+  },
+  "topics": [
+    {
+      "active_action_ids": [
+        "action_340e283d4b244efe02fcb8633a10632c1c2b15d10e17ca5e57c87deb62bb0075",
+        "action_763793439319e6894760f196b7609634677eb779838788cc5bc6dd98d3c00e21"
+      ],
+      "active_endorser_count": 0,
+      "active_objector_count": 0,
+      "participation_satisfied": null,
+      "reason_code": "MULTIPLE_ACTIVE_PROPOSALS",
+      "resolved_action_id": null,
+      "resolved_value_commitment": null,
+      "state": "ABSTAIN",
+      "topic_id": "meeting-time",
+      "topic_receipt_id": "topic_receipt_e32741cb33e0ef6bebb837620e291414f6bb1a8af7b0e962975b65f2eef1d940",
+      "witness_codes": [
+        "ACTIVE_FRONTIER_PRESENT",
+        "BOUNDARY_SEALED",
+        "PARTICIPATION_NOT_EVALUATED",
+        "REASON_MULTIPLE_ACTIVE_PROPOSALS",
+        "STATE_ABSTAIN"
+      ]
+    }
+  ],
+  "version": "2.0.0"
+}

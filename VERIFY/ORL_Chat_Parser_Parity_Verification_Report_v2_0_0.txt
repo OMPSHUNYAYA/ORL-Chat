@@ -1,0 +1,30 @@
+ORL-Chat v2.0.0 Strict-Parser Cross-Implementation Verification
+
+Command
+
+python -B verifier/ORL_Chat_Cross_Language_Cross_Check_v2_0_0.py --all-parser-cases
+
+Result
+
+Strict-parser cases: 8
+Python-JavaScript parser outcome parity: 8/8 PARSER PARITY
+Text profile: ORL-CHAT-UNICODE-SCALAR-EXACT-2-D01
+
+Checked cases
+
+- Duplicate JSON object key.
+- Floating-point JSON number.
+- Integer above the exact interoperable range.
+- Integer below the exact interoperable range.
+- Extreme-length integer token.
+- UTF-8 BOM.
+- Noncanonical artifact bytes under strict-canonical verification.
+- Trailing content under strict-canonical verification.
+
+Refusal boundary
+
+A parser refusal occurs before a conversation document exists and does not carry a bundle identity or refusal_id. A parsed input that violates the supported structural contract produces a canonical REFUSED bundle.
+
+strict-parser refusal != canonical REFUSED bundle
+
+Matching parser refusals return exit code 0. Cross-implementation divergence returns 1. Tool, path, or runtime failure returns 2.

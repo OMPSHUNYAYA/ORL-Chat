@@ -1,0 +1,19 @@
+ORL-Chat v2.0.0 C3 Conversation-State Capsule Laboratory
+
+Automated browser check: PASS
+Page errors: 0
+Console errors: 0
+Default resolver state: ACCEPTED / verified
+Default capsule state: PASS
+Default comparison action: SUPERSEDES
+
+Checked functions:
+- Embedded frozen scenario loading.
+- Browser-side resolution.
+- Capsule creation and verification.
+- Topic and witness rendering.
+- Capsule comparison.
+- Local artifact controls.
+- Responsive three-panel layout.
+
+The laboratory assigns no execution authority.

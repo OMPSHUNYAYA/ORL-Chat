@@ -1,0 +1,609 @@
+{
+  "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+  "boundary": {
+    "boundary_receipt_id": "boundary_receipt_b0bddc5571d5e11681e594c376ab4af74ab4aa2ddb9b339e79de70ddbd9b4ba7",
+    "declared_state": "SEALED",
+    "expected_observation_refs": [
+      "obs-endorse-a-alice",
+      "obs-endorse-a-bob",
+      "obs-proposal-a",
+      "obs-proposal-b",
+      "obs-withdraw-b"
+    ],
+    "missing_observation_refs": [],
+    "observed_observation_refs": [
+      "obs-endorse-a-alice",
+      "obs-endorse-a-bob",
+      "obs-proposal-a",
+      "obs-proposal-b",
+      "obs-withdraw-b"
+    ],
+    "observed_observation_set_id": "observation_set_c93f364cedd3c46accb9e8ed314dffee0ae81bb6ac9ebb447d5a3b33339e7065",
+    "profile": "ORL-CHAT-BOUNDARY-RECEIPT-2-D01",
+    "state": "SEALED",
+    "unexpected_observation_refs": []
+  },
+  "context": {
+    "context": {
+      "conversation_id": "conversation-withdrawal-repair",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "ALL_DECLARED_PARTICIPANTS",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 2
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "context_id": "context_c9caaab124b3a045af05c91cc4222cd175f011a1510649f26b2d05a1bf97a1bf",
+    "validation_state": "ACCEPTED"
+  },
+  "conversation_resolution_id": "conversation_resolution_93e4a0c1c151e813bcb9f43813a78b1645398f6050881468330f5a466a4739e8",
+  "evidence": {
+    "action_ref_to_id": {
+      "endorse-a-alice": "action_e3d6b96b4ef30436d0d93f0eca60ecdfd3a4188c6ec70b2fc2a6940daabccbec",
+      "endorse-a-bob": "action_06851e5f1b6d8070f40f75c5da57b105374eaeb9038b86f033ab78405eb7844f",
+      "proposal-a": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+      "proposal-b": "action_5d8f5d153359cef905a68a0379e8c12e6355aef8f3d284f1f254e60be3421f9e",
+      "withdraw-b": "action_3576c389d0ee8522ebfba2313d2f3cbfa72afb29c30cdf4739408f0eac8a21e5"
+    },
+    "action_set_id": "action_set_3bbab6d056be22d30c19e44adce0cb450f1822e1fbb24a9e8d46dd5fc7f157b1",
+    "actions": [
+      {
+        "action": {
+          "action_ref": "endorse-a-bob",
+          "actor": "bob",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal-a"
+          ],
+          "topic_id": "location"
+        },
+        "action_id": "action_06851e5f1b6d8070f40f75c5da57b105374eaeb9038b86f033ab78405eb7844f",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_185849c27973d351a324d1dba75a58d6320572399f4df80186183012279766b4"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_185849c27973d351a324d1dba75a58d6320572399f4df80186183012279766b4",
+            "presentation": "Bob endorses Room A."
+          }
+        ],
+        "sources": [
+          "node-b"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "withdraw-b",
+          "actor": "bob",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": null,
+          "kind": "WITHDRAW",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal-b"
+          ],
+          "topic_id": "location"
+        },
+        "action_id": "action_3576c389d0ee8522ebfba2313d2f3cbfa72afb29c30cdf4739408f0eac8a21e5",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_9364a2e055230f8e831b1d5ccd7efc5cc4104233fe76dc9c286efb909485abf0"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_9364a2e055230f8e831b1d5ccd7efc5cc4104233fe76dc9c286efb909485abf0",
+            "presentation": "Room B proposal withdrawn."
+          }
+        ],
+        "sources": [
+          "node-b"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "proposal-b",
+          "actor": "bob",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": "Room B",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "location"
+        },
+        "action_id": "action_5d8f5d153359cef905a68a0379e8c12e6355aef8f3d284f1f254e60be3421f9e",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_8d3ba7fe36b531ae71d401fee0060028714a8269d2255c90371b72a241956435"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_8d3ba7fe36b531ae71d401fee0060028714a8269d2255c90371b72a241956435",
+            "presentation": "Use Room B."
+          }
+        ],
+        "sources": [
+          "node-b"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "proposal-a",
+          "actor": "alice",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": "Room A",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "location"
+        },
+        "action_id": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_b158bfef314bdb83c30e9936da8006cb91cd61873b54dfaae8fa958deb6519cc"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_b158bfef314bdb83c30e9936da8006cb91cd61873b54dfaae8fa958deb6519cc",
+            "presentation": "Use Room A."
+          }
+        ],
+        "sources": [
+          "node-a"
+        ]
+      },
+      {
+        "action": {
+          "action_ref": "endorse-a-alice",
+          "actor": "alice",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal-a"
+          ],
+          "topic_id": "location"
+        },
+        "action_id": "action_e3d6b96b4ef30436d0d93f0eca60ecdfd3a4188c6ec70b2fc2a6940daabccbec",
+        "observation_count": 1,
+        "observation_ids": [
+          "observation_16c9930603251a0c8ced586cca51dbd6545a1283737e2183743ee6ad6cb09b15"
+        ],
+        "presentations": [
+          {
+            "observation_id": "observation_16c9930603251a0c8ced586cca51dbd6545a1283737e2183743ee6ad6cb09b15",
+            "presentation": "Alice endorses Room A."
+          }
+        ],
+        "sources": [
+          "node-a"
+        ]
+      }
+    ],
+    "exact_observation_duplicate_count": 0,
+    "observation_multiplicity_count": 0,
+    "observation_set_id": "observation_set_c93f364cedd3c46accb9e8ed314dffee0ae81bb6ac9ebb447d5a3b33339e7065",
+    "observations": [
+      {
+        "action_id": "action_e3d6b96b4ef30436d0d93f0eca60ecdfd3a4188c6ec70b2fc2a6940daabccbec",
+        "observation_id": "observation_16c9930603251a0c8ced586cca51dbd6545a1283737e2183743ee6ad6cb09b15",
+        "observation_ref": "obs-endorse-a-alice",
+        "presentation": "Alice endorses Room A.",
+        "source": "node-a"
+      },
+      {
+        "action_id": "action_06851e5f1b6d8070f40f75c5da57b105374eaeb9038b86f033ab78405eb7844f",
+        "observation_id": "observation_185849c27973d351a324d1dba75a58d6320572399f4df80186183012279766b4",
+        "observation_ref": "obs-endorse-a-bob",
+        "presentation": "Bob endorses Room A.",
+        "source": "node-b"
+      },
+      {
+        "action_id": "action_5d8f5d153359cef905a68a0379e8c12e6355aef8f3d284f1f254e60be3421f9e",
+        "observation_id": "observation_8d3ba7fe36b531ae71d401fee0060028714a8269d2255c90371b72a241956435",
+        "observation_ref": "obs-proposal-b",
+        "presentation": "Use Room B.",
+        "source": "node-b"
+      },
+      {
+        "action_id": "action_3576c389d0ee8522ebfba2313d2f3cbfa72afb29c30cdf4739408f0eac8a21e5",
+        "observation_id": "observation_9364a2e055230f8e831b1d5ccd7efc5cc4104233fe76dc9c286efb909485abf0",
+        "observation_ref": "obs-withdraw-b",
+        "presentation": "Room B proposal withdrawn.",
+        "source": "node-b"
+      },
+      {
+        "action_id": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+        "observation_id": "observation_b158bfef314bdb83c30e9936da8006cb91cd61873b54dfaae8fa958deb6519cc",
+        "observation_ref": "obs-proposal-a",
+        "presentation": "Use Room A.",
+        "source": "node-a"
+      }
+    ],
+    "raw_observation_count": 5,
+    "unique_action_count": 5,
+    "unique_observation_count": 5,
+    "validation_state": "ACCEPTED"
+  },
+  "execution_authority": "NONE",
+  "graph": {
+    "cycle_action_refs": [],
+    "edges": [
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_06851e5f1b6d8070f40f75c5da57b105374eaeb9038b86f033ab78405eb7844f",
+        "source_action_ref": "endorse-a-bob",
+        "target_action_id": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+        "target_action_ref": "proposal-a"
+      },
+      {
+        "relation": "WITHDRAW",
+        "source_action_id": "action_3576c389d0ee8522ebfba2313d2f3cbfa72afb29c30cdf4739408f0eac8a21e5",
+        "source_action_ref": "withdraw-b",
+        "target_action_id": "action_5d8f5d153359cef905a68a0379e8c12e6355aef8f3d284f1f254e60be3421f9e",
+        "target_action_ref": "proposal-b"
+      },
+      {
+        "relation": "ENDORSE",
+        "source_action_id": "action_e3d6b96b4ef30436d0d93f0eca60ecdfd3a4188c6ec70b2fc2a6940daabccbec",
+        "source_action_ref": "endorse-a-alice",
+        "target_action_id": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+        "target_action_ref": "proposal-a"
+      }
+    ],
+    "graph_root": "graph_c9e527e675a2d3417eaf63c2ef3fc8d52b35551969184fcd5a85e3f882cf97a6",
+    "missing_dependencies": [],
+    "nodes": [
+      {
+        "action_id": "action_e3d6b96b4ef30436d0d93f0eca60ecdfd3a4188c6ec70b2fc2a6940daabccbec",
+        "action_ref": "endorse-a-alice",
+        "actor": "alice",
+        "kind": "ENDORSE",
+        "topic_id": "location"
+      },
+      {
+        "action_id": "action_06851e5f1b6d8070f40f75c5da57b105374eaeb9038b86f033ab78405eb7844f",
+        "action_ref": "endorse-a-bob",
+        "actor": "bob",
+        "kind": "ENDORSE",
+        "topic_id": "location"
+      },
+      {
+        "action_id": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+        "action_ref": "proposal-a",
+        "actor": "alice",
+        "kind": "PROPOSE",
+        "topic_id": "location"
+      },
+      {
+        "action_id": "action_5d8f5d153359cef905a68a0379e8c12e6355aef8f3d284f1f254e60be3421f9e",
+        "action_ref": "proposal-b",
+        "actor": "bob",
+        "kind": "PROPOSE",
+        "topic_id": "location"
+      },
+      {
+        "action_id": "action_3576c389d0ee8522ebfba2313d2f3cbfa72afb29c30cdf4739408f0eac8a21e5",
+        "action_ref": "withdraw-b",
+        "actor": "bob",
+        "kind": "WITHDRAW",
+        "topic_id": "location"
+      }
+    ],
+    "profile": "ORL-CHAT-GRAPH-2-D01"
+  },
+  "inputs": {
+    "boundary": {
+      "expected_observation_refs": [
+        "obs-proposal-a",
+        "obs-proposal-b",
+        "obs-withdraw-b",
+        "obs-endorse-a-alice",
+        "obs-endorse-a-bob"
+      ],
+      "schema": "ORL-CHAT-BOUNDARY-2-D01",
+      "state": "SEALED"
+    },
+    "context": {
+      "conversation_id": "conversation-withdrawal-repair",
+      "execution_authority": "NONE",
+      "participation": {
+        "participants": [
+          "alice",
+          "bob"
+        ],
+        "profile": "ALL_DECLARED_PARTICIPANTS",
+        "required_endorsers": [],
+        "schema": "ORL-CHAT-PARTICIPATION-2-D01",
+        "threshold": 2
+      },
+      "purpose_id": "active-instruction",
+      "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+      "schema": "ORL-CHAT-CONTEXT-2-D01"
+    },
+    "observations": [
+      {
+        "action": {
+          "action_ref": "proposal-a",
+          "actor": "alice",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": "Room A",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "location"
+        },
+        "observation_ref": "obs-proposal-a",
+        "presentation": "Use Room A.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-a"
+      },
+      {
+        "action": {
+          "action_ref": "proposal-b",
+          "actor": "bob",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": "Room B",
+          "kind": "PROPOSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [],
+          "topic_id": "location"
+        },
+        "observation_ref": "obs-proposal-b",
+        "presentation": "Use Room B.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-b"
+      },
+      {
+        "action": {
+          "action_ref": "withdraw-b",
+          "actor": "bob",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": null,
+          "kind": "WITHDRAW",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal-b"
+          ],
+          "topic_id": "location"
+        },
+        "observation_ref": "obs-withdraw-b",
+        "presentation": "Room B proposal withdrawn.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-b"
+      },
+      {
+        "action": {
+          "action_ref": "endorse-a-alice",
+          "actor": "alice",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal-a"
+          ],
+          "topic_id": "location"
+        },
+        "observation_ref": "obs-endorse-a-alice",
+        "presentation": "Alice endorses Room A.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-a"
+      },
+      {
+        "action": {
+          "action_ref": "endorse-a-bob",
+          "actor": "bob",
+          "conversation_id": "conversation-withdrawal-repair",
+          "declared_value": null,
+          "kind": "ENDORSE",
+          "schema": "ORL-CHAT-ACTION-2-D01",
+          "targets": [
+            "proposal-a"
+          ],
+          "topic_id": "location"
+        },
+        "observation_ref": "obs-endorse-a-bob",
+        "presentation": "Bob endorses Room A.",
+        "schema": "ORL-CHAT-OBSERVATION-2-D01",
+        "source": "node-b"
+      }
+    ]
+  },
+  "private_bundle_id": "private_bundle_de3028faa51945fc1a66a8cb5a9213ec97239fe48f194fc63ad7d6db15579601",
+  "profile": "ORL-CHAT-PRIVATE-BUNDLE-2-D01",
+  "public_receipt": {
+    "action_set_id": "action_set_3bbab6d056be22d30c19e44adce0cb450f1822e1fbb24a9e8d46dd5fc7f157b1",
+    "architecture_profile": "ORL-CHAT-ARCH-2-D01",
+    "boundary_receipt_id": "boundary_receipt_b0bddc5571d5e11681e594c376ab4af74ab4aa2ddb9b339e79de70ddbd9b4ba7",
+    "boundary_state": "SEALED",
+    "context_id": "context_c9caaab124b3a045af05c91cc4222cd175f011a1510649f26b2d05a1bf97a1bf",
+    "conversation_id": "conversation-withdrawal-repair",
+    "conversation_resolution_id": "conversation_resolution_93e4a0c1c151e813bcb9f43813a78b1645398f6050881468330f5a466a4739e8",
+    "execution_authority": "NONE",
+    "graph_root": "graph_c9e527e675a2d3417eaf63c2ef3fc8d52b35551969184fcd5a85e3f882cf97a6",
+    "profile": "ORL-CHAT-PUBLIC-RECEIPT-2-D01",
+    "public_receipt_id": "public_receipt_491aa3ac2d0b73ac1368344117675136f09be592062183b4a3deb202c45cc932",
+    "purpose_id": "active-instruction",
+    "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+    "state_counts": {
+      "ABSTAIN": 0,
+      "INCOMPLETE": 0,
+      "RESOLVED": 1
+    },
+    "topic_receipt_root": "topic_receipt_root_89a15f0903270f404aac8944e66299b59eb9b990aa6f480f83c3e61db118cc47",
+    "topic_summaries": [
+      {
+        "active_action_ids": [
+          "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7"
+        ],
+        "active_endorser_count": 2,
+        "active_objector_count": 0,
+        "execution_authority": "NONE",
+        "participation_satisfied": true,
+        "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "resolved_action_id": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+        "state": "RESOLVED",
+        "topic_id": "location",
+        "topic_receipt_id": "topic_receipt_26fd903a736ddf6d34714e7e6fdb0bf55f8e550d3d87f374335046550a846060"
+      }
+    ],
+    "version": "2.0.0"
+  },
+  "result": "ACCEPTED",
+  "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+  "self_verification": {
+    "errors": [],
+    "expected_conversation_resolution_id": "conversation_resolution_93e4a0c1c151e813bcb9f43813a78b1645398f6050881468330f5a466a4739e8",
+    "expected_private_bundle_id": "private_bundle_de3028faa51945fc1a66a8cb5a9213ec97239fe48f194fc63ad7d6db15579601",
+    "expected_public_receipt_id": "public_receipt_491aa3ac2d0b73ac1368344117675136f09be592062183b4a3deb202c45cc932",
+    "profile": "ORL-CHAT-PRODUCER-VERIFICATION-2-D01",
+    "valid": true
+  },
+  "topics": {
+    "receipts": [
+      {
+        "action_ids": [
+          "action_06851e5f1b6d8070f40f75c5da57b105374eaeb9038b86f033ab78405eb7844f",
+          "action_3576c389d0ee8522ebfba2313d2f3cbfa72afb29c30cdf4739408f0eac8a21e5",
+          "action_5d8f5d153359cef905a68a0379e8c12e6355aef8f3d284f1f254e60be3421f9e",
+          "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+          "action_e3d6b96b4ef30436d0d93f0eca60ecdfd3a4188c6ec70b2fc2a6940daabccbec"
+        ],
+        "actions": [
+          {
+            "action_id": "action_e3d6b96b4ef30436d0d93f0eca60ecdfd3a4188c6ec70b2fc2a6940daabccbec",
+            "action_ref": "endorse-a-alice",
+            "active_proposal": false,
+            "actor": "alice",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "proposal-a"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_06851e5f1b6d8070f40f75c5da57b105374eaeb9038b86f033ab78405eb7844f",
+            "action_ref": "endorse-a-bob",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "ENDORSE",
+            "superseded": false,
+            "targets": [
+              "proposal-a"
+            ],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+            "action_ref": "proposal-a",
+            "active_proposal": true,
+            "actor": "alice",
+            "declared_value": "Room A",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": false
+          },
+          {
+            "action_id": "action_5d8f5d153359cef905a68a0379e8c12e6355aef8f3d284f1f254e60be3421f9e",
+            "action_ref": "proposal-b",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": "Room B",
+            "dependency_ready": true,
+            "kind": "PROPOSE",
+            "superseded": false,
+            "targets": [],
+            "withdrawn": true
+          },
+          {
+            "action_id": "action_3576c389d0ee8522ebfba2313d2f3cbfa72afb29c30cdf4739408f0eac8a21e5",
+            "action_ref": "withdraw-b",
+            "active_proposal": false,
+            "actor": "bob",
+            "declared_value": null,
+            "dependency_ready": true,
+            "kind": "WITHDRAW",
+            "superseded": false,
+            "targets": [
+              "proposal-b"
+            ],
+            "withdrawn": false
+          }
+        ],
+        "active_action_ids": [
+          "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7"
+        ],
+        "active_action_refs": [
+          "proposal-a"
+        ],
+        "active_endorsers": [
+          "alice",
+          "bob"
+        ],
+        "active_objectors": [],
+        "active_signal_conflicts": [],
+        "cycle_action_refs": [],
+        "execution_authority": "NONE",
+        "missing_dependencies": [],
+        "participation": {
+          "endorsement_count": 2,
+          "endorsers": [
+            "alice",
+            "bob"
+          ],
+          "missing": [],
+          "participants": [
+            "alice",
+            "bob"
+          ],
+          "profile": "ALL_DECLARED_PARTICIPANTS",
+          "required_endorsers": [],
+          "satisfied": true,
+          "surplus": [],
+          "threshold": 2
+        },
+        "profile": "ORL-CHAT-TOPIC-RECEIPT-2-D01",
+        "reason_code": "ONE_ACTIVE_PROPOSAL_AND_PARTICIPATION_SATISFIED",
+        "resolved_action_id": "action_aad1181cb400955973b469ea566ab190d7d97ea8379a0daf6e579c162ec502c7",
+        "resolved_action_ref": "proposal-a",
+        "resolved_declared_value": "Room A",
+        "ruleset_profile": "ORL-CHAT-RULES-2-D01",
+        "signal_conflicts": [],
+        "state": "RESOLVED",
+        "superseded_action_refs": [],
+        "topic_id": "location",
+        "topic_receipt_id": "topic_receipt_26fd903a736ddf6d34714e7e6fdb0bf55f8e550d3d87f374335046550a846060",
+        "withdrawn_action_refs": [
+          "proposal-b"
+        ]
+      }
+    ],
+    "state_counts": {
+      "ABSTAIN": 0,
+      "INCOMPLETE": 0,
+      "RESOLVED": 1
+    },
+    "topic_receipt_root": "topic_receipt_root_89a15f0903270f404aac8944e66299b59eb9b990aa6f480f83c3e61db118cc47"
+  },
+  "version": "2.0.0"
+}

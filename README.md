@@ -415,19 +415,6 @@ ORL-Chat/
 
 ---
 
-## Documentation
-
-- [Quickstart](docs/Quickstart.md)
-- [Architecture](docs/Architecture.md)
-- [Conversation-State Capsule](docs/Conversation_State_Capsule.md)
-- [Integration Guide](docs/Integration_Guide.md)
-- [Verification Guide](docs/Verification_Guide.md)
-- [Claim and Threat Boundary](docs/Claim_and_Threat_Boundary.md)
-- [FAQ](docs/FAQ.md)
-- [Text Profile](docs/Text_Profile.md)
-
----
-
 ## Canonical Data Contract
 
 The supported data contract includes:
